@@ -1,0 +1,32 @@
+# =======================================================================
+# Build Results (Never commit compiled binaries)
+# =======================================================================
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# =======================================================================
+# Visual Studio Cache & Options (Specific to your machine's layout)
+# =======================================================================
+.vs/
+.vscode/
+*.suo
+*.sln.docstates
+
+# =======================================================================
+# CRITICAL FOR WINDOWS FORMS DESIGNER
+# =======================================================================
+# Standard C# templates ignore ALL *.user files. 
+# However, you must EXCLUDE '.csproj.user' from being ignored.
+# Without it, the Windows Forms Visual UI Designer won't open when cloned!
+*.user
+!*.csproj.user
+
+# =======================================================================
+# Package Manager & Tools
+# =======================================================================
+.packages/
+packages/
