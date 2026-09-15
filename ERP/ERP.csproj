@@ -204,6 +204,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Production\Flittling_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\Flittling_Entry.Designer.cs">
+      <DependentUpon>Flittling_Entry.cs</DependentUpon>
+    </Compile>
     <Compile Include="VectorIcons.cs" />
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
@@ -1818,6 +1824,9 @@
       <DependentUpon>AllList_Route_Card.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Production\Flittling_Entry.resx">
+      <DependentUpon>Flittling_Entry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Production\Monthly_Pro_Schedule.resx">
       <DependentUpon>Monthly_Pro_Schedule.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2597,12 +2606,12 @@
   <ItemGroup>
     <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

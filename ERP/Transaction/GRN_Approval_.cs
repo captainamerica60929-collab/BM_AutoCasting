@@ -338,7 +338,7 @@ namespace CRM_App.Transaction
                 MessageBox.Show("Submited Succesfully..", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
-
+           
         }
         string id1 = "0";
         private void imagesave()

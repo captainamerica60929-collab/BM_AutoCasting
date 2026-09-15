@@ -3,36 +3,28 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Maintanence_Printing_Tool;
 using System.Data.SqlClient;
 
 namespace CRM_App.Production
 {
-    public partial class Inspected_Production_Data_Entry : Form
+    public partial class Flittling_Entry : Form
     {
-        public string ErrorMessage = "";
-        public string ID = "";
-        public Inspected_Production_Data_Entry()
+        public Flittling_Entry()
         {
             InitializeComponent();
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        string Part_ID = "";
-        private void Production_Data_Entry_Load(object sender, EventArgs e)
+        public string ErrorMessage = "";
+        public string ID = "";
+        private void Flittling_Entry_Load(object sender, EventArgs e)
         {
             Load1();
-
-
-
         }
-
+        string Part_ID = "";
         private void Load1()
         {
             panel5.Visible = false;
@@ -79,7 +71,6 @@ namespace CRM_App.Production
             loademployee();
             loadrej();
         }
-
         private void loadrej()
         {
             DataTable a = dbFunctions.getTable("select Rej_iid, Rej_vDescription from Rejection_Method_Master where Rej_cStatus = 'A' and Rej_Type='Rejection' ");
@@ -148,7 +139,7 @@ namespace CRM_App.Production
                 SqlCommand com = new SqlCommand();
                 com.Connection = con;
                 com.CommandType = CommandType.StoredProcedure;
-                com.CommandText = "pr_Insert_Production_Details_Inspection";
+                com.CommandText = "pr_Insert_Production_Flittling_Details";
 
                 com.Parameters.Add("@PD_Route_Card_ID", SqlDbType.VarChar).Value = dbFunctions.Route_Card_ID;
                 com.Parameters.Add("@PD_Date", SqlDbType.DateTime).Value = PD_Date.Text.ToString();
@@ -173,7 +164,10 @@ namespace CRM_App.Production
                 //    "prod_scanned_name = '" + dbFunctions.username + "' " +
                 //    "WHERE PROD_vBarcodeId = '" + aci_vCardNo1.Text + "'"
                 //);
-                DataTable a = dbFunctions.getTable("update PROD_Barcode_Details set prod_qty_status='A' Where PROD_Rej_Qty='" + txtRCNo.Text + "' and prod_status='SCANNED'");
+
+
+
+               // DataTable a = dbFunctions.getTable("update PROD_Barcode_Details set prod_qty_status='A' Where PROD_Rej_Qty='" + txtRCNo.Text + "' and prod_status='SCANNED'");
                 Clear();
                 display();
 
@@ -194,7 +188,7 @@ namespace CRM_App.Production
 
         public void display()
         {
-            DataTable dt = dbFunctions.getTable("pr_Display_Production_Final_Inspection  " + dbFunctions.Route_Card_ID);
+            DataTable dt = dbFunctions.getTable("pr_Display_Production_Flittling_Inspection  " + dbFunctions.Route_Card_ID);
             dataGridView1.DataSource = dt;
             dbFunctions.DGVStyleAutoSizeColumn(dataGridView1);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -260,84 +254,6 @@ namespace CRM_App.Production
             }
             btnsave.Text = "&Save";
         }
-
-        private void PD_OK_Qty_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char keypress = e.KeyChar;
-            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
-            {
-            }
-            else
-            {
-                MessageBox.Show("Numbers Only Allowed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-            }
-        }
-
-        private void PD_Reject_Qty_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char keypress = e.KeyChar;
-            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
-            {
-            }
-            else
-            {
-                MessageBox.Show("Numbers Only Allowed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-            }
-        }
-
-        private void btnsave_Click(object sender, EventArgs e)
-        {
-            if (Validate())
-            {
-                MessageBox.Show(ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            if (btnsave.Text.ToString().Equals("&Update"))
-            {
-                Update();
-            }
-            else
-            {
-                insert();
-
-            }
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            Edit();
-        }
-
-        public void Edit()
-        {
-
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                DataTable dt = dbFunctions.getTable("pr_Edit_Production_Details  " + dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-                ID = dt.Rows[0]["PD_iid"].ToString();
-                PD_Date.Text = dt.Rows[0]["Date"].ToString();
-                PD_CreatedBy.Text = dt.Rows[0]["PD_CreatedBy"].ToString();
-                Shift.Text = dt.Rows[0]["PD_Shift"].ToString();
-                PD_OK_Qty.Text = dt.Rows[0]["PD_OK_Qty"].ToString();
-                PD_Reject_Qty.Text = dt.Rows[0]["PD_Reject_Qty"].ToString();
-
-                btnsave.Text = "&Update";
-
-            }
-            else
-            {
-                MessageBox.Show("Please Select Row", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            Delete();
-        }
-
         public void Delete()
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -356,60 +272,6 @@ namespace CRM_App.Production
                 MessageBox.Show("Please Select Row", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void Production_Data_Entry_Shown(object sender, EventArgs e)
-        {
-            display();
-        }
-        private void loademployee()
-        {
-            DataTable a = dbFunctions.getTable("select EM_iid,EM_EmployeeName from Employee_Master where EM_Status='A' AND EM_Category != 'Staff'");
-            Employee_Name.DataSource = a;
-            Employee_Name.DisplayMember = "EM_EmployeeName";
-            Employee_Name.ValueMember = "EM_iid";
-            Employee_Name.SelectedIndex = -1;
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (Validate())
-            {
-                MessageBox.Show(ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            if (btnsave.Text.ToString().Equals("&Update"))
-            {
-                Update();
-            }
-            else
-            {
-                insert();
-
-            }
-
-            if (decimal.Parse(lbl_Prod_Qty.Text) <= decimal.Parse(label28.Text.Trim()))
-            {
-                DialogResult result = MessageBox.Show("Are You Sure Want to Close Routecard", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    DataTable dd = dbFunctions.getTable("update Production_Request set    Pq_Route_Card_End_Date=(select Max(FID_Date) from Production_Details_Inspection where FID_Route_Card_ID=" + dbFunctions.Route_Card_ID + "), RC_Status='Closed' where pq_iid=" + dbFunctions.Route_Card_ID);
-
-                }
-
-            }
-
-
-            groupBox2.Visible = true;
-            groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            displayInProcessInspection();
-        }
-
         public string E_ID = "";
 
         public void displayInProcessInspection()
@@ -462,143 +324,6 @@ namespace CRM_App.Production
             }
             catch (Exception ex) { }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            bool Flag = true;
-
-
-
-            DataTable dtd = dbFunctions.getTable("delete from Final_Inspection_QC_Details where FI_Production_ID=" + E_ID);
-
-            for (int i = 0; i < dataGridView2.Rows.Count; i++)
-            {
-                SqlConnection con = new SqlConnection(dbFunctions.connectionstring);
-                try
-                {
-                    con.Open();
-                    SqlCommand com = new SqlCommand();
-                    com.Connection = con;
-                    com.CommandType = CommandType.StoredProcedure;
-                    com.CommandText = "Pr_Insert_Final_Inspection_QC_Details";
-                    com.Parameters.Add("@FI_RouteCard_ID", SqlDbType.VarChar).Value = dbFunctions.Route_Card_ID;
-                    com.Parameters.Add("@FI_Production_ID", SqlDbType.VarChar).Value = E_ID;
-                    com.Parameters.Add("@FI_Description", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["Description"].Value.ToString();
-                    com.Parameters.Add("@FI_Parameters", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["Parameter"].Value.ToString();
-                    com.Parameters.Add("@FI_X1", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X1"].Value.ToString();
-                    com.Parameters.Add("@FI_X2", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X2"].Value.ToString();
-                    com.Parameters.Add("@FI_X3", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X3"].Value.ToString();
-                    com.Parameters.Add("@FI_X4", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X4"].Value.ToString();
-                    com.Parameters.Add("@FI_X5", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X5"].Value.ToString();
-                    com.Parameters.Add("@FI_Inpection_Status", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["Status"].Value.ToString();
-                    com.Parameters.Add("@FI_UserDetails", SqlDbType.VarChar).Value = dbFunctions.username;
-                    com.ExecuteNonQuery();
-                    com.Connection.Close();
-                    Clear();
-                    display();
-                }
-                catch (Exception Ex)
-                {
-                    Flag = false;
-                    MessageBox.Show(Ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            if (Flag)
-            {
-                MessageBox.Show("Details Saved Successfully ", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                groupBox2.Visible = false;
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            groupBox2.Visible = false;
-        }
-
-        private void dataGridView3_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataTable dt = dbFunctions.getTable("pr_Display_Final_QC_Details '" + dbFunctions.Route_Card_ID + "','" + E_ID + "'");
-            if (dt.Rows.Count > 0)
-            {
-                dataGridView2.DataSource = dt;
-                dbFunctions.DGVStyle(dataGridView2);
-                dataGridView2.Columns[0].Frozen = true;
-                dataGridView2.Columns[1].Frozen = true;
-                dataGridView2.Columns[2].Frozen = true;
-
-                dataGridView2.Columns[1].Width = 250;
-                dataGridView2.Columns[2].Width = 250;
-                dataGridView2.SelectionMode = DataGridViewSelectionMode.CellSelect;
-
-
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-
-            try
-            {
-                groupBox2.Visible = true;
-                groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-
-                DataTable dt = dbFunctions.getTable("pr_Display_Final_QC_Details '" + dbFunctions.Route_Card_ID + "','" + dataGridView3.SelectedRows[0].Cells[0].Value.ToString() + "'");
-
-                E_ID = dataGridView3.SelectedRows[0].Cells[0].Value.ToString();
-                if (dt.Rows.Count > 0)
-                {
-                    dataGridView2.DataSource = dt;
-                    dbFunctions.DGVStyle(dataGridView2);
-                    dataGridView2.Columns[0].Frozen = true;
-                    dataGridView2.Columns[1].Frozen = true;
-                    dataGridView2.Columns[2].Frozen = true;
-
-                    dataGridView2.Columns[1].Width = 250;
-                    dataGridView2.Columns[2].Width = 250;
-                    dataGridView2.SelectionMode = DataGridViewSelectionMode.CellSelect;
-
-
-                }
-            }
-            catch { }
-        }
-
-        private void PD_OK_Qty_TextChanged(object sender, EventArgs e)
-        {
-            //  CAL();
-
-        }
-
-        private void Panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void GroupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 10)
-            {
-                getdata();
-            }
-        }
-
         private void getdata()
         {
             panel14.Visible = true;
@@ -608,7 +333,7 @@ namespace CRM_App.Production
             }
             catch { }
             dataGridView5.DataSource = null;
-            DataTable dt = dbFunctions.getTable("pr_edit_Final_Inspection_Detail  " + dbFunctions.Route_Card_ID);
+            DataTable dt = dbFunctions.getTable("pr_edit_Flittling_Detail  " + dbFunctions.Route_Card_ID);
             dataGridView5.DataSource = dt;
             dbFunctions.DGVStyleAutoSizeColumn(dataGridView5);
             dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
@@ -629,32 +354,6 @@ namespace CRM_App.Production
             {
                 dataGridView5.Rows[i].Cells[6].Value = "Update";
             }
-        }
-
-        private void PD_Reject_Qty_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                int A = Int32.Parse(PD_Reject_Qty.Text);
-                if (A >= 1)
-                {
-                    panel5.Visible = true;
-                    display1();
-                }
-                else if (A == 0)
-                {
-                    panel5.Visible = false;
-                }
-            }
-            catch
-            {
-            }
-        }
-
-        private void Button12_Click(object sender, EventArgs e)
-        {
-            save();
-
         }
         public string ID1 = "0";
         private void save()
@@ -716,21 +415,6 @@ namespace CRM_App.Production
             dataGridView4.DataSource = dis;
             dataGridView4.Columns["ID"].Visible = false;
         }
-
-        private void clear1()
-        {
-            ID1 = "0";
-            Rejection.Text = "";
-            textBox2.Text = "";
-
-        }
-
-        private void Button6_Click(object sender, EventArgs e)
-        {
-            Edit1();
-            button9.Text = "&Update";
-            ID1 = dataGridView4.SelectedRows[0].Cells[0].Value.ToString();
-        }
         public string as1 = "";
         private void Edit1()
         {
@@ -740,59 +424,47 @@ namespace CRM_App.Production
             textBox2.Text = a.Rows[0]["prej_qty"].ToString();
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private void clear1()
         {
-            if (dataGridView4.SelectedRows.Count > 0)
-            {
-                DialogResult result = MessageBox.Show("Are You Sure Want to Delete Press YES", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    DataTable dt = dbFunctions.getTable("update Production_Rejection set pjrej_status='D'   where prej_id='" + dataGridView4.SelectedRows[0].Cells[0].Value.ToString() + "'");
-                    MessageBox.Show("Deleted Successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    display1();
-                    clear1();
+            ID1 = "0";
+            Rejection.Text = "";
+            textBox2.Text = "";
 
-                }
+        }
+        private void loademployee()
+        {
+            DataTable a = dbFunctions.getTable("select EM_iid,EM_EmployeeName from Employee_Master where EM_Status='A' AND EM_Category != 'Staff'");
+            Employee_Name.DataSource = a;
+            Employee_Name.DisplayMember = "EM_EmployeeName";
+            Employee_Name.ValueMember = "EM_iid";
+            Employee_Name.SelectedIndex = -1;
+
+        }
+
+        public void Edit()
+        {
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataTable dt = dbFunctions.getTable("pr_Edit_Production_Details  " + dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                ID = dt.Rows[0]["PD_iid"].ToString();
+                PD_Date.Text = dt.Rows[0]["Date"].ToString();
+                PD_CreatedBy.Text = dt.Rows[0]["PD_CreatedBy"].ToString();
+                Shift.Text = dt.Rows[0]["PD_Shift"].ToString();
+                PD_OK_Qty.Text = dt.Rows[0]["PD_OK_Qty"].ToString();
+                PD_Reject_Qty.Text = dt.Rows[0]["PD_Reject_Qty"].ToString();
+
+                btnsave.Text = "&Update";
+
             }
             else
             {
                 MessageBox.Show("Please Select Row", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
-        private void Button14_Click(object sender, EventArgs e)
-        {
-            LarchERP.Master.RejectionMethod new1 = new LarchERP.Master.RejectionMethod();
-            new1.Show();
-        }
-
-        private void Button13_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DataTable dt = dbFunctions.getTable("Pr_Rej_CheckPointRefresh");
-                Rejection.DataSource = dt;
-                Rejection.DisplayMember = "Rej_vDescription";
-                Rejection.ValueMember = "Rej_iid";
-                Rejection.SelectedIndex = 0;
-
-            }
-            catch
-            {
-            }
-        }
-
-        private void Button11_Click(object sender, EventArgs e)
-        {
-            panel5.Visible = false;
-        }
-
-        private void Button9_Click(object sender, EventArgs e)
-        {
-            save();
-        }
-
-        private void Aci_vCardNo1_KeyUp(object sender, KeyEventArgs e)
+        private void aci_vCardNo1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -940,7 +612,88 @@ namespace CRM_App.Production
             }
         }
 
-        private void Button15_Click(object sender, EventArgs e)
+        private void PD_Reject_Qty_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int A = Int32.Parse(PD_Reject_Qty.Text);
+                if (A >= 1)
+                {
+                    panel5.Visible = true;
+                    display1();
+                }
+                else if (A == 0)
+                {
+                    panel5.Visible = false;
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            save();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            save();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Edit1();
+            button9.Text = "&Update";
+            ID1 = dataGridView4.SelectedRows[0].Cells[0].Value.ToString();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Validate())
+            {
+                MessageBox.Show(ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (btnsave.Text.ToString().Equals("&Update"))
+            {
+                Update();
+            }
+            else
+            {
+                insert();
+
+            }
+
+            if (decimal.Parse(lbl_Prod_Qty.Text) <= decimal.Parse(label28.Text.Trim()))
+            {
+                DialogResult result = MessageBox.Show("Are You Sure Want to Close Routecard", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    DataTable dd = dbFunctions.getTable("update Production_Request set    Pq_Route_Card_End_Date=(select Max(FID_Date) from Production_Details_Inspection where FID_Route_Card_ID=" + dbFunctions.Route_Card_ID + "), RC_Status='Closed' where pq_iid=" + dbFunctions.Route_Card_ID);
+
+                }
+
+            }
+
+
+            //groupBox2.Visible = true;
+            //groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            //displayInProcessInspection();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
         {
             try
             {
@@ -954,60 +707,155 @@ namespace CRM_App.Production
             catch { }
         }
 
-        private void Prod_ok_TextChanged(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    int a = Convert.ToInt32(textBox4.Text);
 
-            //    int b = Convert.ToInt32(prod_ok.Text);
+        }
 
-            //    int c= Convert.ToInt32(textBox6.Text);
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Load1();
+        }
 
-            //    textBox6.Text= (c-b).ToString();
-            //    textBox4.Text = (a + b).ToString();
-            //}
-            //catch { }
+        private void button11_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            bool Flag = true;
+
+
+
+            DataTable dtd = dbFunctions.getTable("delete from Final_Inspection_QC_Details where FI_Production_ID=" + E_ID);
+
+            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            {
+                SqlConnection con = new SqlConnection(dbFunctions.connectionstring);
+                try
+                {
+                    con.Open();
+                    SqlCommand com = new SqlCommand();
+                    com.Connection = con;
+                    com.CommandType = CommandType.StoredProcedure;
+                    com.CommandText = "Pr_Insert_Final_Inspection_QC_Details";
+                    com.Parameters.Add("@FI_RouteCard_ID", SqlDbType.VarChar).Value = dbFunctions.Route_Card_ID;
+                    com.Parameters.Add("@FI_Production_ID", SqlDbType.VarChar).Value = E_ID;
+                    com.Parameters.Add("@FI_Description", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["Description"].Value.ToString();
+                    com.Parameters.Add("@FI_Parameters", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["Parameter"].Value.ToString();
+                    com.Parameters.Add("@FI_X1", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X1"].Value.ToString();
+                    com.Parameters.Add("@FI_X2", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X2"].Value.ToString();
+                    com.Parameters.Add("@FI_X3", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X3"].Value.ToString();
+                    com.Parameters.Add("@FI_X4", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X4"].Value.ToString();
+                    com.Parameters.Add("@FI_X5", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["X5"].Value.ToString();
+                    com.Parameters.Add("@FI_Inpection_Status", SqlDbType.VarChar).Value = dataGridView2.Rows[i].Cells["Status"].Value.ToString();
+                    com.Parameters.Add("@FI_UserDetails", SqlDbType.VarChar).Value = dbFunctions.username;
+                    com.ExecuteNonQuery();
+                    com.Connection.Close();
+                    Clear();
+                    display();
+                }
+                catch (Exception Ex)
+                {
+                    Flag = false;
+                    MessageBox.Show(Ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Flag)
+            {
+                MessageBox.Show("Details Saved Successfully ", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                groupBox2.Visible = false;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
             try
             {
+                groupBox2.Visible = true;
+                groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
 
-                int a = Convert.ToInt32(textBox4.Text) - Convert.ToInt32(prod_ok.Tag);
-                int b = Convert.ToInt32(prod_ok.Text);
+                DataTable dt = dbFunctions.getTable("pr_Display_Final_QC_Details '" + dbFunctions.Route_Card_ID + "','" + dataGridView3.SelectedRows[0].Cells[0].Value.ToString() + "'");
 
-                textBox4.Text = (a + b).ToString();
-                prod_ok.Tag = b;  // Store the last entered value of b
+                E_ID = dataGridView3.SelectedRows[0].Cells[0].Value.ToString();
+                if (dt.Rows.Count > 0)
+                {
+                    dataGridView2.DataSource = dt;
+                    dbFunctions.DGVStyle(dataGridView2);
+                    dataGridView2.Columns[0].Frozen = true;
+                    dataGridView2.Columns[1].Frozen = true;
+                    dataGridView2.Columns[2].Frozen = true;
+
+                    dataGridView2.Columns[1].Width = 250;
+                    dataGridView2.Columns[2].Width = 250;
+                    dataGridView2.SelectionMode = DataGridViewSelectionMode.CellSelect;
+
+
+                }
             }
             catch { }
         }
 
-        private void TextBox5_TextChanged(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            PD_Reject_Qty.Text = textBox5.Text;
-        }
-
-        private void TextBox4_TextChanged(object sender, EventArgs e)
-        {
-            PD_OK_Qty.Text = textBox4.Text;
-        }
-
-        private void Prod_rej_TextChanged(object sender, EventArgs e)
-        {
-            try
+            if (dataGridView4.SelectedRows.Count > 0)
             {
-                //int a = Convert.ToInt32(textBox5.Text);
+                DialogResult result = MessageBox.Show("Are You Sure Want to Delete Press YES", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    DataTable dt = dbFunctions.getTable("update Production_Rejection set pjrej_status='D'   where prej_id='" + dataGridView4.SelectedRows[0].Cells[0].Value.ToString() + "'");
+                    MessageBox.Show("Deleted Successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    display1();
+                    clear1();
 
-                //int b = Convert.ToInt32(prod_rej.Text);
-                //textBox5.Text = (a + b).ToString();
-
-
-                int a = Convert.ToInt32(textBox5.Text) - Convert.ToInt32(prod_rej.Tag);
-                int b = Convert.ToInt32(prod_rej.Text);
-
-                textBox5.Text = (a + b).ToString();
-                prod_rej.Tag = b;  // Store the last entered value of b
-
+                }
             }
-            catch { }
+            else
+            {
+                MessageBox.Show("Please Select Row", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PD_OK_Qty_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char keypress = e.KeyChar;
+            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
+            {
+            }
+            else
+            {
+                MessageBox.Show("Numbers Only Allowed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+        }
+
+        private void PD_Reject_Qty_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char keypress = e.KeyChar;
+            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
+            {
+            }
+            else
+            {
+                MessageBox.Show("Numbers Only Allowed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+        }
+
+        private void Flittling_Entry_Shown(object sender, EventArgs e)
+        {
+            display();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 10)
+            {
+                getdata();
+            }
         }
 
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1023,35 +871,14 @@ namespace CRM_App.Production
             }
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
-            panel14.Visible = false;
-            display();
+            this.Close();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Load1();
-        }
-
-        private void Pq_RequestNo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Employee_Name_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Shift_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            groupBox2.Visible = false;
         }
     }
 }

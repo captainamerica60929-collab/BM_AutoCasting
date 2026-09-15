@@ -249,7 +249,9 @@ namespace GenuineHR.Reports
                         string ReplaceText13 = ReplaceText12.Replace("@Approve_Date@", dataGridView1.SelectedRows[0].Cells["CS_Lot_Date"].Value.ToString());
                         string ReplaceText14 = ReplaceText13.Replace("@Year@", System.DateTime.Now.ToString("MMM yyyy"));
                         string ReplaceText15 = ReplaceText14.Replace("@Barcode@", dataGridView1.SelectedRows[0].Cells["CS_Barcode"].Value.ToString());
-                        RawPrinterHelper.SendStringToPrinter(PrinterName, ReplaceText15);
+                        string ReplaceText16 = ReplaceText15.Replace("@Heat_NO@", dataGridView1.SelectedRows[0].Cells["GRND_HeatNo"].Value.ToString());
+
+                        RawPrinterHelper.SendStringToPrinter(PrinterName, ReplaceText16);
 
 
                     }
