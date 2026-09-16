@@ -535,6 +535,7 @@ namespace CRM_App.Production
                     //    {
                     //        txtRCNo.Text = dt1.Rows[0]["PROD_Rej_Qty"].ToString();
                     //        txtPartNo.Text = dt1.Rows[0]["PROD_iItemId"].ToString();
+                    //        txtPartNo.Text = dt1.Rows[0]["PROD_iItemId"].ToString();
                     //        txtPartName.Text = dt1.Rows[0]["PROD_vLotNo"].ToString();
 
 
@@ -656,7 +657,8 @@ namespace CRM_App.Production
 
         private void button16_Click(object sender, EventArgs e)
         {
-
+            panel14.Visible = false;
+            display();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -676,16 +678,16 @@ namespace CRM_App.Production
 
             }
 
-            if (decimal.Parse(lbl_Prod_Qty.Text) <= decimal.Parse(label28.Text.Trim()))
-            {
-                DialogResult result = MessageBox.Show("Are You Sure Want to Close Routecard", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    DataTable dd = dbFunctions.getTable("update Production_Request set    Pq_Route_Card_End_Date=(select Max(FID_Date) from Production_Details_Inspection where FID_Route_Card_ID=" + dbFunctions.Route_Card_ID + "), RC_Status='Closed' where pq_iid=" + dbFunctions.Route_Card_ID);
+            //if (decimal.Parse(lbl_Prod_Qty.Text) <= decimal.Parse(label28.Text.Trim()))
+            //{
+            //    DialogResult result = MessageBox.Show("Are You Sure Want to Close Routecard", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            //    if (result == DialogResult.Yes)
+            //    {
+            //        DataTable dd = dbFunctions.getTable("update Production_Request set    Pq_Route_Card_End_Date=(select Max(FID_Date) from Production_Details_Inspection where FID_Route_Card_ID=" + dbFunctions.Route_Card_ID + "), RC_Status='Closed' where pq_iid=" + dbFunctions.Route_Card_ID);
 
-                }
+            //    }
 
-            }
+            //}
 
 
             //groupBox2.Visible = true;
@@ -862,7 +864,7 @@ namespace CRM_App.Production
         {
             if (e.ColumnIndex == 6)
             {
-                DataTable dt = dbFunctions.getTable("pr_Update_Final_Inspection_Details '" + dataGridView5.Rows[e.RowIndex].Cells[0].Value.ToString() + "','" + dataGridView5.Rows[e.RowIndex].Cells["OK"].Value.ToString() + "','" + dataGridView5.Rows[e.RowIndex].Cells["Rejection"].Value.ToString() + "','" + dbFunctions.username + "'");
+                DataTable dt = dbFunctions.getTable("pr_Update_Flittling_Details '" + dataGridView5.Rows[e.RowIndex].Cells[0].Value.ToString() + "','" + dataGridView5.Rows[e.RowIndex].Cells["OK"].Value.ToString() + "','" + dataGridView5.Rows[e.RowIndex].Cells["Rejection"].Value.ToString() + "','" + dbFunctions.username + "'");
                 //DataTable dt = dbFunctions.getTable($"EXEC pr_Update_Production_Details {dataGridView2.Rows[e.RowIndex].Cells[0].Value}, {dataGridView2.Rows[e.RowIndex].Cells[4].Value}, {dataGridView2.Rows[e.RowIndex].Cells[5].Value}, '{Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value):yyyy-MM-dd HH:mm:ss}', '{Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value):yyyy-MM-dd HH:mm:ss}', '{dbFunctions.username}'");
                 //DataTable dt = dbFunctions.getTable($"EXEC pr_Update_Production_Details {dataGridView2.Rows[e.RowIndex].Cells[0].Value}, {dataGridView2.Rows[e.RowIndex].Cells[4].Value}, {dataGridView2.Rows[e.RowIndex].Cells[5].Value}, '{dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value}', '{dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value}', '{dbFunctions.username}'");
 
@@ -879,6 +881,511 @@ namespace CRM_App.Production
         private void button3_Click(object sender, EventArgs e)
         {
             groupBox2.Visible = false;
+        }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Employee_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtxplanQty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Prod_Qty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PD_Date_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Shift_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PD_OK_Qty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PD_CreatedBy_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStartDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPartNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pq_dRevDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pq_RequestNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pq_vRevNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pq_vDocNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRCNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtModel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPartName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label64_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label65_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void aci_vCardNo1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ROTSTATUS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBoxX1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rejection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prod_ok_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prod_rej_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView4.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Are You Sure Want to Delete Press YES", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    DataTable dt = dbFunctions.getTable("update Production_Rejection set pjrej_status='D'   where prej_id='" + dataGridView4.SelectedRows[0].Cells[0].Value.ToString() + "'");
+                    MessageBox.Show("Deleted Successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    display1();
+                    clear1();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select Row", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

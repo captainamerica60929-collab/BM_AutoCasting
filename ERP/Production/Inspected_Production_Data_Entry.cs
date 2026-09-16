@@ -48,7 +48,7 @@ namespace CRM_App.Production
                 if (comboBox1.Text == "Manual")
                 {
                     aci_vCardNo1.Visible = false;
-                    DataTable dt = dbFunctions.getTable("pr_get_Production_Request  '" + dbFunctions.Route_Card_ID + "'");
+                    DataTable dt = dbFunctions.getTable("pr_get_Production_Final_Request  '" + dbFunctions.Route_Card_ID + "'");
                     //ID = dt.Rows[0]["Pq_iid"].ToString();
                     Part_ID = dt.Rows[0]["Pq_iPart_ID"].ToString();
                     txtRCNo.Text = dt.Rows[0]["Pq_Route_Card_No"].ToString();

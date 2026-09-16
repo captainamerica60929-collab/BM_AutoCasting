@@ -74,9 +74,10 @@
             this.Menus = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printBarcodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flittlingInspectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sandblastingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.flittlingInspectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -649,10 +650,11 @@
             this.editToolStripMenuItem,
             this.printBarcodeToolStripMenuItem,
             this.flittlingInspectionToolStripMenuItem,
+            this.sandblastingToolStripMenuItem,
             this.deleteToolStripMenuItem,
             this.toolStripMenuItem1});
             this.Menus.Name = "Menus";
-            this.Menus.Size = new System.Drawing.Size(240, 176);
+            this.Menus.Size = new System.Drawing.Size(240, 184);
             // 
             // editToolStripMenuItem
             // 
@@ -672,6 +674,24 @@
             this.printBarcodeToolStripMenuItem.Text = "Inprocess QC";
             this.printBarcodeToolStripMenuItem.Click += new System.EventHandler(this.printBarcodeToolStripMenuItem_Click);
             // 
+            // flittlingInspectionToolStripMenuItem
+            // 
+            this.flittlingInspectionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.flittlingInspectionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("flittlingInspectionToolStripMenuItem.Image")));
+            this.flittlingInspectionToolStripMenuItem.Name = "flittlingInspectionToolStripMenuItem";
+            this.flittlingInspectionToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
+            this.flittlingInspectionToolStripMenuItem.Text = "Fettling Inspection";
+            this.flittlingInspectionToolStripMenuItem.Click += new System.EventHandler(this.flittlingInspectionToolStripMenuItem_Click);
+            // 
+            // sandblastingToolStripMenuItem
+            // 
+            this.sandblastingToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.sandblastingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sandblastingToolStripMenuItem.Image")));
+            this.sandblastingToolStripMenuItem.Name = "sandblastingToolStripMenuItem";
+            this.sandblastingToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
+            this.sandblastingToolStripMenuItem.Text = "Shortblasting";
+            this.sandblastingToolStripMenuItem.Click += new System.EventHandler(this.sandblastingToolStripMenuItem_Click);
+            // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
@@ -690,14 +710,6 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(239, 30);
             this.toolStripMenuItem1.Text = "Print Barcode";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // flittlingInspectionToolStripMenuItem
-            // 
-            this.flittlingInspectionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.flittlingInspectionToolStripMenuItem.Name = "flittlingInspectionToolStripMenuItem";
-            this.flittlingInspectionToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
-            this.flittlingInspectionToolStripMenuItem.Text = "Flittling Inspection";
-            this.flittlingInspectionToolStripMenuItem.Click += new System.EventHandler(this.flittlingInspectionToolStripMenuItem_Click);
             // 
             // List_Route_Card
             // 
@@ -775,5 +787,6 @@
         private System.Windows.Forms.Label label10;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
         private System.Windows.Forms.ToolStripMenuItem flittlingInspectionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sandblastingToolStripMenuItem;
     }
 }

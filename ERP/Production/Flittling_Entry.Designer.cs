@@ -173,6 +173,7 @@ namespace CRM_App.Production
             this.label30.Size = new System.Drawing.Size(183, 19);
             this.label30.TabIndex = 299;
             this.label30.Text = "Balance Production Qty  :";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // Employee_Name
             // 
@@ -185,6 +186,7 @@ namespace CRM_App.Production
             this.Employee_Name.Name = "Employee_Name";
             this.Employee_Name.Size = new System.Drawing.Size(156, 27);
             this.Employee_Name.TabIndex = 296;
+            this.Employee_Name.SelectedIndexChanged += new System.EventHandler(this.Employee_Name_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -196,6 +198,7 @@ namespace CRM_App.Production
             this.textBox1.Size = new System.Drawing.Size(141, 26);
             this.textBox1.TabIndex = 295;
             this.textBox1.Visible = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtxplanQty
             // 
@@ -207,6 +210,7 @@ namespace CRM_App.Production
             this.txtxplanQty.Name = "txtxplanQty";
             this.txtxplanQty.Size = new System.Drawing.Size(210, 26);
             this.txtxplanQty.TabIndex = 280;
+            this.txtxplanQty.TextChanged += new System.EventHandler(this.txtxplanQty_TextChanged);
             // 
             // label15
             // 
@@ -217,6 +221,7 @@ namespace CRM_App.Production
             this.label15.Size = new System.Drawing.Size(74, 19);
             this.label15.TabIndex = 281;
             this.label15.Text = "Plan Qty :";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label29
             // 
@@ -229,6 +234,7 @@ namespace CRM_App.Production
             this.label29.Size = new System.Drawing.Size(121, 19);
             this.label29.TabIndex = 287;
             this.label29.Text = "Production Qty :";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label18
             // 
@@ -240,6 +246,7 @@ namespace CRM_App.Production
             this.label18.Size = new System.Drawing.Size(173, 22);
             this.label18.TabIndex = 285;
             this.label18.Text = "Production Details";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label32
             // 
@@ -250,6 +257,7 @@ namespace CRM_App.Production
             this.label32.Size = new System.Drawing.Size(127, 19);
             this.label32.TabIndex = 294;
             this.label32.Text = "Inspector Name :";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // label23
             // 
@@ -262,6 +270,7 @@ namespace CRM_App.Production
             this.label23.Size = new System.Drawing.Size(97, 19);
             this.label23.TabIndex = 286;
             this.label23.Text = "Grand Total";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // lbl_Prod_Qty
             // 
@@ -274,6 +283,7 @@ namespace CRM_App.Production
             this.lbl_Prod_Qty.Size = new System.Drawing.Size(18, 19);
             this.lbl_Prod_Qty.TabIndex = 288;
             this.lbl_Prod_Qty.Text = "0";
+            this.lbl_Prod_Qty.Click += new System.EventHandler(this.lbl_Prod_Qty_Click);
             // 
             // PD_Date
             // 
@@ -283,6 +293,7 @@ namespace CRM_App.Production
             this.PD_Date.Name = "PD_Date";
             this.PD_Date.Size = new System.Drawing.Size(133, 26);
             this.PD_Date.TabIndex = 293;
+            this.PD_Date.ValueChanged += new System.EventHandler(this.PD_Date_ValueChanged);
             // 
             // Shift
             // 
@@ -295,6 +306,7 @@ namespace CRM_App.Production
             this.Shift.Name = "Shift";
             this.Shift.Size = new System.Drawing.Size(84, 27);
             this.Shift.TabIndex = 290;
+            this.Shift.SelectedIndexChanged += new System.EventHandler(this.Shift_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -308,6 +320,7 @@ namespace CRM_App.Production
             this.label22.TabIndex = 287;
             this.label22.Text = "Rejection Quantity(Nos)";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label20
             // 
@@ -320,6 +333,7 @@ namespace CRM_App.Production
             this.label20.TabIndex = 285;
             this.label20.Text = "Shift In-charge Name";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label21
             // 
@@ -334,6 +348,7 @@ namespace CRM_App.Production
             this.label21.TabIndex = 286;
             this.label21.Text = "OK Quantity(Nos)";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label19
             // 
@@ -346,6 +361,7 @@ namespace CRM_App.Production
             this.label19.Size = new System.Drawing.Size(112, 18);
             this.label19.TabIndex = 285;
             this.label19.Text = "Shift Details";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label16
             // 
@@ -356,6 +372,7 @@ namespace CRM_App.Production
             this.label16.Size = new System.Drawing.Size(52, 19);
             this.label16.TabIndex = 289;
             this.label16.Text = "Shift  :";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // PD_Reject_Qty
             // 
@@ -378,6 +395,7 @@ namespace CRM_App.Production
             this.label14.Size = new System.Drawing.Size(86, 19);
             this.label14.TabIndex = 286;
             this.label14.Text = "Reject Qty :";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // PD_OK_Qty
             // 
@@ -388,6 +406,7 @@ namespace CRM_App.Production
             this.PD_OK_Qty.Name = "PD_OK_Qty";
             this.PD_OK_Qty.Size = new System.Drawing.Size(80, 26);
             this.PD_OK_Qty.TabIndex = 285;
+            this.PD_OK_Qty.TextChanged += new System.EventHandler(this.PD_OK_Qty_TextChanged);
             this.PD_OK_Qty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PD_OK_Qty_KeyPress);
             // 
             // label13
@@ -399,6 +418,7 @@ namespace CRM_App.Production
             this.label13.Size = new System.Drawing.Size(64, 19);
             this.label13.TabIndex = 284;
             this.label13.Text = "OK Qty :";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // PD_CreatedBy
             // 
@@ -410,6 +430,7 @@ namespace CRM_App.Production
             this.PD_CreatedBy.Name = "PD_CreatedBy";
             this.PD_CreatedBy.Size = new System.Drawing.Size(134, 26);
             this.PD_CreatedBy.TabIndex = 283;
+            this.PD_CreatedBy.TextChanged += new System.EventHandler(this.PD_CreatedBy_TextChanged);
             // 
             // label11
             // 
@@ -420,6 +441,7 @@ namespace CRM_App.Production
             this.label11.Size = new System.Drawing.Size(49, 19);
             this.label11.TabIndex = 282;
             this.label11.Text = "User :";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel1
             // 
@@ -435,6 +457,7 @@ namespace CRM_App.Production
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1356, 33);
             this.panel1.TabIndex = 283;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label10
             // 
@@ -445,6 +468,7 @@ namespace CRM_App.Production
             this.label10.Size = new System.Drawing.Size(49, 19);
             this.label10.TabIndex = 280;
             this.label10.Text = "Date :";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtStartDate
             // 
@@ -456,6 +480,7 @@ namespace CRM_App.Production
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.Size = new System.Drawing.Size(210, 26);
             this.txtStartDate.TabIndex = 278;
+            this.txtStartDate.TextChanged += new System.EventHandler(this.txtStartDate_TextChanged);
             // 
             // txtPartNo
             // 
@@ -467,6 +492,7 @@ namespace CRM_App.Production
             this.txtPartNo.Name = "txtPartNo";
             this.txtPartNo.Size = new System.Drawing.Size(315, 26);
             this.txtPartNo.TabIndex = 277;
+            this.txtPartNo.TextChanged += new System.EventHandler(this.txtPartNo_TextChanged);
             // 
             // Pq_dRevDate
             // 
@@ -480,6 +506,7 @@ namespace CRM_App.Production
             this.Pq_dRevDate.TabIndex = 17;
             this.Pq_dRevDate.Text = "02.01.2016";
             this.Pq_dRevDate.Visible = false;
+            this.Pq_dRevDate.TextChanged += new System.EventHandler(this.Pq_dRevDate_TextChanged);
             // 
             // Pq_RequestNo
             // 
@@ -492,6 +519,7 @@ namespace CRM_App.Production
             this.Pq_RequestNo.Size = new System.Drawing.Size(209, 26);
             this.Pq_RequestNo.TabIndex = 12;
             this.Pq_RequestNo.Visible = false;
+            this.Pq_RequestNo.TextChanged += new System.EventHandler(this.Pq_RequestNo_TextChanged);
             // 
             // label12
             // 
@@ -503,6 +531,7 @@ namespace CRM_App.Production
             this.label12.TabIndex = 276;
             this.label12.Text = "Req No :";
             this.label12.Visible = false;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // Pq_vRevNo
             // 
@@ -516,6 +545,7 @@ namespace CRM_App.Production
             this.Pq_vRevNo.TabIndex = 16;
             this.Pq_vRevNo.Text = "01";
             this.Pq_vRevNo.Visible = false;
+            this.Pq_vRevNo.TextChanged += new System.EventHandler(this.Pq_vRevNo_TextChanged);
             // 
             // label9
             // 
@@ -528,6 +558,7 @@ namespace CRM_App.Production
             this.label9.TabIndex = 270;
             this.label9.Text = "Rev No :";
             this.label9.Visible = false;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // Pq_vDocNo
             // 
@@ -541,6 +572,7 @@ namespace CRM_App.Production
             this.Pq_vDocNo.TabIndex = 15;
             this.Pq_vDocNo.Text = "F/PRD/07";
             this.Pq_vDocNo.Visible = false;
+            this.Pq_vDocNo.TextChanged += new System.EventHandler(this.Pq_vDocNo_TextChanged);
             // 
             // label6
             // 
@@ -553,6 +585,7 @@ namespace CRM_App.Production
             this.label6.TabIndex = 266;
             this.label6.Text = "Doc No :";
             this.label6.Visible = false;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -565,6 +598,7 @@ namespace CRM_App.Production
             this.label7.TabIndex = 267;
             this.label7.Text = "Rev Date :";
             this.label7.Visible = false;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtRCNo
             // 
@@ -576,6 +610,7 @@ namespace CRM_App.Production
             this.txtRCNo.Name = "txtRCNo";
             this.txtRCNo.Size = new System.Drawing.Size(210, 26);
             this.txtRCNo.TabIndex = 13;
+            this.txtRCNo.TextChanged += new System.EventHandler(this.txtRCNo_TextChanged);
             // 
             // label2
             // 
@@ -586,6 +621,7 @@ namespace CRM_App.Production
             this.label2.Size = new System.Drawing.Size(119, 19);
             this.label2.TabIndex = 262;
             this.label2.Text = "Route Card No :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -596,6 +632,7 @@ namespace CRM_App.Production
             this.label4.Size = new System.Drawing.Size(86, 19);
             this.label4.TabIndex = 263;
             this.label4.Text = "Start Date :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtModel
             // 
@@ -607,6 +644,7 @@ namespace CRM_App.Production
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(315, 26);
             this.txtModel.TabIndex = 4;
+            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
             // 
             // txtPartName
             // 
@@ -618,6 +656,7 @@ namespace CRM_App.Production
             this.txtPartName.Name = "txtPartName";
             this.txtPartName.Size = new System.Drawing.Size(315, 26);
             this.txtPartName.TabIndex = 3;
+            this.txtPartName.TextChanged += new System.EventHandler(this.txtPartName_TextChanged);
             // 
             // label1
             // 
@@ -628,6 +667,7 @@ namespace CRM_App.Production
             this.label1.Size = new System.Drawing.Size(70, 19);
             this.label1.TabIndex = 255;
             this.label1.Text = "Part No :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -638,6 +678,7 @@ namespace CRM_App.Production
             this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 256;
             this.label3.Text = "Part Name :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label8
             // 
@@ -648,6 +689,7 @@ namespace CRM_App.Production
             this.label8.Size = new System.Drawing.Size(60, 19);
             this.label8.TabIndex = 257;
             this.label8.Text = "Model :";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label64
             // 
@@ -659,6 +701,7 @@ namespace CRM_App.Production
             this.label64.Size = new System.Drawing.Size(22, 25);
             this.label64.TabIndex = 258;
             this.label64.Text = "*";
+            this.label64.Click += new System.EventHandler(this.label64_Click);
             // 
             // label65
             // 
@@ -670,6 +713,7 @@ namespace CRM_App.Production
             this.label65.Size = new System.Drawing.Size(22, 25);
             this.label65.TabIndex = 259;
             this.label65.Text = "*";
+            this.label65.Click += new System.EventHandler(this.label65_Click);
             // 
             // panel7
             // 
@@ -678,6 +722,7 @@ namespace CRM_App.Production
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(12, 13);
             this.panel7.TabIndex = 3;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // label5
             // 
@@ -686,9 +731,10 @@ namespace CRM_App.Production
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(23, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 19);
+            this.label5.Size = new System.Drawing.Size(164, 19);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Flittling Entry Details";
+            this.label5.Text = "Fettling Entry Details";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel8
             // 
@@ -699,6 +745,7 @@ namespace CRM_App.Production
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1353, 2);
             this.panel8.TabIndex = 1;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label31
             // 
@@ -711,6 +758,7 @@ namespace CRM_App.Production
             this.label31.Size = new System.Drawing.Size(18, 19);
             this.label31.TabIndex = 300;
             this.label31.Text = "0";
+            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // panel9
             // 
@@ -726,6 +774,7 @@ namespace CRM_App.Production
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(994, 36);
             this.panel9.TabIndex = 287;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // dataGridView3
             // 
@@ -737,6 +786,7 @@ namespace CRM_App.Production
             this.dataGridView3.Size = new System.Drawing.Size(272, 103);
             this.dataGridView3.TabIndex = 298;
             this.dataGridView3.Visible = false;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // aci_vCardNo1
             // 
@@ -746,6 +796,7 @@ namespace CRM_App.Production
             this.aci_vCardNo1.Size = new System.Drawing.Size(312, 41);
             this.aci_vCardNo1.TabIndex = 382;
             this.aci_vCardNo1.Visible = false;
+            this.aci_vCardNo1.TextChanged += new System.EventHandler(this.aci_vCardNo1_TextChanged);
             this.aci_vCardNo1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.aci_vCardNo1_KeyUp);
             // 
             // panel5
@@ -769,6 +820,7 @@ namespace CRM_App.Production
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(735, 331);
             this.panel5.TabIndex = 300;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // button13
             // 
@@ -781,6 +833,7 @@ namespace CRM_App.Production
             this.button13.TabIndex = 315;
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -805,6 +858,7 @@ namespace CRM_App.Production
             this.ROTSTATUS.TabIndex = 312;
             this.ROTSTATUS.Text = "F";
             this.ROTSTATUS.Visible = false;
+            this.ROTSTATUS.TextChanged += new System.EventHandler(this.ROTSTATUS_TextChanged);
             // 
             // panel12
             // 
@@ -820,6 +874,7 @@ namespace CRM_App.Production
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(727, 28);
             this.panel12.TabIndex = 311;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             // 
             // textBoxX1
             // 
@@ -834,6 +889,7 @@ namespace CRM_App.Production
             this.textBoxX1.TabIndex = 5;
             this.textBoxX1.WatermarkColor = System.Drawing.Color.Gray;
             this.textBoxX1.WatermarkText = "Search";
+            this.textBoxX1.TextChanged += new System.EventHandler(this.textBoxX1_TextChanged);
             // 
             // panel13
             // 
@@ -844,6 +900,7 @@ namespace CRM_App.Production
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(17, 13);
             this.panel13.TabIndex = 16;
+            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
             // 
             // button7
             // 
@@ -860,6 +917,7 @@ namespace CRM_App.Production
             this.button7.TabIndex = 8;
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label40
             // 
@@ -870,6 +928,7 @@ namespace CRM_App.Production
             this.label40.Size = new System.Drawing.Size(56, 19);
             this.label40.TabIndex = 10;
             this.label40.Text = "Search";
+            this.label40.Click += new System.EventHandler(this.label40_Click);
             // 
             // button5
             // 
@@ -888,6 +947,7 @@ namespace CRM_App.Production
             this.button5.Text = "&Delete";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button6
             // 
@@ -934,6 +994,7 @@ namespace CRM_App.Production
             this.dateTimePicker1.Size = new System.Drawing.Size(164, 26);
             this.dateTimePicker1.TabIndex = 310;
             this.dateTimePicker1.Visible = false;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // button11
             // 
@@ -963,6 +1024,7 @@ namespace CRM_App.Production
             this.label39.Size = new System.Drawing.Size(40, 19);
             this.label39.TabIndex = 308;
             this.label39.Text = "Qty :";
+            this.label39.Click += new System.EventHandler(this.label39_Click);
             // 
             // dataGridView4
             // 
@@ -977,6 +1039,7 @@ namespace CRM_App.Production
             this.dataGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView4.Size = new System.Drawing.Size(723, 145);
             this.dataGridView4.TabIndex = 307;
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // panel11
             // 
@@ -985,6 +1048,7 @@ namespace CRM_App.Production
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(12, 13);
             this.panel11.TabIndex = 306;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // label38
             // 
@@ -996,6 +1060,7 @@ namespace CRM_App.Production
             this.label38.Size = new System.Drawing.Size(123, 19);
             this.label38.TabIndex = 305;
             this.label38.Text = "Rejection Entry";
+            this.label38.Click += new System.EventHandler(this.label38_Click);
             // 
             // panel10
             // 
@@ -1006,6 +1071,7 @@ namespace CRM_App.Production
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(724, 2);
             this.panel10.TabIndex = 304;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
             // button12
             // 
@@ -1034,6 +1100,7 @@ namespace CRM_App.Production
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(104, 26);
             this.textBox2.TabIndex = 294;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label37
             // 
@@ -1044,6 +1111,7 @@ namespace CRM_App.Production
             this.label37.Size = new System.Drawing.Size(125, 19);
             this.label37.TabIndex = 303;
             this.label37.Text = "Rejection Name :";
+            this.label37.Click += new System.EventHandler(this.label37_Click);
             // 
             // Rejection
             // 
@@ -1053,6 +1121,7 @@ namespace CRM_App.Production
             this.Rejection.Name = "Rejection";
             this.Rejection.Size = new System.Drawing.Size(197, 27);
             this.Rejection.TabIndex = 302;
+            this.Rejection.SelectedIndexChanged += new System.EventHandler(this.Rejection_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -1067,6 +1136,7 @@ namespace CRM_App.Production
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1356, 70);
             this.panel2.TabIndex = 284;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel4
             // 
@@ -1080,6 +1150,7 @@ namespace CRM_App.Production
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(994, 36);
             this.panel4.TabIndex = 286;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // dataGridView2
             // 
@@ -1091,6 +1162,7 @@ namespace CRM_App.Production
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(392, 52);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // textBox3
             // 
@@ -1098,6 +1170,7 @@ namespace CRM_App.Production
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 26);
             this.textBox3.TabIndex = 383;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // groupBox2
             // 
@@ -1111,8 +1184,9 @@ namespace CRM_App.Production
             this.groupBox2.Size = new System.Drawing.Size(404, 118);
             this.groupBox2.TabIndex = 285;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Flittling Entry Details";
+            this.groupBox2.Text = "Fettling Entry Details";
             this.groupBox2.Visible = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button2
             // 
@@ -1159,6 +1233,7 @@ namespace CRM_App.Production
             this.textBox5.Size = new System.Drawing.Size(100, 26);
             this.textBox5.TabIndex = 393;
             this.textBox5.Text = "0";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
@@ -1167,6 +1242,7 @@ namespace CRM_App.Production
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 392;
             this.textBox4.Text = "0";
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label35
             // 
@@ -1177,6 +1253,7 @@ namespace CRM_App.Production
             this.label35.Size = new System.Drawing.Size(102, 19);
             this.label35.TabIndex = 391;
             this.label35.Text = "Scanned Qty :";
+            this.label35.Click += new System.EventHandler(this.label35_Click);
             // 
             // textBox6
             // 
@@ -1184,6 +1261,7 @@ namespace CRM_App.Production
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 26);
             this.textBox6.TabIndex = 390;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // prod_ok
             // 
@@ -1191,6 +1269,7 @@ namespace CRM_App.Production
             this.prod_ok.Name = "prod_ok";
             this.prod_ok.Size = new System.Drawing.Size(100, 26);
             this.prod_ok.TabIndex = 385;
+            this.prod_ok.TextChanged += new System.EventHandler(this.prod_ok_TextChanged);
             // 
             // button15
             // 
@@ -1208,6 +1287,7 @@ namespace CRM_App.Production
             this.prod_rej.Name = "prod_rej";
             this.prod_rej.Size = new System.Drawing.Size(100, 26);
             this.prod_rej.TabIndex = 386;
+            this.prod_rej.TextChanged += new System.EventHandler(this.prod_rej_TextChanged);
             // 
             // label33
             // 
@@ -1218,6 +1298,7 @@ namespace CRM_App.Production
             this.label33.Size = new System.Drawing.Size(64, 19);
             this.label33.TabIndex = 387;
             this.label33.Text = "OK Qty :";
+            this.label33.Click += new System.EventHandler(this.label33_Click);
             // 
             // label34
             // 
@@ -1228,6 +1309,7 @@ namespace CRM_App.Production
             this.label34.Size = new System.Drawing.Size(66, 19);
             this.label34.TabIndex = 388;
             this.label34.Text = "Rej Qty :";
+            this.label34.Click += new System.EventHandler(this.label34_Click);
             // 
             // panel3
             // 
@@ -1245,6 +1327,7 @@ namespace CRM_App.Production
             this.panel3.Size = new System.Drawing.Size(282, 129);
             this.panel3.TabIndex = 384;
             this.panel3.Visible = false;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label36
             // 
@@ -1253,9 +1336,10 @@ namespace CRM_App.Production
             this.label36.ForeColor = System.Drawing.Color.Brown;
             this.label36.Location = new System.Drawing.Point(10, 8);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(201, 19);
+            this.label36.Size = new System.Drawing.Size(142, 19);
             this.label36.TabIndex = 286;
-            this.label36.Text = "Edit Final Inspection Details";
+            this.label36.Text = "Edit Fettling Details";
+            this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
             // dataGridView5
             // 
@@ -1278,6 +1362,7 @@ namespace CRM_App.Production
             this.label41.Size = new System.Drawing.Size(59, 19);
             this.label41.TabIndex = 297;
             this.label41.Text = "Status :";
+            this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // comboBox1
             // 
@@ -1304,6 +1389,7 @@ namespace CRM_App.Production
             this.panel14.Size = new System.Drawing.Size(626, 225);
             this.panel14.TabIndex = 385;
             this.panel14.Visible = false;
+            this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // button16
             // 
@@ -1381,6 +1467,7 @@ namespace CRM_App.Production
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1364, 749);
             this.panel6.TabIndex = 2;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // dataGridView1
             // 
@@ -1405,6 +1492,7 @@ namespace CRM_App.Production
             this.label28.Size = new System.Drawing.Size(18, 19);
             this.label28.TabIndex = 297;
             this.label28.Text = "0";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label27
             // 
@@ -1417,6 +1505,7 @@ namespace CRM_App.Production
             this.label27.Size = new System.Drawing.Size(18, 19);
             this.label27.TabIndex = 296;
             this.label27.Text = "0";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // label26
             // 
@@ -1429,6 +1518,7 @@ namespace CRM_App.Production
             this.label26.Size = new System.Drawing.Size(18, 19);
             this.label26.TabIndex = 294;
             this.label26.Text = "0";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // label25
             // 
@@ -1440,6 +1530,7 @@ namespace CRM_App.Production
             this.label25.Size = new System.Drawing.Size(158, 19);
             this.label25.TabIndex = 295;
             this.label25.Text = "Total Inspection Qty  :";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label24
             // 
@@ -1451,6 +1542,7 @@ namespace CRM_App.Production
             this.label24.Size = new System.Drawing.Size(146, 19);
             this.label24.TabIndex = 293;
             this.label24.Text = "Total Rejection Qty :";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // label17
             // 
@@ -1462,6 +1554,7 @@ namespace CRM_App.Production
             this.label17.Size = new System.Drawing.Size(102, 19);
             this.label17.TabIndex = 292;
             this.label17.Text = "Total OK Qty :";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // groupBox1
             // 
@@ -1492,6 +1585,7 @@ namespace CRM_App.Production
             this.groupBox1.TabIndex = 279;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Production Details";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button4
             // 
@@ -1508,6 +1602,7 @@ namespace CRM_App.Production
             this.button4.Text = "Update &Inspection";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
@@ -1522,7 +1617,7 @@ namespace CRM_App.Production
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 29);
             this.button1.TabIndex = 291;
-            this.button1.Text = "&Inspection";
+            this.button1.Text = "&Save";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -1545,6 +1640,7 @@ namespace CRM_App.Production
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -1564,6 +1660,7 @@ namespace CRM_App.Production
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -1583,6 +1680,7 @@ namespace CRM_App.Production
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Visible = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnsave
             // 
@@ -1600,6 +1698,7 @@ namespace CRM_App.Production
             this.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnsave.UseVisualStyleBackColor = true;
             this.btnsave.Visible = false;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // button10
             // 
