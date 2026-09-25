@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RM_Master));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.IM_aoe = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.IM_Color = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -94,8 +96,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.IM_aoe = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -120,7 +120,10 @@
             this.panel6.Controls.Add(this.IM_RMSource);
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.label19);
+            this.panel6.Controls.Add(this.IM_Supplier);
+            this.panel6.Controls.Add(this.label63);
             this.panel6.Controls.Add(this.label14);
+            this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.IM_Mate_Standard);
             this.panel6.Controls.Add(this.comboBox1);
             this.panel6.Controls.Add(this.label5);
@@ -133,14 +136,12 @@
             this.panel6.Controls.Add(this.label77);
             this.panel6.Controls.Add(this.IM_PartNo);
             this.panel6.Controls.Add(this.IM_PartName);
-            this.panel6.Controls.Add(this.IM_Supplier);
             this.panel6.Controls.Add(this.IM_Currency);
             this.panel6.Controls.Add(this.IM_UOM);
             this.panel6.Controls.Add(this.IM_Sales_Price);
             this.panel6.Controls.Add(this.IM_Dealer);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.label12);
-            this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.label8);
@@ -149,7 +150,6 @@
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.label67);
             this.panel6.Controls.Add(this.label66);
-            this.panel6.Controls.Add(this.label63);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.label21);
@@ -165,12 +165,31 @@
             this.panel6.TabIndex = 0;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel6_Paint);
             // 
+            // IM_aoe
+            // 
+            this.IM_aoe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.IM_aoe.FormattingEnabled = true;
+            this.IM_aoe.Location = new System.Drawing.Point(698, 72);
+            this.IM_aoe.Name = "IM_aoe";
+            this.IM_aoe.Size = new System.Drawing.Size(95, 27);
+            this.IM_aoe.TabIndex = 318;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(651, 75);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(41, 19);
+            this.label25.TabIndex = 319;
+            this.label25.Text = "WE :";
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(23, 100);
+            this.label24.Location = new System.Drawing.Point(23, 72);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(22, 25);
             this.label24.TabIndex = 316;
@@ -181,7 +200,7 @@
             // 
             this.IM_Color.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IM_Color.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IM_Color.Location = new System.Drawing.Point(299, 138);
+            this.IM_Color.Location = new System.Drawing.Point(299, 110);
             this.IM_Color.Name = "IM_Color";
             this.IM_Color.Size = new System.Drawing.Size(103, 26);
             this.IM_Color.TabIndex = 314;
@@ -190,7 +209,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(241, 142);
+            this.label23.Location = new System.Drawing.Point(241, 114);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(55, 19);
             this.label23.TabIndex = 315;
@@ -240,7 +259,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(29, 71);
+            this.label20.Location = new System.Drawing.Point(29, 43);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(22, 25);
             this.label20.TabIndex = 308;
@@ -251,7 +270,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(38, 39);
+            this.label19.Location = new System.Drawing.Point(38, 11);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(22, 25);
             this.label19.TabIndex = 307;
@@ -272,7 +291,7 @@
             // 
             this.IM_Mate_Standard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IM_Mate_Standard.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IM_Mate_Standard.Location = new System.Drawing.Point(133, 105);
+            this.IM_Mate_Standard.Location = new System.Drawing.Point(133, 77);
             this.IM_Mate_Standard.Name = "IM_Mate_Standard";
             this.IM_Mate_Standard.Size = new System.Drawing.Size(269, 26);
             this.IM_Mate_Standard.TabIndex = 3;
@@ -356,7 +375,7 @@
             // 
             this.IM_HSNCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IM_HSNCode.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IM_HSNCode.Location = new System.Drawing.Point(134, 139);
+            this.IM_HSNCode.Location = new System.Drawing.Point(134, 111);
             this.IM_HSNCode.Name = "IM_HSNCode";
             this.IM_HSNCode.Size = new System.Drawing.Size(106, 26);
             this.IM_HSNCode.TabIndex = 4;
@@ -365,7 +384,7 @@
             // 
             this.label77.AutoSize = true;
             this.label77.ForeColor = System.Drawing.Color.Black;
-            this.label77.Location = new System.Drawing.Point(47, 143);
+            this.label77.Location = new System.Drawing.Point(47, 115);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(86, 19);
             this.label77.TabIndex = 295;
@@ -375,7 +394,7 @@
             // 
             this.IM_PartNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IM_PartNo.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IM_PartNo.Location = new System.Drawing.Point(133, 40);
+            this.IM_PartNo.Location = new System.Drawing.Point(133, 12);
             this.IM_PartNo.Name = "IM_PartNo";
             this.IM_PartNo.Size = new System.Drawing.Size(269, 26);
             this.IM_PartNo.TabIndex = 1;
@@ -384,7 +403,7 @@
             // 
             this.IM_PartName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IM_PartName.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IM_PartName.Location = new System.Drawing.Point(133, 72);
+            this.IM_PartName.Location = new System.Drawing.Point(133, 44);
             this.IM_PartName.Name = "IM_PartName";
             this.IM_PartName.Size = new System.Drawing.Size(269, 26);
             this.IM_PartName.TabIndex = 2;
@@ -392,10 +411,11 @@
             // IM_Supplier
             // 
             this.IM_Supplier.FormattingEnabled = true;
-            this.IM_Supplier.Location = new System.Drawing.Point(133, 7);
+            this.IM_Supplier.Location = new System.Drawing.Point(134, 143);
             this.IM_Supplier.Name = "IM_Supplier";
             this.IM_Supplier.Size = new System.Drawing.Size(269, 27);
             this.IM_Supplier.TabIndex = 0;
+            this.IM_Supplier.Visible = false;
             // 
             // IM_Currency
             // 
@@ -458,17 +478,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(58, 10);
+            this.label6.Location = new System.Drawing.Point(59, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 19);
             this.label6.TabIndex = 278;
             this.label6.Text = "Supplier :";
+            this.label6.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(57, 42);
+            this.label1.Location = new System.Drawing.Point(57, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 19);
             this.label1.TabIndex = 283;
@@ -479,7 +500,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(47, 75);
+            this.label3.Location = new System.Drawing.Point(47, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 19);
             this.label3.TabIndex = 284;
@@ -489,7 +510,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(41, 107);
+            this.label8.Location = new System.Drawing.Point(41, 79);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 19);
             this.label8.TabIndex = 285;
@@ -553,11 +574,12 @@
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.Red;
-            this.label63.Location = new System.Drawing.Point(38, 7);
+            this.label63.Location = new System.Drawing.Point(39, 143);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(22, 25);
             this.label63.TabIndex = 291;
             this.label63.Text = "*";
+            this.label63.Visible = false;
             // 
             // label10
             // 
@@ -585,7 +607,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(31, 137);
+            this.label21.Location = new System.Drawing.Point(31, 109);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(22, 25);
             this.label21.TabIndex = 309;
@@ -901,25 +923,6 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(39, 17);
             this.txtStatus.Text = "Ready";
-            // 
-            // IM_aoe
-            // 
-            this.IM_aoe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.IM_aoe.FormattingEnabled = true;
-            this.IM_aoe.Location = new System.Drawing.Point(698, 72);
-            this.IM_aoe.Name = "IM_aoe";
-            this.IM_aoe.Size = new System.Drawing.Size(95, 27);
-            this.IM_aoe.TabIndex = 318;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(635, 76);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(62, 19);
-            this.label25.TabIndex = 319;
-            this.label25.Text = "AS/OE :";
             // 
             // RM_Master
             // 

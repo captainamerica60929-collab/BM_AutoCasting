@@ -55,6 +55,12 @@ namespace LarchERP.Master
 
         private void ItemMaster_Load(object sender, EventArgs e)
         {
+
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Height = 30;
+
+            panel6.Dock = DockStyle.Fill;
+
             ArrowButton.Visible = true;
             MLD_Mold.Focus();
 
@@ -298,6 +304,7 @@ namespace LarchERP.Master
                 com.Parameters.Add("@MLD_Core_Cavity_Material", SqlDbType.VarChar).Value = "";//MLD_Core_Cavity_Material.Text.ToString();
                 com.Parameters.Add("@MLD_isCretical_Mould", SqlDbType.VarChar).Value = "";//MLD_isCretical_Mould.Text.ToString();
                 com.Parameters.Add("@MLD_itc", SqlDbType.VarChar).Value = mld_itc.Text.ToString();
+                com.Parameters.Add("@MLD_Approvaldatetype", SqlDbType.VarChar).Value = comboBox1.Text.ToString();
                 com.Parameters.Add("@MLD_Frequency", SqlDbType.Int).Value = Convert.ToInt32(MLD_Frequency.Text);
 
 
@@ -359,7 +366,7 @@ namespace LarchERP.Master
                 com.Parameters.Add("@MLD_isCretical_Mould", SqlDbType.VarChar).Value = ""; //MLD_isCretical_Mould.Text.ToString();
                 com.Parameters.Add("@MLD_itc", SqlDbType.VarChar).Value = mld_itc.Text.ToString();
                 com.Parameters.Add("@MLD_Frequency", SqlDbType.Int).Value = Convert.ToInt32(MLD_Frequency.Text);
-
+                com.Parameters.Add("@MLD_Approvaldatetype", SqlDbType.VarChar).Value = comboBox1.Text.ToString();
 
 
 
@@ -405,6 +412,7 @@ namespace LarchERP.Master
                 MLD_OpeningShots.Text = dt.Rows[0]["MLD_OpeningShots"].ToString();
                 MLD_MouldCost.Text = dt.Rows[0]["MLD_MouldCost"].ToString();
                 MLD_Cycle_Time.Text = dt.Rows[0]["MLD_Cycle_Time"].ToString();
+                comboBox1.Text = dt.Rows[0]["MLD_Approvaldatetype"].ToString();
 
                 MLD_Ejector_Type.Text = dt.Rows[0]["MLD_Ejector_Type"].ToString();
                 MLD_Mould_weight.Text = dt.Rows[0]["MLD_Mould_weight"].ToString();
@@ -486,8 +494,8 @@ namespace LarchERP.Master
             MLD_MoldType.Text = "";
             MLD_Core_Cavity_Material.Text = "";
             MLD_isCretical_Mould.Text = "";
-           // mld_itc.Text = "";
-
+            // mld_itc.Text = "";
+            comboBox1.Text = "";
             MLD_MoludReceived.Text = "";
             MLD_ISAR_Approval.Text = "";
             MLD_PPAP_Approval.Text = "";
@@ -702,6 +710,28 @@ namespace LarchERP.Master
         private void Panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "PRAP")
+            {
+                label11.Text = "PRAP Approval Date :";
+            }
+            else
+            {
+                label11.Text = "ISIR Approval Date :";
+            }
         }
     }
 }

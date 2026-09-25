@@ -135,12 +135,12 @@ namespace CRM_App.Master
         public bool Validate()
         {
                
-                if ((string.IsNullOrEmpty(IM_Supplier.Text.Trim())))
-                {
-                    ErrorMessage = "Supplier Should Not be Empty";
-                    IM_Supplier.Focus();
-                    return true;
-                }
+                //if ((string.IsNullOrEmpty(IM_Supplier.Text.Trim())))
+                //{
+                //    ErrorMessage = "Supplier Should Not be Empty";
+                //    IM_Supplier.Focus();
+                //    return true;
+                //}
 
                 if ((string.IsNullOrEmpty(IM_PartNo.Text.Trim())))
                 {
@@ -268,7 +268,7 @@ namespace CRM_App.Master
 
                 com.Parameters.Add("@IM_ID", SqlDbType.Int).Value = ID;
                 com.Parameters.Add("@IM_Type", SqlDbType.Int).Value ="3";
-                com.Parameters.Add("@IM_Supplier", SqlDbType.Int).Value = IM_Supplier.SelectedValue.ToString();
+                com.Parameters.Add("@IM_Supplier", SqlDbType.Int).Value = "1";//IM_Supplier.SelectedValue.ToString();
                 com.Parameters.Add("@IM_PartNo", SqlDbType.VarChar).Value = IM_PartNo.Text.ToString();
                 com.Parameters.Add("@IM_PartName", SqlDbType.VarChar).Value = IM_PartName.Text.ToString();
                 com.Parameters.Add("@IM_Mate_Standard", SqlDbType.VarChar).Value = IM_Mate_Standard.Text.ToString();
@@ -311,7 +311,7 @@ namespace CRM_App.Master
                 com.CommandType = CommandType.StoredProcedure;
                 com.CommandText = "pr_Insert_Item_Master_BO11";
                 com.Parameters.Add("@IM_Type", SqlDbType.Int).Value = "3";
-                com.Parameters.Add("@IM_Supplier", SqlDbType.Int).Value = IM_Supplier.SelectedValue.ToString();
+                com.Parameters.Add("@IM_Supplier", SqlDbType.Int).Value = "1";//IM_Supplier.SelectedValue.ToString();
                 com.Parameters.Add("@IM_PartNo", SqlDbType.VarChar).Value = IM_PartNo.Text.ToString();
                 com.Parameters.Add("@IM_PartName", SqlDbType.VarChar).Value = IM_PartName.Text.ToString();
                 com.Parameters.Add("@IM_Mate_Standard", SqlDbType.VarChar).Value = IM_Mate_Standard.Text.ToString();

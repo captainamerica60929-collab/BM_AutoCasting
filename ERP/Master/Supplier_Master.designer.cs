@@ -273,6 +273,7 @@
             this.SM_TINNo.Size = new System.Drawing.Size(266, 23);
             this.SM_TINNo.TabIndex = 13;
             this.SM_TINNo.TextChanged += new System.EventHandler(this.SM_TINNo_TextChanged);
+            this.SM_TINNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SM_TINNo_KeyDown);
             // 
             // SM_CSTNo
             // 
@@ -283,6 +284,7 @@
             this.SM_CSTNo.Size = new System.Drawing.Size(266, 23);
             this.SM_CSTNo.TabIndex = 14;
             this.SM_CSTNo.Enter += new System.EventHandler(this.CB_City_Enter);
+            this.SM_CSTNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SM_CSTNo_KeyDown);
             // 
             // SM_RangeAddr
             // 
@@ -723,7 +725,13 @@
             "Machine Supplier",
             "Fixed Assets",
             "Sub contractor",
-            "Consumables"});
+            "Consumables",
+            "Fixture Supplier",
+            "Tool Supplier",
+            "Guage Supplier",
+            "Calibration",
+            "Instrument",
+            "Others"});
             this.SM_SupType.Location = new System.Drawing.Point(125, 267);
             this.SM_SupType.Name = "SM_SupType";
             this.SM_SupType.Size = new System.Drawing.Size(252, 27);

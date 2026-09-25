@@ -204,6 +204,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\StateInfo.cs" />
     <Compile Include="Crystal\.Sandblasting_Inspection_Details.cs">
       <DependentUpon>.Sandblasting_Inspection_Details.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1327,7 +1328,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crystal\Flittling_Inspection_Details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Flittling_Inspection_Details.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Crystal\Maintanance\DC_Print_1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -856,9 +856,9 @@ namespace CRM_App.Production
             this.label36.ForeColor = System.Drawing.Color.Brown;
             this.label36.Location = new System.Drawing.Point(10, 8);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(183, 19);
+            this.label36.Size = new System.Drawing.Size(176, 19);
             this.label36.TabIndex = 286;
-            this.label36.Text = "Edit Shortblasting Details";
+            this.label36.Text = "Edit Shotblasting Details";
             // 
             // button16
             // 
@@ -1155,7 +1155,8 @@ namespace CRM_App.Production
             this.Shift.FormattingEnabled = true;
             this.Shift.Items.AddRange(new object[] {
             "Shift I",
-            "Shift II"});
+            "Shift II",
+            "Shift III"});
             this.Shift.Location = new System.Drawing.Point(437, 35);
             this.Shift.Name = "Shift";
             this.Shift.Size = new System.Drawing.Size(84, 27);
@@ -1594,9 +1595,9 @@ namespace CRM_App.Production
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(23, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 19);
+            this.label5.Size = new System.Drawing.Size(200, 19);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Shortblasting Entry Details";
+            this.label5.Text = "Shotblasting Entry Details";
             // 
             // panel8
             // 

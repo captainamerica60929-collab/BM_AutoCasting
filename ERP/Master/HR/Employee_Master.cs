@@ -188,7 +188,7 @@ namespace LarchERP.Master
                 com.Parameters.Add("@EM_Designation", SqlDbType.VarChar).Value = EM_Designation.Text.ToString();
                 com.Parameters.Add("@EM_Category", SqlDbType.VarChar).Value = EM_Category.Text.ToString();
                 com.Parameters.Add("@EM_DOB", SqlDbType.VarChar).Value = EM_DOB.Value.ToString("dd-MMM-yyyy");
-                com.Parameters.Add("@EM_DOJ", SqlDbType.VarChar).Value = EM_DOB.Value.ToString("dd-MMM-yyyy");
+                com.Parameters.Add("@EM_DOJ", SqlDbType.VarChar).Value = EM_DOJ.Value.ToString("dd-MMM-yyyy");
                 com.Parameters.Add("@EM_Branch", SqlDbType.VarChar).Value = EM_Branch.Text.ToString();
                 com.Parameters.Add("@EM_Address1", SqlDbType.VarChar).Value = EM_Address1.Text.ToString();
                 com.Parameters.Add("@EM_Address2", SqlDbType.VarChar).Value = EM_Address2.Text.ToString();
@@ -253,7 +253,7 @@ namespace LarchERP.Master
                 com.Parameters.Add("@EM_Designation", SqlDbType.VarChar).Value = EM_Designation.Text.ToString();
                 com.Parameters.Add("@EM_Category", SqlDbType.VarChar).Value = EM_Category.Text.ToString();
                 com.Parameters.Add("@EM_DOB", SqlDbType.VarChar).Value = EM_DOB.Value.ToString("dd-MMM-yyyy");
-                com.Parameters.Add("@EM_DOJ", SqlDbType.VarChar).Value = EM_DOB.Value.ToString("dd-MMM-yyyy");
+                com.Parameters.Add("@EM_DOJ", SqlDbType.VarChar).Value = EM_DOJ.Value.ToString("dd-MMM-yyyy");
                 com.Parameters.Add("@EM_Branch", SqlDbType.VarChar).Value = EM_Branch.Text.ToString();
                 com.Parameters.Add("@EM_Address1", SqlDbType.VarChar).Value = EM_Address1.Text.ToString();
                 com.Parameters.Add("@EM_Address2", SqlDbType.VarChar).Value = EM_Address2.Text.ToString();

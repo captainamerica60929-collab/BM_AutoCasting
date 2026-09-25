@@ -301,7 +301,8 @@ namespace CRM_App.Production
             this.Shift.FormattingEnabled = true;
             this.Shift.Items.AddRange(new object[] {
             "Shift I",
-            "Shift II"});
+            "Shift II",
+            "Shift III"});
             this.Shift.Location = new System.Drawing.Point(437, 35);
             this.Shift.Name = "Shift";
             this.Shift.Size = new System.Drawing.Size(84, 27);

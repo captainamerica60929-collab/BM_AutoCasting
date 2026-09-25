@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mold_Master));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.MLD_Machine_Tonage = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.MLD_Frequency = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
@@ -123,7 +124,8 @@
             this.txt_Rows = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
-            this.MLD_Machine_Tonage = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -141,13 +143,16 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1370, 165);
+            this.dataGridView1.Size = new System.Drawing.Size(1364, 161);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label41);
+            this.panel6.Controls.Add(this.comboBox1);
             this.panel6.Controls.Add(this.MLD_Machine_Tonage);
             this.panel6.Controls.Add(this.label39);
             this.panel6.Controls.Add(this.MLD_Frequency);
@@ -218,12 +223,19 @@
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label21);
             this.panel6.Controls.Add(this.label22);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1370, 304);
+            this.panel6.Size = new System.Drawing.Size(1364, 307);
             this.panel6.TabIndex = 1;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel6_Paint);
+            // 
+            // MLD_Machine_Tonage
+            // 
+            this.MLD_Machine_Tonage.FormattingEnabled = true;
+            this.MLD_Machine_Tonage.Location = new System.Drawing.Point(495, 268);
+            this.MLD_Machine_Tonage.Name = "MLD_Machine_Tonage";
+            this.MLD_Machine_Tonage.Size = new System.Drawing.Size(207, 27);
+            this.MLD_Machine_Tonage.TabIndex = 168;
             // 
             // label39
             // 
@@ -311,7 +323,7 @@
             // 
             this.MLD_LastPM.CustomFormat = "dd-MMM-yyyy";
             this.MLD_LastPM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MLD_LastPM.Location = new System.Drawing.Point(875, 228);
+            this.MLD_LastPM.Location = new System.Drawing.Point(875, 235);
             this.MLD_LastPM.Name = "MLD_LastPM";
             this.MLD_LastPM.Size = new System.Drawing.Size(225, 26);
             this.MLD_LastPM.TabIndex = 158;
@@ -320,7 +332,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(753, 231);
+            this.label35.Location = new System.Drawing.Point(759, 241);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(108, 19);
             this.label35.TabIndex = 159;
@@ -650,7 +662,7 @@
             // 
             this.MLD_SOPStart.CustomFormat = "dd-MMM-yyyy";
             this.MLD_SOPStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MLD_SOPStart.Location = new System.Drawing.Point(875, 196);
+            this.MLD_SOPStart.Location = new System.Drawing.Point(875, 203);
             this.MLD_SOPStart.Name = "MLD_SOPStart";
             this.MLD_SOPStart.Size = new System.Drawing.Size(225, 26);
             this.MLD_SOPStart.TabIndex = 22;
@@ -659,16 +671,17 @@
             // 
             this.MLD_PPAP_Approval.CustomFormat = "dd-MMM-yyyy";
             this.MLD_PPAP_Approval.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MLD_PPAP_Approval.Location = new System.Drawing.Point(875, 165);
+            this.MLD_PPAP_Approval.Location = new System.Drawing.Point(1138, 191);
             this.MLD_PPAP_Approval.Name = "MLD_PPAP_Approval";
             this.MLD_PPAP_Approval.Size = new System.Drawing.Size(225, 26);
             this.MLD_PPAP_Approval.TabIndex = 21;
+            this.MLD_PPAP_Approval.Visible = false;
             // 
             // MLD_ISAR_Approval
             // 
             this.MLD_ISAR_Approval.CustomFormat = "dd-MMM-yyyy";
             this.MLD_ISAR_Approval.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MLD_ISAR_Approval.Location = new System.Drawing.Point(875, 134);
+            this.MLD_ISAR_Approval.Location = new System.Drawing.Point(875, 168);
             this.MLD_ISAR_Approval.Name = "MLD_ISAR_Approval";
             this.MLD_ISAR_Approval.Size = new System.Drawing.Size(225, 26);
             this.MLD_ISAR_Approval.TabIndex = 20;
@@ -686,11 +699,12 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(713, 168);
+            this.label16.Location = new System.Drawing.Point(1108, 160);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(157, 19);
             this.label16.TabIndex = 111;
             this.label16.Text = "PPAP Approval Date :";
+            this.label16.Visible = false;
             // 
             // label15
             // 
@@ -716,11 +730,12 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(716, 137);
+            this.label11.Location = new System.Drawing.Point(720, 170);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(154, 19);
+            this.label11.Size = new System.Drawing.Size(149, 19);
             this.label11.TabIndex = 107;
-            this.label11.Text = "ISAR Approval Date :";
+            this.label11.Text = "ISIR Approval Date :";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
@@ -776,7 +791,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(753, 199);
+            this.label3.Location = new System.Drawing.Point(753, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 19);
             this.label3.TabIndex = 101;
@@ -802,7 +817,7 @@
             this.button10.ForeColor = System.Drawing.SystemColors.WindowText;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(1283, -1);
+            this.button10.Location = new System.Drawing.Point(1277, -1);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(81, 30);
             this.button10.TabIndex = 26;
@@ -831,7 +846,7 @@
             this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(1207, 1);
+            this.button8.Location = new System.Drawing.Point(1201, 1);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(74, 27);
             this.button8.TabIndex = 25;
@@ -849,7 +864,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(1100, 1);
+            this.button9.Location = new System.Drawing.Point(1094, 1);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 27);
             this.button9.TabIndex = 24;
@@ -884,7 +899,7 @@
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel8.Location = new System.Drawing.Point(5, 31);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1359, 2);
+            this.panel8.Size = new System.Drawing.Size(1353, 2);
             this.panel8.TabIndex = 1;
             // 
             // label13
@@ -1001,9 +1016,9 @@
             this.panel3.Controls.Add(this.btnEdit);
             this.panel3.Controls.Add(this.btnsave);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 304);
+            this.panel3.Location = new System.Drawing.Point(0, 324);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1370, 28);
+            this.panel3.Size = new System.Drawing.Size(1364, 34);
             this.panel3.TabIndex = 0;
             // 
             // radioButton2
@@ -1012,7 +1027,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(850, 2);
+            this.radioButton2.Location = new System.Drawing.Point(849, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(81, 23);
             this.radioButton2.TabIndex = 6;
@@ -1028,7 +1043,7 @@
             this.Radio_Active.AutoSize = true;
             this.Radio_Active.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Radio_Active.ForeColor = System.Drawing.Color.White;
-            this.Radio_Active.Location = new System.Drawing.Point(765, 2);
+            this.Radio_Active.Location = new System.Drawing.Point(764, 2);
             this.Radio_Active.Name = "Radio_Active";
             this.Radio_Active.Size = new System.Drawing.Size(69, 23);
             this.Radio_Active.TabIndex = 7;
@@ -1048,7 +1063,7 @@
             this.ArrowButton.ForeColor = System.Drawing.Color.White;
             this.ArrowButton.Image = ((System.Drawing.Image)(resources.GetObject("ArrowButton.Image")));
             this.ArrowButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ArrowButton.Location = new System.Drawing.Point(1337, 0);
+            this.ArrowButton.Location = new System.Drawing.Point(1336, 0);
             this.ArrowButton.Name = "ArrowButton";
             this.ArrowButton.Size = new System.Drawing.Size(30, 27);
             this.ArrowButton.TabIndex = 4;
@@ -1107,7 +1122,7 @@
             this.btnDisplay.ForeColor = System.Drawing.Color.White;
             this.btnDisplay.Image = ((System.Drawing.Image)(resources.GetObject("btnDisplay.Image")));
             this.btnDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDisplay.Location = new System.Drawing.Point(937, 0);
+            this.btnDisplay.Location = new System.Drawing.Point(936, 0);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(84, 27);
             this.btnDisplay.TabIndex = 5;
@@ -1136,7 +1151,7 @@
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(1268, 0);
+            this.btnClear.Location = new System.Drawing.Point(1267, 0);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(72, 27);
             this.btnClear.TabIndex = 3;
@@ -1155,7 +1170,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(1188, 0);
+            this.btnDelete.Location = new System.Drawing.Point(1187, 0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(79, 27);
             this.btnDelete.TabIndex = 2;
@@ -1174,7 +1189,7 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(1110, 0);
+            this.btnEdit.Location = new System.Drawing.Point(1109, 0);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(64, 27);
             this.btnEdit.TabIndex = 1;
@@ -1193,7 +1208,7 @@
             this.btnsave.ForeColor = System.Drawing.Color.White;
             this.btnsave.Image = ((System.Drawing.Image)(resources.GetObject("btnsave.Image")));
             this.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsave.Location = new System.Drawing.Point(1029, 0);
+            this.btnsave.Location = new System.Drawing.Point(1028, 0);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(81, 27);
             this.btnsave.TabIndex = 0;
@@ -1206,9 +1221,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.txtStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 501);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 523);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1370, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1364, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1238,8 +1253,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.label34);
             this.splitContainer1.Panel2.Controls.Add(this.MLD_Manufacturer);
             this.splitContainer1.Panel2.Controls.Add(this.label27);
-            this.splitContainer1.Size = new System.Drawing.Size(1370, 501);
-            this.splitContainer1.SplitterDistance = 332;
+            this.splitContainer1.Size = new System.Drawing.Size(1364, 523);
+            this.splitContainer1.SplitterDistance = 358;
             this.splitContainer1.TabIndex = 5;
             // 
             // txt_Rows
@@ -1248,7 +1263,7 @@
             this.txt_Rows.BackColor = System.Drawing.Color.Transparent;
             this.txt_Rows.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Rows.ForeColor = System.Drawing.Color.Blue;
-            this.txt_Rows.Location = new System.Drawing.Point(1174, 503);
+            this.txt_Rows.Location = new System.Drawing.Point(1174, 525);
             this.txt_Rows.Name = "txt_Rows";
             this.txt_Rows.Size = new System.Drawing.Size(196, 19);
             this.txt_Rows.TabIndex = 51;
@@ -1261,7 +1276,7 @@
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.Red;
-            this.label70.Location = new System.Drawing.Point(407, 502);
+            this.label70.Location = new System.Drawing.Point(407, 524);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(22, 25);
             this.label70.TabIndex = 248;
@@ -1273,26 +1288,42 @@
             this.label69.BackColor = System.Drawing.Color.Transparent;
             this.label69.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.Red;
-            this.label69.Location = new System.Drawing.Point(427, 502);
+            this.label69.Location = new System.Drawing.Point(427, 524);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(190, 19);
             this.label69.TabIndex = 247;
             this.label69.Text = "Are Mandatory";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // MLD_Machine_Tonage
+            // comboBox1
             // 
-            this.MLD_Machine_Tonage.FormattingEnabled = true;
-            this.MLD_Machine_Tonage.Location = new System.Drawing.Point(495, 268);
-            this.MLD_Machine_Tonage.Name = "MLD_Machine_Tonage";
-            this.MLD_Machine_Tonage.Size = new System.Drawing.Size(207, 27);
-            this.MLD_Machine_Tonage.TabIndex = 168;
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ISIR",
+            "PRAP"});
+            this.comboBox1.Location = new System.Drawing.Point(875, 133);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(225, 27);
+            this.comboBox1.TabIndex = 169;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Location = new System.Drawing.Point(748, 136);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(119, 19);
+            this.label41.TabIndex = 170;
+            this.label41.Text = "Approval Type :";
             // 
             // Mold_Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 523);
+            this.ClientSize = new System.Drawing.Size(1364, 545);
             this.Controls.Add(this.label70);
             this.Controls.Add(this.label69);
             this.Controls.Add(this.txt_Rows);
@@ -1420,5 +1451,7 @@
         private System.Windows.Forms.TextBox mld_itc;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox MLD_Machine_Tonage;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -191,7 +191,7 @@ namespace CRM_App.production
                     MachineID = dt.Rows[0]["MM_ID"].ToString();
                     Mould_ID = dt.Rows[0]["MLD_ID"].ToString();
                     part_price.Text = dt.Rows[0]["IM_Sales_Price"].ToString();
-
+                    Customer.Text = dt.Rows[0]["IM_Customer"].ToString();
                     
 
                     Pq_RM_Spec.Text = "";

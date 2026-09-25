@@ -565,8 +565,8 @@ namespace CRM_App.Transaction
 
         private void IM_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            POD_dUnit_Price.Enabled = false;
-            POD_dUnit_Price.ReadOnly = true;
+            //POD_dUnit_Price.Enabled = false;
+            //POD_dUnit_Price.ReadOnly = true;
 
             POD_vSource.Enabled = false;
             POD_vSource.ReadOnly = true;
@@ -886,6 +886,11 @@ namespace CRM_App.Transaction
         }
 
         private void POD_vPacking_Std_TextChanged(object sender, EventArgs e)
+        {
+            calulate();
+        }
+
+        private void POD_dUnit_Price_TextChanged(object sender, EventArgs e)
         {
             calulate();
         }
