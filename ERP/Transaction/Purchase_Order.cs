@@ -206,6 +206,34 @@ namespace CRM_App.Transaction
             {
             }
         }
+        void calulate_Qty()
+        {
+            try
+            {
+                decimal Gross_tot = 0m;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    Gross_tot += decimal.Parse(dataGridView1.Rows[i].Cells["txtTotalPrice1"].Value.ToString());
+
+                }
+                PO_dSub_Total.Text = Gross_tot.ToString("0.00");
+
+                PO_dFreight_Charge.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dFreight_Charge_Percentage.Text)) / 100)))).ToString("0.00");
+                PO_dInsurence_Charge.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dInsurence_Charge_Percentage.Text)) / 100)))).ToString("0.00");
+                PO_dExcise_Duty_Amount.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dExcise_Duty_Percent.Text)) / 100)))).ToString("0.00");
+                PO_dVAR_CST_Amount.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dVAT_CST_Percentage.Text)) / 100)))).ToString("0.00");
+                POD_vTotal_Price.Text = (Decimal.Parse(POD_dQty.Text) * Decimal.Parse(POD_dUnit_Price.Text)).ToString("0.00");
+
+
+
+                PO_dGrand_Total.Text = (Decimal.Parse(PO_dSub_Total.Text) + ((Decimal.Parse(PO_dFreight_Charge.Text) + ((Decimal.Parse(PO_dInsurence_Charge.Text) + ((Decimal.Parse(PO_dExcise_Duty_Amount.Text) + Decimal.Parse(PO_dVAR_CST_Amount.Text)))))))).ToString("0.00");
+
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
 
 
         void save()
@@ -389,6 +417,7 @@ namespace CRM_App.Transaction
                 //    POD_dUnit_Price.Text = "0";
 
                 txtTotalPrice.Text = (float.Parse(POD_dQty.Text.ToString()) * float.Parse(POD_dUnit_Price.Text.ToString())).ToString("0.00");
+                calulate_Qty();
             }
             catch (Exception ex)
             {
@@ -842,7 +871,7 @@ namespace CRM_App.Transaction
             {
                 try
                 {
-                    DataTable dt = dbFunctions.getTable("pr_GetMetireal_PartNoall '" + PO_vSupplier_Name.SelectedValue.ToString() + "'");
+                    DataTable dt = dbFunctions.getTable("pr_GetMetireal_PartNoall '" + PO_vSupplier_Name.SelectedValue.ToString() + "', '"+ IM_Type.SelectedValue.ToString()+ "'");
                     POD_vPart_No.DataSource = dt;
                     POD_vPart_No.DisplayMember = "IM_PartNo";
                     POD_vPart_No.ValueMember = "IM_ID";

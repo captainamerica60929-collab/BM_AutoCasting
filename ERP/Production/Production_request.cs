@@ -35,8 +35,9 @@ namespace CRM_App.production
             Load_Part_Number();
             LoadRouteCardNo();
             loadpalt();
-         
- 
+            Load_Mold();
+
+
             LoadReqNo();
             Pq_Route_Card_Start_Date.MinDate = System.DateTime.Now.AddDays(-3);
             //LoadMachineNO();
@@ -103,6 +104,23 @@ namespace CRM_App.production
             {
             }
         }
+        public void Load_Mold()
+        {
+            try
+            {
+                // DataTable dt = dbFunctions.getTable("pr_LoadMachine '" + Pq_vPart_No.SelectedValue.ToString() + "'");
+                DataTable dt = dbFunctions.getTable("Pr_Get_Mold_dropdown ");
+                Mold.DataSource = dt;
+                Mold.DisplayMember = "MLD_PartName";
+                Mold.ValueMember = "MLD_PartName";
+                Mold.SelectedIndex = -1;
+                //isReqNo_Load = true;
+            }
+            catch
+            {
+            }
+        }
+
 
         private void LoadRMSpec()
 
@@ -182,6 +200,7 @@ namespace CRM_App.production
                         Pq_vPart_Name.Text = dt.Rows[0]["IM_PartNo"].ToString();
                     Pq_vModel.Text = dt.Rows[0]["ML_Model"].ToString();
                     Pq_Mould_Name.Text = dt.Rows[0]["MLD_Mold"].ToString();
+                    Mold.SelectedValue = dt.Rows[0]["MLD_Mold"].ToString();
                     //Pq_Mould_Number.Text = dt.Rows[0]["IM_MouldNumer"].ToString();
                     Pq_Mould_Number.Text = dt.Rows[0]["MLD_MouldNo"].ToString();
                     // Pq_Machine_Name.Text = dt.Rows[0]["MM_MachineName"].ToString();
@@ -896,6 +915,11 @@ namespace CRM_App.production
                 //textBox6.Text = "";
                 //dataGridView2.Visible = false;
             }
+        }
+
+        private void Pq_vModel_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -341,7 +341,7 @@
             this.PO_NO.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PO_NO.FormattingEnabled = true;
             this.PO_NO.Items.AddRange(new object[] {
-            "Capex",
+            "Sub Part",
             "Cosumable",
             "Raw Material",
             "Others"});
@@ -656,7 +656,6 @@
             this.textBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(608, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(85, 26);
             this.textBox1.TabIndex = 105;
             // 

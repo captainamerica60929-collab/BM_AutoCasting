@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Production_request));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.Mold = new System.Windows.Forms.ComboBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.Customer = new System.Windows.Forms.TextBox();
             this.part_price = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label42 = new System.Windows.Forms.Label();
@@ -120,8 +123,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.Customer = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,6 +134,7 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.Mold);
             this.panel6.Controls.Add(this.label43);
             this.panel6.Controls.Add(this.Customer);
             this.panel6.Controls.Add(this.part_price);
@@ -214,6 +216,35 @@
             this.panel6.Size = new System.Drawing.Size(1351, 464);
             this.panel6.TabIndex = 0;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel6_Paint);
+            // 
+            // Mold
+            // 
+            this.Mold.FormattingEnabled = true;
+            this.Mold.Location = new System.Drawing.Point(110, 111);
+            this.Mold.Name = "Mold";
+            this.Mold.Size = new System.Drawing.Size(297, 27);
+            this.Mold.TabIndex = 327;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.ForeColor = System.Drawing.Color.Black;
+            this.label43.Location = new System.Drawing.Point(19, 304);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(84, 19);
+            this.label43.TabIndex = 326;
+            this.label43.Text = "Customer :";
+            // 
+            // Customer
+            // 
+            this.Customer.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Customer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Customer.Enabled = false;
+            this.Customer.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Customer.Location = new System.Drawing.Point(106, 300);
+            this.Customer.Name = "Customer";
+            this.Customer.Size = new System.Drawing.Size(297, 26);
+            this.Customer.TabIndex = 325;
             // 
             // part_price
             // 
@@ -869,6 +900,7 @@
             this.Pq_vModel.Name = "Pq_vModel";
             this.Pq_vModel.Size = new System.Drawing.Size(297, 26);
             this.Pq_vModel.TabIndex = 4;
+            this.Pq_vModel.TextChanged += new System.EventHandler(this.Pq_vModel_TextChanged);
             // 
             // Pq_vPart_Name
             // 
@@ -1256,27 +1288,6 @@
             this.label28.TabIndex = 300;
             this.label28.Text = "Req. Shift :";
             // 
-            // Customer
-            // 
-            this.Customer.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Customer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Customer.Enabled = false;
-            this.Customer.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Customer.Location = new System.Drawing.Point(106, 300);
-            this.Customer.Name = "Customer";
-            this.Customer.Size = new System.Drawing.Size(297, 26);
-            this.Customer.TabIndex = 325;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(19, 304);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(84, 19);
-            this.label43.TabIndex = 326;
-            this.label43.Text = "Customer :";
-            // 
             // Production_request
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1394,5 +1405,6 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox Customer;
+        private System.Windows.Forms.ComboBox Mold;
     }
 }

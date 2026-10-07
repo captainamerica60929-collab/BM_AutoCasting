@@ -127,7 +127,7 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Location = new System.Drawing.Point(0, 587);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1023, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1370, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -137,7 +137,7 @@
             this.LoginTime.AutoSize = true;
             this.LoginTime.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginTime.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.LoginTime.Location = new System.Drawing.Point(1180, 731);
+            this.LoginTime.Location = new System.Drawing.Point(1527, 731);
             this.LoginTime.Name = "LoginTime";
             this.LoginTime.Size = new System.Drawing.Size(14, 16);
             this.LoginTime.TabIndex = 20;
@@ -150,7 +150,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(1081, 731);
+            this.label3.Location = new System.Drawing.Point(1428, 731);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 16);
             this.label3.TabIndex = 19;
@@ -163,7 +163,7 @@
             this.User.AutoSize = true;
             this.User.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.User.Location = new System.Drawing.Point(929, 730);
+            this.User.Location = new System.Drawing.Point(1276, 730);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(14, 16);
             this.User.TabIndex = 18;
@@ -176,7 +176,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(853, 730);
+            this.label2.Location = new System.Drawing.Point(1200, 730);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 17;
@@ -223,7 +223,7 @@
             this.MainPanel.Controls.Add(this.panel4);
             this.MainPanel.Location = new System.Drawing.Point(0, 67);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1358, 660);
+            this.MainPanel.Size = new System.Drawing.Size(1705, 660);
             this.MainPanel.TabIndex = 5;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
@@ -493,7 +493,7 @@
             this.panel8.BackColor = System.Drawing.Color.SkyBlue;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label12);
-            this.panel8.Location = new System.Drawing.Point(224, 23);
+            this.panel8.Location = new System.Drawing.Point(571, 23);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(355, 27);
             this.panel8.TabIndex = 37;
@@ -514,7 +514,7 @@
             this.dataGridView4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(224, 50);
+            this.dataGridView4.Location = new System.Drawing.Point(571, 50);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.Size = new System.Drawing.Size(355, 162);
@@ -527,7 +527,7 @@
             this.panel6.BackColor = System.Drawing.Color.SkyBlue;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label10);
-            this.panel6.Location = new System.Drawing.Point(617, 23);
+            this.panel6.Location = new System.Drawing.Point(964, 23);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(355, 27);
             this.panel6.TabIndex = 35;
@@ -548,7 +548,7 @@
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(617, 50);
+            this.dataGridView2.Location = new System.Drawing.Point(964, 50);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(355, 162);
@@ -561,7 +561,7 @@
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(988, 27);
+            this.panel5.Location = new System.Drawing.Point(1335, 27);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(355, 27);
             this.panel5.TabIndex = 33;
@@ -582,7 +582,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(988, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(1335, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(355, 162);
@@ -794,7 +794,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 67);
+            this.panel1.Size = new System.Drawing.Size(1370, 67);
             this.panel1.TabIndex = 4;
             // 
             // button8
@@ -809,7 +809,7 @@
             this.button8.ForeColor = System.Drawing.Color.DimGray;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button8.Location = new System.Drawing.Point(350, 5);
+            this.button8.Location = new System.Drawing.Point(697, 5);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(98, 57);
             this.button8.TabIndex = 27;
@@ -830,7 +830,7 @@
             this.button2.ForeColor = System.Drawing.Color.DimGray;
             this.button2.Image = global::CRM_App.Properties.Resources.p_removebg_preview;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(457, 3);
+            this.button2.Location = new System.Drawing.Point(804, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 63);
             this.button2.TabIndex = 26;
@@ -851,7 +851,7 @@
             this.btnSales.ForeColor = System.Drawing.Color.DimGray;
             this.btnSales.Image = ((System.Drawing.Image)(resources.GetObject("btnSales.Image")));
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSales.Location = new System.Drawing.Point(676, 5);
+            this.btnSales.Location = new System.Drawing.Point(1023, 5);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(71, 57);
             this.btnSales.TabIndex = 25;
@@ -872,7 +872,7 @@
             this.btnPurchase.ForeColor = System.Drawing.Color.DimGray;
             this.btnPurchase.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchase.Image")));
             this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPurchase.Location = new System.Drawing.Point(168, 5);
+            this.btnPurchase.Location = new System.Drawing.Point(515, 5);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(88, 57);
             this.btnPurchase.TabIndex = 19;
@@ -893,7 +893,7 @@
             this.btnmouldmatanance.ForeColor = System.Drawing.Color.DimGray;
             this.btnmouldmatanance.Image = ((System.Drawing.Image)(resources.GetObject("btnmouldmatanance.Image")));
             this.btnmouldmatanance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmouldmatanance.Location = new System.Drawing.Point(575, 5);
+            this.btnmouldmatanance.Location = new System.Drawing.Point(922, 5);
             this.btnmouldmatanance.Name = "btnmouldmatanance";
             this.btnmouldmatanance.Size = new System.Drawing.Size(114, 56);
             this.btnmouldmatanance.TabIndex = 24;
@@ -914,7 +914,7 @@
             this.btnProduction.ForeColor = System.Drawing.Color.DimGray;
             this.btnProduction.Image = ((System.Drawing.Image)(resources.GetObject("btnProduction.Image")));
             this.btnProduction.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProduction.Location = new System.Drawing.Point(251, 5);
+            this.btnProduction.Location = new System.Drawing.Point(598, 5);
             this.btnProduction.Name = "btnProduction";
             this.btnProduction.Size = new System.Drawing.Size(98, 57);
             this.btnProduction.TabIndex = 23;
@@ -935,7 +935,7 @@
             this.btnApproval.ForeColor = System.Drawing.Color.DimGray;
             this.btnApproval.Image = ((System.Drawing.Image)(resources.GetObject("btnApproval.Image")));
             this.btnApproval.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnApproval.Location = new System.Drawing.Point(70, 5);
+            this.btnApproval.Location = new System.Drawing.Point(417, 5);
             this.btnApproval.Name = "btnApproval";
             this.btnApproval.Size = new System.Drawing.Size(89, 57);
             this.btnApproval.TabIndex = 22;
@@ -968,7 +968,7 @@
             this.button3.ForeColor = System.Drawing.Color.DimGray;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(885, 5);
+            this.button3.Location = new System.Drawing.Point(1232, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(69, 57);
             this.button3.TabIndex = 18;
@@ -989,7 +989,7 @@
             this.btnSettings.ForeColor = System.Drawing.Color.DimGray;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSettings.Location = new System.Drawing.Point(810, 5);
+            this.btnSettings.Location = new System.Drawing.Point(1157, 5);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(78, 57);
             this.btnSettings.TabIndex = 17;
@@ -1010,7 +1010,7 @@
             this.button11.ForeColor = System.Drawing.Color.DimGray;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button11.Location = new System.Drawing.Point(953, 5);
+            this.button11.Location = new System.Drawing.Point(1300, 5);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(69, 57);
             this.button11.TabIndex = 16;
@@ -1031,7 +1031,7 @@
             this.button10.ForeColor = System.Drawing.Color.DimGray;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button10.Location = new System.Drawing.Point(-68, 5);
+            this.button10.Location = new System.Drawing.Point(279, 5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(69, 57);
             this.button10.TabIndex = 15;
@@ -1052,7 +1052,7 @@
             this.btnMaster.ForeColor = System.Drawing.Color.DimGray;
             this.btnMaster.Image = ((System.Drawing.Image)(resources.GetObject("btnMaster.Image")));
             this.btnMaster.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMaster.Location = new System.Drawing.Point(1, 5);
+            this.btnMaster.Location = new System.Drawing.Point(348, 5);
             this.btnMaster.Name = "btnMaster";
             this.btnMaster.Size = new System.Drawing.Size(69, 57);
             this.btnMaster.TabIndex = 14;
@@ -1073,7 +1073,7 @@
             this.btnReports.ForeColor = System.Drawing.Color.DimGray;
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReports.Location = new System.Drawing.Point(742, 5);
+            this.btnReports.Location = new System.Drawing.Point(1089, 5);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(69, 57);
             this.btnReports.TabIndex = 13;
@@ -1087,7 +1087,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1023, 609);
+            this.ClientSize = new System.Drawing.Size(1370, 609);
             this.Controls.Add(this.Status_Main);
             this.Controls.Add(this.LoginTime);
             this.Controls.Add(this.label3);

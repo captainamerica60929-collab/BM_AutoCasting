@@ -317,11 +317,11 @@ namespace CRM_App.Transaction
             }
             else
             {
-                if (Podc_Description.Text.Equals(""))
-                {
-                    MessageBox.Show("Document Name Should Not be Empty", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                //if (Podc_Description.Text.Equals(""))
+                //{
+                //    MessageBox.Show("Document Name Should Not be Empty", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    return;
+                //}
 
                 DialogResult result = MessageBox.Show("Everything is correct?", "Confirmation",
                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -589,7 +589,7 @@ namespace CRM_App.Transaction
                 double UnitPrice = double.Parse(dataGridView1.Rows[e.RowIndex].Cells["Unit Price"].Value.ToString());
 
                 dataGridView1.Rows[e.RowIndex].Cells["Total Amount"].Value = ((NoofBags * QtyBags) * UnitPrice).ToString();
-                calulate();
+                
             }
             catch
             {
@@ -678,11 +678,6 @@ namespace CRM_App.Transaction
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void PO_dPO_Date_TextChanged(object sender, EventArgs e)
         {
 
         }
