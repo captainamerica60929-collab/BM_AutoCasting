@@ -24,7 +24,9 @@ namespace CRM_App.Master
             Load_UOM();
             LoadCurrency();
             Load_Mould();
-            
+            Load_UOM_PKG();
+
+
             comboBox1.Text = "Active";
         }
         private void Loadasoe()
@@ -117,6 +119,20 @@ namespace CRM_App.Master
                 IM_UOM.DisplayMember = "UM_UOM";
                 IM_UOM.ValueMember = "UM_ID";
                 IM_UOM.SelectedIndex = 0;
+            }
+            catch
+            {
+            }
+        } 
+        public void Load_UOM_PKG()
+        {
+            try
+            {
+                DataTable dt = dbFunctions.getTable("pr_LoadUOM_Nos");
+                comboBox3.DataSource = dt;
+                comboBox3.DisplayMember = "UM_UOM";
+                comboBox3.ValueMember = "UM_ID";
+                comboBox3.SelectedIndex = 0;
             }
             catch
             {

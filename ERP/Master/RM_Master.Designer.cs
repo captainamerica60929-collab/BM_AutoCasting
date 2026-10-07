@@ -96,6 +96,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -109,6 +111,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel6.Controls.Add(this.comboBox3);
+            this.panel6.Controls.Add(this.comboBox2);
             this.panel6.Controls.Add(this.IM_aoe);
             this.panel6.Controls.Add(this.label25);
             this.panel6.Controls.Add(this.label24);
@@ -161,7 +165,7 @@
             this.panel6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1139, 174);
+            this.panel6.Size = new System.Drawing.Size(1212, 174);
             this.panel6.TabIndex = 0;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel6_Paint);
             // 
@@ -663,7 +667,7 @@
             this.txt_Rows.BackColor = System.Drawing.Color.Transparent;
             this.txt_Rows.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Rows.ForeColor = System.Drawing.Color.Blue;
-            this.txt_Rows.Location = new System.Drawing.Point(939, 542);
+            this.txt_Rows.Location = new System.Drawing.Point(1012, 542);
             this.txt_Rows.Name = "txt_Rows";
             this.txt_Rows.Size = new System.Drawing.Size(200, 19);
             this.txt_Rows.TabIndex = 54;
@@ -683,7 +687,7 @@
             this.ArrowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ArrowButton.ForeColor = System.Drawing.Color.White;
             this.ArrowButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ArrowButton.Location = new System.Drawing.Point(1106, 0);
+            this.ArrowButton.Location = new System.Drawing.Point(1179, 0);
             this.ArrowButton.Name = "ArrowButton";
             this.ArrowButton.Size = new System.Drawing.Size(30, 27);
             this.ArrowButton.TabIndex = 3;
@@ -707,7 +711,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1139, 540);
+            this.splitContainer1.Size = new System.Drawing.Size(1212, 540);
             this.splitContainer1.SplitterDistance = 202;
             this.splitContainer1.TabIndex = 53;
             // 
@@ -729,7 +733,7 @@
             this.panel3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(0, 174);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1139, 28);
+            this.panel3.Size = new System.Drawing.Size(1212, 28);
             this.panel3.TabIndex = 1;
             // 
             // btnDelete
@@ -742,7 +746,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(952, 2);
+            this.btnDelete.Location = new System.Drawing.Point(1025, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(79, 27);
             this.btnDelete.TabIndex = 55;
@@ -761,7 +765,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(641, 3);
+            this.button8.Location = new System.Drawing.Point(714, 3);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(74, 27);
             this.button8.TabIndex = 11;
@@ -821,7 +825,7 @@
             this.btnDisplay.ForeColor = System.Drawing.Color.White;
             this.btnDisplay.Image = ((System.Drawing.Image)(resources.GetObject("btnDisplay.Image")));
             this.btnDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDisplay.Location = new System.Drawing.Point(720, 2);
+            this.btnDisplay.Location = new System.Drawing.Point(793, 2);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(84, 27);
             this.btnDisplay.TabIndex = 4;
@@ -850,7 +854,7 @@
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(1037, 0);
+            this.btnClear.Location = new System.Drawing.Point(1110, 0);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(72, 27);
             this.btnClear.TabIndex = 2;
@@ -869,7 +873,7 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(885, 2);
+            this.btnEdit.Location = new System.Drawing.Point(958, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(64, 27);
             this.btnEdit.TabIndex = 1;
@@ -888,7 +892,7 @@
             this.btnsave.ForeColor = System.Drawing.Color.White;
             this.btnsave.Image = ((System.Drawing.Image)(resources.GetObject("btnsave.Image")));
             this.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsave.Location = new System.Drawing.Point(803, 2);
+            this.btnsave.Location = new System.Drawing.Point(876, 2);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(80, 27);
             this.btnsave.TabIndex = 0;
@@ -904,7 +908,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1139, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(1212, 334);
             this.dataGridView1.TabIndex = 0;
             // 
             // statusStrip1
@@ -913,7 +917,7 @@
             this.txtStatus});
             this.statusStrip1.Location = new System.Drawing.Point(0, 540);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1139, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1212, 22);
             this.statusStrip1.TabIndex = 52;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -924,11 +928,33 @@
             this.txtStatus.Size = new System.Drawing.Size(39, 17);
             this.txtStatus.Text = "Ready";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Hrs",
+            "Mins",
+            "Secs"});
+            this.comboBox2.Location = new System.Drawing.Point(1142, 8);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(58, 27);
+            this.comboBox2.TabIndex = 320;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(1142, 40);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(58, 27);
+            this.comboBox3.TabIndex = 321;
+            // 
             // RM_Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1139, 562);
+            this.ClientSize = new System.Drawing.Size(1212, 562);
             this.Controls.Add(this.txt_Rows);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
@@ -1024,5 +1050,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ComboBox IM_aoe;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
