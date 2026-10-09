@@ -379,15 +379,15 @@ namespace CRM_App.Transaction
                         string ReplaceText10 = ReplaceText9.Replace("@Mfg_Date@", DateTime.Parse(dt.Rows[i]["Mfg Date"].ToString()).ToString("dd-MMM-yyyy"));
                         string ReplaceText11 = ReplaceText10.Replace("@Exp_Date@", DateTime.Parse(dt.Rows[i]["ExpDate"].ToString()).ToString("dd-MMM-yyyy"));
                         string ReplaceText12 = ReplaceText11.Replace("@Approve_By@", dt.Rows[i]["Useer"].ToString());
-                        string ReplaceText120 = ReplaceText11.Replace("@Heat_NO@", dt.Rows[i]["GRND_HeatNo"].ToString());
-                        string ReplaceText13 = ReplaceText120.Replace("@Approve_Date@", DateTime.Parse(dt.Rows[i]["GRN Date"].ToString()).ToString("dd-MMM-yyyy"));
+                        string ReplaceText13 = ReplaceText12.Replace("@Approve_Date@", DateTime.Parse(dt.Rows[i]["GRN Date"].ToString()).ToString("dd-MMM-yyyy"));
                         string ReplaceText14 = ReplaceText13.Replace("@Year@", System.DateTime.Now.ToString("MMM yyyy"));
                         string ReplaceText15 = ReplaceText14.Replace("@Barcode@", dt.Rows[i]["Barcode"].ToString());
                         string ReplaceText16 = ReplaceText15.Replace("@User@", username);
                         string ReplaceText17 = ReplaceText16.Replace("@User1@", Su_Name.Text);
+                        string ReplaceText18 = ReplaceText17.Replace("@Heat_NO@", dt.Rows[i]["GRND_HeatNo"].ToString());
 
 
-                        RawPrinterHelper.SendStringToPrinter(PrinterName, ReplaceText17);
+                        RawPrinterHelper.SendStringToPrinter(PrinterName, ReplaceText18);
 
                     }
                 }

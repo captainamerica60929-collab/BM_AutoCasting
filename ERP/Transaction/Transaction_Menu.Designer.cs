@@ -84,7 +84,7 @@
             this.BodyPanel.Controls.Add(this.Incoming_Inspection);
             this.BodyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodyPanel.Location = new System.Drawing.Point(0, 0);
-            this.BodyPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BodyPanel.Margin = new System.Windows.Forms.Padding(4);
             this.BodyPanel.Name = "BodyPanel";
             this.BodyPanel.Size = new System.Drawing.Size(1051, 837);
             this.BodyPanel.TabIndex = 0;
@@ -101,7 +101,7 @@
             this.GRN_QC_Details_Print.Image = ((System.Drawing.Image)(resources.GetObject("GRN_QC_Details_Print.Image")));
             this.GRN_QC_Details_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GRN_QC_Details_Print.Location = new System.Drawing.Point(451, 416);
-            this.GRN_QC_Details_Print.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GRN_QC_Details_Print.Margin = new System.Windows.Forms.Padding(4);
             this.GRN_QC_Details_Print.Name = "GRN_QC_Details_Print";
             this.GRN_QC_Details_Print.Size = new System.Drawing.Size(267, 43);
             this.GRN_QC_Details_Print.TabIndex = 3;
@@ -121,7 +121,7 @@
             this.Incoming_Inspection.Image = ((System.Drawing.Image)(resources.GetObject("Incoming_Inspection.Image")));
             this.Incoming_Inspection.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Incoming_Inspection.Location = new System.Drawing.Point(429, 322);
-            this.Incoming_Inspection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Incoming_Inspection.Margin = new System.Windows.Forms.Padding(4);
             this.Incoming_Inspection.Name = "Incoming_Inspection";
             this.Incoming_Inspection.Size = new System.Drawing.Size(267, 43);
             this.Incoming_Inspection.TabIndex = 29;
@@ -136,7 +136,7 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -190,7 +190,7 @@
             this.panel2.Controls.Add(this.PO_Print);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(203, 837);
             this.panel2.TabIndex = 0;
@@ -204,7 +204,7 @@
             this.button6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button6.Location = new System.Drawing.Point(0, 508);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(267, 2);
             this.button6.TabIndex = 65;
@@ -219,7 +219,7 @@
             this.button5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button5.Location = new System.Drawing.Point(0, 377);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(267, 2);
             this.button5.TabIndex = 64;
@@ -234,7 +234,7 @@
             this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button3.Location = new System.Drawing.Point(4, 282);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(267, 2);
             this.button3.TabIndex = 63;
@@ -251,14 +251,13 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(3, 603);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(263, 32);
             this.button1.TabIndex = 61;
             this.button1.Text = "    Sub Part  Issue";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // button17
@@ -269,7 +268,7 @@
             this.button17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button17.Location = new System.Drawing.Point(0, 682);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(269, 2);
             this.button17.TabIndex = 62;
@@ -287,7 +286,7 @@
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(3, 514);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(263, 33);
             this.button7.TabIndex = 48;
@@ -306,7 +305,7 @@
             this.MaterialIssue.Image = ((System.Drawing.Image)(resources.GetObject("MaterialIssue.Image")));
             this.MaterialIssue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MaterialIssue.Location = new System.Drawing.Point(-1, 558);
-            this.MaterialIssue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaterialIssue.Margin = new System.Windows.Forms.Padding(4);
             this.MaterialIssue.Name = "MaterialIssue";
             this.MaterialIssue.Size = new System.Drawing.Size(267, 37);
             this.MaterialIssue.TabIndex = 60;
@@ -323,7 +322,7 @@
             this.button16.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button16.Location = new System.Drawing.Point(0, 594);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(267, 2);
             this.button16.TabIndex = 38;
@@ -340,7 +339,7 @@
             this.Deliver_Performance.Image = ((System.Drawing.Image)(resources.GetObject("Deliver_Performance.Image")));
             this.Deliver_Performance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Deliver_Performance.Location = new System.Drawing.Point(0, 466);
-            this.Deliver_Performance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Deliver_Performance.Margin = new System.Windows.Forms.Padding(4);
             this.Deliver_Performance.Name = "Deliver_Performance";
             this.Deliver_Performance.Size = new System.Drawing.Size(267, 43);
             this.Deliver_Performance.TabIndex = 37;
@@ -357,7 +356,7 @@
             this.button14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button14.Location = new System.Drawing.Point(3, 635);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button14.Margin = new System.Windows.Forms.Padding(4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(267, 2);
             this.button14.TabIndex = 36;
@@ -375,7 +374,7 @@
             this.PO_Deliver_Schedule.Image = ((System.Drawing.Image)(resources.GetObject("PO_Deliver_Schedule.Image")));
             this.PO_Deliver_Schedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PO_Deliver_Schedule.Location = new System.Drawing.Point(4, 778);
-            this.PO_Deliver_Schedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PO_Deliver_Schedule.Margin = new System.Windows.Forms.Padding(4);
             this.PO_Deliver_Schedule.Name = "PO_Deliver_Schedule";
             this.PO_Deliver_Schedule.Size = new System.Drawing.Size(267, 43);
             this.PO_Deliver_Schedule.TabIndex = 35;
@@ -395,7 +394,7 @@
             this.GRN_Label_Print.Image = ((System.Drawing.Image)(resources.GetObject("GRN_Label_Print.Image")));
             this.GRN_Label_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GRN_Label_Print.Location = new System.Drawing.Point(0, 282);
-            this.GRN_Label_Print.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GRN_Label_Print.Margin = new System.Windows.Forms.Padding(4);
             this.GRN_Label_Print.Name = "GRN_Label_Print";
             this.GRN_Label_Print.Size = new System.Drawing.Size(267, 43);
             this.GRN_Label_Print.TabIndex = 34;
@@ -412,7 +411,7 @@
             this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button4.Location = new System.Drawing.Point(0, 332);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(267, 2);
             this.button4.TabIndex = 33;
@@ -429,7 +428,7 @@
             this.GRN_Approval.Image = ((System.Drawing.Image)(resources.GetObject("GRN_Approval.Image")));
             this.GRN_Approval.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GRN_Approval.Location = new System.Drawing.Point(0, 236);
-            this.GRN_Approval.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GRN_Approval.Margin = new System.Windows.Forms.Padding(4);
             this.GRN_Approval.Name = "GRN_Approval";
             this.GRN_Approval.Size = new System.Drawing.Size(267, 43);
             this.GRN_Approval.TabIndex = 31;
@@ -446,7 +445,7 @@
             this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button2.Location = new System.Drawing.Point(0, 412);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(267, 2);
             this.button2.TabIndex = 32;
@@ -457,7 +456,7 @@
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.Location = new System.Drawing.Point(-1, 1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(268, 46);
             this.panel3.TabIndex = 6;
@@ -470,7 +469,7 @@
             this.button27.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button27.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button27.Location = new System.Drawing.Point(0, 276);
-            this.button27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button27.Margin = new System.Windows.Forms.Padding(4);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(267, 2);
             this.button27.TabIndex = 30;
@@ -485,7 +484,7 @@
             this.button26.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button26.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button26.Location = new System.Drawing.Point(0, 90);
-            this.button26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button26.Margin = new System.Windows.Forms.Padding(4);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(267, 2);
             this.button26.TabIndex = 28;
@@ -502,7 +501,7 @@
             this.Purchase_Order.Image = ((System.Drawing.Image)(resources.GetObject("Purchase_Order.Image")));
             this.Purchase_Order.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Purchase_Order.Location = new System.Drawing.Point(0, 47);
-            this.Purchase_Order.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Purchase_Order.Margin = new System.Windows.Forms.Padding(4);
             this.Purchase_Order.Name = "Purchase_Order";
             this.Purchase_Order.Size = new System.Drawing.Size(267, 43);
             this.Purchase_Order.TabIndex = 17;
@@ -521,7 +520,7 @@
             this.PO_Amendment.Image = ((System.Drawing.Image)(resources.GetObject("PO_Amendment.Image")));
             this.PO_Amendment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PO_Amendment.Location = new System.Drawing.Point(0, 92);
-            this.PO_Amendment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PO_Amendment.Margin = new System.Windows.Forms.Padding(4);
             this.PO_Amendment.Name = "PO_Amendment";
             this.PO_Amendment.Size = new System.Drawing.Size(267, 43);
             this.PO_Amendment.TabIndex = 25;
@@ -536,7 +535,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-3, 738);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(269, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -551,7 +550,7 @@
             this.button20.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button20.Location = new System.Drawing.Point(0, 135);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(267, 2);
             this.button20.TabIndex = 26;
@@ -566,7 +565,7 @@
             this.button13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button13.Location = new System.Drawing.Point(0, 458);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button13.Margin = new System.Windows.Forms.Padding(4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(267, 2);
             this.button13.TabIndex = 24;
@@ -580,7 +579,7 @@
             this.button15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button15.Location = new System.Drawing.Point(-5, 729);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(269, 2);
             this.button15.TabIndex = 22;
@@ -598,7 +597,7 @@
             this.GRN_Details.Image = ((System.Drawing.Image)(resources.GetObject("GRN_Details.Image")));
             this.GRN_Details.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GRN_Details.Location = new System.Drawing.Point(0, 330);
-            this.GRN_Details.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GRN_Details.Margin = new System.Windows.Forms.Padding(4);
             this.GRN_Details.Name = "GRN_Details";
             this.GRN_Details.Size = new System.Drawing.Size(267, 43);
             this.GRN_Details.TabIndex = 18;
@@ -615,7 +614,7 @@
             this.button12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button12.Location = new System.Drawing.Point(0, 549);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(267, 2);
             this.button12.TabIndex = 12;
@@ -630,7 +629,7 @@
             this.button11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button11.Location = new System.Drawing.Point(0, 503);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(267, 2);
             this.button11.TabIndex = 11;
@@ -645,7 +644,7 @@
             this.button10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button10.Location = new System.Drawing.Point(0, 321);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(267, 2);
             this.button10.TabIndex = 10;
@@ -660,7 +659,7 @@
             this.button9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button9.Location = new System.Drawing.Point(0, 230);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(267, 2);
             this.button9.TabIndex = 9;
@@ -675,7 +674,7 @@
             this.button8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.button8.Location = new System.Drawing.Point(0, 185);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(267, 2);
             this.button8.TabIndex = 8;
@@ -692,7 +691,7 @@
             this.Deliver_Schedule_Details.Image = ((System.Drawing.Image)(resources.GetObject("Deliver_Schedule_Details.Image")));
             this.Deliver_Schedule_Details.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Deliver_Schedule_Details.Location = new System.Drawing.Point(0, 421);
-            this.Deliver_Schedule_Details.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Deliver_Schedule_Details.Margin = new System.Windows.Forms.Padding(4);
             this.Deliver_Schedule_Details.Name = "Deliver_Schedule_Details";
             this.Deliver_Schedule_Details.Size = new System.Drawing.Size(267, 43);
             this.Deliver_Schedule_Details.TabIndex = 5;
@@ -711,7 +710,7 @@
             this.Supplier_Problem.Image = ((System.Drawing.Image)(resources.GetObject("Supplier_Problem.Image")));
             this.Supplier_Problem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supplier_Problem.Location = new System.Drawing.Point(0, 375);
-            this.Supplier_Problem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Supplier_Problem.Margin = new System.Windows.Forms.Padding(4);
             this.Supplier_Problem.Name = "Supplier_Problem";
             this.Supplier_Problem.Size = new System.Drawing.Size(267, 43);
             this.Supplier_Problem.TabIndex = 4;
@@ -730,7 +729,7 @@
             this.GRN.Image = ((System.Drawing.Image)(resources.GetObject("GRN.Image")));
             this.GRN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GRN.Location = new System.Drawing.Point(0, 187);
-            this.GRN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GRN.Margin = new System.Windows.Forms.Padding(4);
             this.GRN.Name = "GRN";
             this.GRN.Size = new System.Drawing.Size(267, 43);
             this.GRN.TabIndex = 2;
@@ -749,7 +748,7 @@
             this.PO_Print.Image = ((System.Drawing.Image)(resources.GetObject("PO_Print.Image")));
             this.PO_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PO_Print.Location = new System.Drawing.Point(0, 142);
-            this.PO_Print.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PO_Print.Margin = new System.Windows.Forms.Padding(4);
             this.PO_Print.Name = "PO_Print";
             this.PO_Print.Size = new System.Drawing.Size(267, 43);
             this.PO_Print.TabIndex = 1;
@@ -764,7 +763,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 837);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Transaction_Menu";
             this.Text = "Transaction_Menu";
             this.Load += new System.EventHandler(this.Transaction_Menu_Load);

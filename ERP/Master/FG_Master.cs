@@ -25,9 +25,24 @@ namespace CRM_App.Master
             Load_Mould();
             LoadMachineNo();
             Loadasoe();
+            load_Customer();
             comboBox1.Text = "Active";
         }
-
+        public void load_Customer()
+        {
+            try
+            {
+                DataTable dt = dbFunctions.getTable("select CM_ID,CM_Name from customer_master where CM_Status='A'  ");
+                Customers.DataSource = dt;
+                Customers.DisplayMember = "CM_Name";
+                Customers.ValueMember = "CM_Name";
+                Customers.SelectedIndex = -1;
+                //isMoldLoadAssy = true;
+            }
+            catch
+            {
+            }
+        }
         private void Loadasoe()
         {
             try
@@ -304,7 +319,7 @@ namespace CRM_App.Master
                 com.Parameters.Add("@IM_PackingStandard", SqlDbType.VarChar).Value = IM_PackingStandard.Text.ToString();
                 com.Parameters.Add("@IM_Tool_Cost", SqlDbType.VarChar).Value = IM_Tool_Cost.Text.ToString();
                 com.Parameters.Add("@IM_aoe", SqlDbType.VarChar).Value = IM_aoe.Text.ToString();
-                
+                com.Parameters.Add("@IM_Customer", SqlDbType.VarChar).Value = Customers.Text.ToString();
                 com.Parameters.Add("@IM_Status", SqlDbType.VarChar).Value = (comboBox1.Text == "Active") ? 'A' : 'D';
                 com.ExecuteNonQuery();
                 com.Connection.Close();
@@ -349,6 +364,7 @@ namespace CRM_App.Master
                 com.Parameters.Add("@IM_PackingStandard", SqlDbType.VarChar).Value = IM_PackingStandard.Text.ToString();
                 com.Parameters.Add("@IM_Tool_Cost", SqlDbType.VarChar).Value = IM_Tool_Cost.Text.ToString();
                 com.Parameters.Add("@IM_aoe", SqlDbType.VarChar).Value = IM_aoe.Text.ToString();
+                com.Parameters.Add("@IM_Customer", SqlDbType.VarChar).Value = Customers.Text.ToString();
                 
 
                 com.Parameters.Add("@IM_Status", SqlDbType.VarChar).Value = (comboBox1.Text == "Active") ? 'A' : 'D';
@@ -399,6 +415,7 @@ namespace CRM_App.Master
     ? string.Empty
     : dt.Rows[0]["IM_Currency"].ToString();
                 //IM_MouldNumer.Text = dt.Rows[0]["IM_Mould"].ToString();
+                
                 IM_MouldNumer.Text = dt.Rows[0]["IM_MouldNumer"].ToString();
                 //IM_MachineNo.Text = dt.Rows[0]["MM_MachineCode"].ToString();
     //            IM_MachineNo.Text = dt.Rows[0]["IM_MachineNo"] == DBNull.Value || string.IsNullOrWhiteSpace(dt.Rows[0]["IM_MachineNo"].ToString())
@@ -412,6 +429,7 @@ namespace CRM_App.Master
                 string s = dt.Rows[0]["IM_Status"].ToString();
                 comboBox1.Text = (dt.Rows[0]["IM_Status"].ToString().Trim().Equals("A")) ? "Active" : "Inactive";
                 btnsave.Text = "&Update";
+                Customers.SelectedValue = dt.Rows[0]["IM_Customer"].ToString();
                 IM_Plant.Focus();
             }
         }
@@ -510,6 +528,11 @@ namespace CRM_App.Master
                 }
 
             }
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

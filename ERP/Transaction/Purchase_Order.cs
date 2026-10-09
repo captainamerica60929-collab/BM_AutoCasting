@@ -83,6 +83,11 @@ namespace CRM_App.Transaction
                 com.Parameters.Add("@PO_vPayment_Terms", SqlDbType.VarChar).Value = PO_vPayment_Terms.Text.ToString();
                 com.Parameters.Add("@PO_vInspection", SqlDbType.VarChar).Value = PO_vInspection.Text.ToString();
                 com.Parameters.Add("@PO_vWarrenty_Class", SqlDbType.VarChar).Value = PO_vWarrenty_Class.Text.ToString();
+                com.Parameters.Add("@PO_Warranty", SqlDbType.VarChar).Value = Warranty.Text.ToString();
+                com.Parameters.Add("@PO_Advance", SqlDbType.VarChar).Value = Advance.Text.ToString();
+                com.Parameters.Add("@PO_TestReport", SqlDbType.VarChar).Value = TestReport.Text.ToString();
+                com.Parameters.Add("@PO_Insurance", SqlDbType.VarChar).Value = Insurance.Text.ToString();
+                com.Parameters.Add("@PO_Applicable", SqlDbType.VarChar).Value = Applicable.Text.ToString();
                
 
                 com.Parameters.Add("@PO_vCreatedby", SqlDbType.VarChar).Value = dbFunctions.username;
@@ -111,7 +116,7 @@ namespace CRM_App.Transaction
             dataGridView1["POD_iType", rowid].Value = IM_Type.Text;
             dataGridView1["POD_vSource1", rowid].Value = POD_vSource.Text;
             //dataGridView1["POD_vPartName", rowid].Value = txtGrade.Text;
-            dataGridView1["POD_iUOM1", rowid].Value = POD_iUOM.Text;
+            dataGridView1["POD_iUOM1", rowid].Value = UOM.Text;
             dataGridView1["POD_dQty1", rowid].Value = POD_dQty.Text;
             dataGridView1["POD_vPacking_Std1", rowid].Value = POD_vPacking_Std.Text;
             dataGridView1["POD_dUnit_Price1", rowid].Value = POD_dUnit_Price.Text;
@@ -120,7 +125,7 @@ namespace CRM_App.Transaction
             dataGridView1["Note", rowid].Value = richTextBox1.Text;
             rowid += 1;
 
-            calulate();
+           // calulate();
             POD_vPart_No.Text = "";
             POD_vSource.Text = "";
             POD_iUOM.Text = "";
@@ -206,6 +211,34 @@ namespace CRM_App.Transaction
             {
             }
         }
+        void calulate_Qty()
+        {
+            try
+            {
+                decimal Gross_tot = 0m;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    Gross_tot += decimal.Parse(dataGridView1.Rows[i].Cells["txtTotalPrice1"].Value.ToString());
+
+                }
+                PO_dSub_Total.Text = Gross_tot.ToString("0.00");
+
+                PO_dFreight_Charge.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dFreight_Charge_Percentage.Text)) / 100)))).ToString("0.00");
+                PO_dInsurence_Charge.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dInsurence_Charge_Percentage.Text)) / 100)))).ToString("0.00");
+                PO_dExcise_Duty_Amount.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dExcise_Duty_Percent.Text)) / 100)))).ToString("0.00");
+                PO_dVAR_CST_Amount.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dVAT_CST_Percentage.Text)) / 100)))).ToString("0.00");
+                POD_vTotal_Price.Text = (Decimal.Parse(POD_dQty.Text) * Decimal.Parse(POD_dUnit_Price.Text)).ToString("0.00");
+
+
+
+                PO_dGrand_Total.Text = (Decimal.Parse(PO_dSub_Total.Text) + ((Decimal.Parse(PO_dFreight_Charge.Text) + ((Decimal.Parse(PO_dInsurence_Charge.Text) + ((Decimal.Parse(PO_dExcise_Duty_Amount.Text) + Decimal.Parse(PO_dVAR_CST_Amount.Text)))))))).ToString("0.00");
+
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
 
 
         void save()
@@ -260,8 +293,8 @@ namespace CRM_App.Transaction
         {
             dbFunctions.DGVStyleAutoSizeColumn(dataGridView1);
             dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-      
-        
+
+            Load_UOM();
             LoadPo_No();
             LoadSupplier();
             LoadItemType();
@@ -269,7 +302,20 @@ namespace CRM_App.Transaction
 
             PO_vDelivery.Text = "At our Factory located at Ayyanambakkam on or Before " + PO_dPO_Date.Value.AddDays(15).ToString("dd-MMM-yyyy");
         }
-
+        public void Load_UOM()
+        {
+            try
+            {
+                DataTable dt = dbFunctions.getTable("pr_LoadUOM_Nos");
+                UOM.DataSource = dt;
+                UOM.DisplayMember = "UM_UOM";
+                UOM.ValueMember = "UM_UOM";
+                UOM.SelectedIndex = 0;
+            }
+            catch
+            {
+            }
+        }
 
         public void LoadItemType()
         {
@@ -389,6 +435,7 @@ namespace CRM_App.Transaction
                 //    POD_dUnit_Price.Text = "0";
 
                 txtTotalPrice.Text = (float.Parse(POD_dQty.Text.ToString()) * float.Parse(POD_dUnit_Price.Text.ToString())).ToString("0.00");
+                calulate_Qty();
             }
             catch (Exception ex)
             {
@@ -516,7 +563,7 @@ namespace CRM_App.Transaction
                         //POD_vSpec.Text = dt.Rows[0]["IM_PartName"].ToString();
                         POD_vSource.Text = dt.Rows[0]["IM_RMSource"].ToString();
                         txtGrade.Text = dt.Rows[0]["IM_PartName"].ToString();
-                        POD_iUOM.Text = dt.Rows[0]["UM_UOM"].ToString();
+                        UOM.Text = dt.Rows[0]["UM_UOM"].ToString();
                         textBox1.Text = dt.Rows[0]["IM_HSNCode"].ToString();
                         POD_vPacking_Std.Text = dt.Rows[0]["IM_PackingStandard"].ToString();
                         POD_dUnit_Price.Text = dt.Rows[0]["IM_Purchase_Price"].ToString();
@@ -565,8 +612,8 @@ namespace CRM_App.Transaction
 
         private void IM_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            POD_dUnit_Price.Enabled = false;
-            POD_dUnit_Price.ReadOnly = true;
+            //POD_dUnit_Price.Enabled = false;
+            //POD_dUnit_Price.ReadOnly = true;
 
             POD_vSource.Enabled = false;
             POD_vSource.ReadOnly = true;
@@ -624,6 +671,7 @@ namespace CRM_App.Transaction
                 label19.Text = "Name :";
             }
             LoadItem();
+            Get_Material_section();
         }
 
             //POD_dUnit_Price.Enabled = false;
@@ -842,7 +890,7 @@ namespace CRM_App.Transaction
             {
                 try
                 {
-                    DataTable dt = dbFunctions.getTable("pr_GetMetireal_PartNoall '" + PO_vSupplier_Name.SelectedValue.ToString() + "'");
+                    DataTable dt = dbFunctions.getTable("pr_GetMetireal_PartNoall '" + PO_vSupplier_Name.SelectedValue.ToString() + "', '"+ IM_Type.SelectedValue.ToString()+ "'");
                     POD_vPart_No.DataSource = dt;
                     POD_vPart_No.DisplayMember = "IM_PartNo";
                     POD_vPart_No.ValueMember = "IM_ID";
@@ -869,7 +917,40 @@ namespace CRM_App.Transaction
                 }
             }
         }
+        public void Get_Material_section()
+        {
 
+            if (checkBox1.Checked == true)
+            {
+                try
+                {
+                    DataTable dt = dbFunctions.getTable("pr_GetMetireal_PartNoall '" + PO_vSupplier_Name.SelectedValue.ToString() + "', '" + IM_Type.SelectedValue.ToString() + "'");
+                    POD_vPart_No.DataSource = dt;
+                    POD_vPart_No.DisplayMember = "IM_PartNo";
+                    POD_vPart_No.ValueMember = "IM_ID";
+                    POD_vPart_No.SelectedIndex = -1;
+                    isLoadItem = true;
+                }
+                catch
+                {
+                }
+            }
+            else
+            {
+                try
+                {
+                    DataTable dt = dbFunctions.getTable("pr_GetMetireal_PartNo '" + PO_vSupplier_Name.SelectedValue.ToString() + "'");
+                    POD_vPart_No.DataSource = dt;
+                    POD_vPart_No.DisplayMember = "IM_PartNo";
+                    POD_vPart_No.ValueMember = "IM_ID";
+                    POD_vPart_No.SelectedIndex = -1;
+                    isLoadItem = true;
+                }
+                catch
+                {
+                }
+            }
+        }
         private void PO_vPO_NO_TextChanged(object sender, EventArgs e)
         {
 
@@ -886,6 +967,11 @@ namespace CRM_App.Transaction
         }
 
         private void POD_vPacking_Std_TextChanged(object sender, EventArgs e)
+        {
+            //calulate();
+        }
+
+        private void POD_dUnit_Price_TextChanged(object sender, EventArgs e)
         {
             calulate();
         }

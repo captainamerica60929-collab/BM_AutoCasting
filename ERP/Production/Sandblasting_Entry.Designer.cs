@@ -1,6 +1,7 @@
-﻿namespace CRM_App.Production
+﻿
+namespace CRM_App.Production
 {
-    partial class Inspected_Production_Data_Entry
+    partial class Sandblasting_Entry
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +29,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inspected_Production_Data_Entry));
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label41 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label36 = new System.Windows.Forms.Label();
-            this.button16 = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sandblasting_Entry));
+            this.aci_vCardNo1 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.prod_ok = new System.Windows.Forms.TextBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.prod_rej = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.aci_vCardNo1 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.prod_ok = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -76,21 +66,32 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.Rejection = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.prod_rej = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.button16 = new System.Windows.Forms.Button();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Prod_Qty = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -144,177 +145,32 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.panel6.SuspendLayout();
-            this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel6
+            // aci_vCardNo1
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label41);
-            this.panel6.Controls.Add(this.comboBox1);
-            this.panel6.Controls.Add(this.panel14);
-            this.panel6.Controls.Add(this.panel3);
-            this.panel6.Controls.Add(this.textBox3);
-            this.panel6.Controls.Add(this.groupBox2);
-            this.panel6.Controls.Add(this.dataGridView3);
-            this.panel6.Controls.Add(this.aci_vCardNo1);
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.dataGridView1);
-            this.panel6.Controls.Add(this.label28);
-            this.panel6.Controls.Add(this.label27);
-            this.panel6.Controls.Add(this.label26);
-            this.panel6.Controls.Add(this.label25);
-            this.panel6.Controls.Add(this.label24);
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.panel2);
-            this.panel6.Controls.Add(this.panel1);
-            this.panel6.Controls.Add(this.txtxplanQty);
-            this.panel6.Controls.Add(this.label15);
-            this.panel6.Controls.Add(this.groupBox1);
-            this.panel6.Controls.Add(this.txtStartDate);
-            this.panel6.Controls.Add(this.txtPartNo);
-            this.panel6.Controls.Add(this.Pq_dRevDate);
-            this.panel6.Controls.Add(this.Pq_RequestNo);
-            this.panel6.Controls.Add(this.label12);
-            this.panel6.Controls.Add(this.Pq_vRevNo);
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.Pq_vDocNo);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.txtRCNo);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.txtModel);
-            this.panel6.Controls.Add(this.txtPartName);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.label64);
-            this.panel6.Controls.Add(this.label65);
-            this.panel6.Controls.Add(this.button10);
-            this.panel6.Controls.Add(this.button8);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.panel8);
-            this.panel6.Controls.Add(this.label30);
-            this.panel6.Controls.Add(this.label31);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1364, 589);
-            this.panel6.TabIndex = 1;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel6_Paint);
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(447, 5);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(59, 19);
-            this.label41.TabIndex = 297;
-            this.label41.Text = "Status :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Manual",
-            "Scanned"});
-            this.comboBox1.Location = new System.Drawing.Point(510, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 27);
-            this.comboBox1.TabIndex = 297;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // panel14
-            // 
-            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.label36);
-            this.panel14.Controls.Add(this.button16);
-            this.panel14.Controls.Add(this.dataGridView5);
-            this.panel14.Location = new System.Drawing.Point(615, 322);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(626, 225);
-            this.panel14.TabIndex = 385;
-            this.panel14.Visible = false;
-            // 
-            // label36
-            // 
-            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label36.AutoSize = true;
-            this.label36.ForeColor = System.Drawing.Color.Brown;
-            this.label36.Location = new System.Drawing.Point(10, 8);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(201, 19);
-            this.label36.TabIndex = 286;
-            this.label36.Text = "Edit Final Inspection Details";
-            // 
-            // button16
-            // 
-            this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
-            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.Location = new System.Drawing.Point(540, 3);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(81, 30);
-            this.button16.TabIndex = 118;
-            this.button16.Text = "Close";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(1, 34);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(622, 188);
-            this.dataGridView5.TabIndex = 0;
-            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.label35);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.prod_ok);
-            this.panel3.Controls.Add(this.button15);
-            this.panel3.Controls.Add(this.prod_rej);
-            this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.label34);
-            this.panel3.Location = new System.Drawing.Point(1079, 32);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(282, 129);
-            this.panel3.TabIndex = 384;
-            this.panel3.Visible = false;
+            this.aci_vCardNo1.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aci_vCardNo1.Location = new System.Drawing.Point(7, 58);
+            this.aci_vCardNo1.Name = "aci_vCardNo1";
+            this.aci_vCardNo1.Size = new System.Drawing.Size(312, 41);
+            this.aci_vCardNo1.TabIndex = 382;
+            this.aci_vCardNo1.Visible = false;
             // 
             // textBox5
             // 
@@ -323,7 +179,6 @@
             this.textBox5.Size = new System.Drawing.Size(100, 26);
             this.textBox5.TabIndex = 393;
             this.textBox5.Text = "0";
-            this.textBox5.TextChanged += new System.EventHandler(this.TextBox5_TextChanged);
             // 
             // textBox4
             // 
@@ -332,7 +187,6 @@
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 392;
             this.textBox4.Text = "0";
-            this.textBox4.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
             // 
             // label35
             // 
@@ -350,52 +204,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 26);
             this.textBox6.TabIndex = 390;
-            // 
-            // prod_ok
-            // 
-            this.prod_ok.Location = new System.Drawing.Point(68, 32);
-            this.prod_ok.Name = "prod_ok";
-            this.prod_ok.Size = new System.Drawing.Size(100, 26);
-            this.prod_ok.TabIndex = 385;
-            this.prod_ok.TextChanged += new System.EventHandler(this.Prod_ok_TextChanged);
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(84, 96);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 27);
-            this.button15.TabIndex = 389;
-            this.button15.Text = "Add";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.Button15_Click);
-            // 
-            // prod_rej
-            // 
-            this.prod_rej.Location = new System.Drawing.Point(70, 65);
-            this.prod_rej.Name = "prod_rej";
-            this.prod_rej.Size = new System.Drawing.Size(100, 26);
-            this.prod_rej.TabIndex = 386;
-            this.prod_rej.TextChanged += new System.EventHandler(this.Prod_rej_TextChanged);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(1, 39);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(64, 19);
-            this.label33.TabIndex = 387;
-            this.label33.Text = "OK Qty :";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(5, 71);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(66, 19);
-            this.label34.TabIndex = 388;
-            this.label34.Text = "Rej Qty :";
             // 
             // textBox3
             // 
@@ -416,9 +224,8 @@
             this.groupBox2.Size = new System.Drawing.Size(404, 118);
             this.groupBox2.TabIndex = 285;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Final Inspection Details";
+            this.groupBox2.Text = "Shortblasting Entry Details";
             this.groupBox2.Visible = false;
-            this.groupBox2.Enter += new System.EventHandler(this.GroupBox2_Enter);
             // 
             // button2
             // 
@@ -437,7 +244,6 @@
             this.button2.Text = "Update &Inspection";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView2
             // 
@@ -449,7 +255,6 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(392, 52);
             this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellContentClick);
             // 
             // button3
             // 
@@ -468,29 +273,38 @@
             this.button3.Text = "Close";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dataGridView3
+            // panel4
             // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(926, 386);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(272, 103);
-            this.dataGridView3.TabIndex = 298;
-            this.dataGridView3.Visible = false;
-            this.dataGridView3.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentDoubleClick);
+            this.panel4.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(120, -1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(994, 36);
+            this.panel4.TabIndex = 286;
             // 
-            // aci_vCardNo1
+            // label19
             // 
-            this.aci_vCardNo1.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aci_vCardNo1.Location = new System.Drawing.Point(7, 58);
-            this.aci_vCardNo1.Name = "aci_vCardNo1";
-            this.aci_vCardNo1.Size = new System.Drawing.Size(312, 41);
-            this.aci_vCardNo1.TabIndex = 382;
-            this.aci_vCardNo1.Visible = false;
-            this.aci_vCardNo1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Aci_vCardNo1_KeyUp);
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(449, 9);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(112, 18);
+            this.label19.TabIndex = 285;
+            this.label19.Text = "Shift Details";
+            // 
+            // prod_ok
+            // 
+            this.prod_ok.Location = new System.Drawing.Point(68, 32);
+            this.prod_ok.Name = "prod_ok";
+            this.prod_ok.Size = new System.Drawing.Size(100, 26);
+            this.prod_ok.TabIndex = 385;
             // 
             // panel5
             // 
@@ -525,7 +339,6 @@
             this.button13.TabIndex = 315;
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.Button13_Click);
             // 
             // button14
             // 
@@ -537,7 +350,6 @@
             this.button14.TabIndex = 316;
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.Button14_Click);
             // 
             // ROTSTATUS
             // 
@@ -633,7 +445,6 @@
             this.button5.Text = "&Delete";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button6
             // 
@@ -652,7 +463,7 @@
             this.button6.Text = "&Edit";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button9
             // 
@@ -671,7 +482,7 @@
             this.button9.Text = "&Save    ";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.Button9_Click);
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // dateTimePicker1
             // 
@@ -698,7 +509,7 @@
             this.button11.Text = "Close";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.Button11_Click);
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label39
             // 
@@ -769,7 +580,7 @@
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Visible = false;
-            this.button12.Click += new System.EventHandler(this.Button12_Click);
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // textBox2
             // 
@@ -800,87 +611,6 @@
             this.Rejection.Size = new System.Drawing.Size(197, 27);
             this.Rejection.TabIndex = 302;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 312);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1356, 247);
-            this.dataGridView1.TabIndex = 19;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.Color.Brown;
-            this.label28.Location = new System.Drawing.Point(1017, 561);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(18, 19);
-            this.label28.TabIndex = 297;
-            this.label28.Text = "0";
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
-            this.label27.ForeColor = System.Drawing.Color.Brown;
-            this.label27.Location = new System.Drawing.Point(808, 561);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(18, 19);
-            this.label27.TabIndex = 296;
-            this.label27.Text = "0";
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
-            this.label26.ForeColor = System.Drawing.Color.Brown;
-            this.label26.Location = new System.Drawing.Point(551, 561);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(18, 19);
-            this.label26.TabIndex = 294;
-            this.label26.Text = "0";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(865, 561);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(158, 19);
-            this.label25.TabIndex = 295;
-            this.label25.Text = "Total Inspection Qty  :";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(668, 561);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(146, 19);
-            this.label24.TabIndex = 293;
-            this.label24.Text = "Total Rejection Qty :";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(452, 561);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(102, 19);
-            this.label17.TabIndex = 292;
-            this.label17.Text = "Total OK Qty :";
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -894,7 +624,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1356, 70);
             this.panel2.TabIndex = 284;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // label23
             // 
@@ -962,30 +691,286 @@
             this.label21.Text = "OK Quantity(Nos)";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel4
+            // button15
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.button15.Location = new System.Drawing.Point(84, 96);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 27);
+            this.button15.TabIndex = 389;
+            this.button15.Text = "Add";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.Brown;
+            this.label26.Location = new System.Drawing.Point(551, 721);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(18, 19);
+            this.label26.TabIndex = 294;
+            this.label26.Text = "0";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(865, 721);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(158, 19);
+            this.label25.TabIndex = 295;
+            this.label25.Text = "Total Inspection Qty  :";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(452, 721);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(102, 19);
+            this.label17.TabIndex = 292;
+            this.label17.Text = "Total OK Qty :";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label19);
-            this.panel4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(120, -1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(994, 36);
-            this.panel4.TabIndex = 286;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 312);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1356, 407);
+            this.dataGridView1.TabIndex = 19;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label19
+            // label28
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(449, 9);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(112, 18);
-            this.label19.TabIndex = 285;
-            this.label19.Text = "Shift Details";
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.label28.ForeColor = System.Drawing.Color.Brown;
+            this.label28.Location = new System.Drawing.Point(1017, 721);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(18, 19);
+            this.label28.TabIndex = 297;
+            this.label28.Text = "0";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(668, 721);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(146, 19);
+            this.label24.TabIndex = 293;
+            this.label24.Text = "Total Rejection Qty :";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Location = new System.Drawing.Point(447, 5);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(59, 19);
+            this.label41.TabIndex = 297;
+            this.label41.Text = "Status :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Manual",
+            "Scanned"});
+            this.comboBox1.Location = new System.Drawing.Point(510, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 27);
+            this.comboBox1.TabIndex = 297;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.label35);
+            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Controls.Add(this.prod_ok);
+            this.panel3.Controls.Add(this.button15);
+            this.panel3.Controls.Add(this.prod_rej);
+            this.panel3.Controls.Add(this.label33);
+            this.panel3.Controls.Add(this.label34);
+            this.panel3.Location = new System.Drawing.Point(1079, 32);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(282, 129);
+            this.panel3.TabIndex = 384;
+            this.panel3.Visible = false;
+            // 
+            // prod_rej
+            // 
+            this.prod_rej.Location = new System.Drawing.Point(70, 65);
+            this.prod_rej.Name = "prod_rej";
+            this.prod_rej.Size = new System.Drawing.Size(100, 26);
+            this.prod_rej.TabIndex = 386;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.Black;
+            this.label33.Location = new System.Drawing.Point(1, 39);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(64, 19);
+            this.label33.TabIndex = 387;
+            this.label33.Text = "OK Qty :";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(5, 71);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(66, 19);
+            this.label34.TabIndex = 388;
+            this.label34.Text = "Rej Qty :";
+            // 
+            // panel14
+            // 
+            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel14.Controls.Add(this.label36);
+            this.panel14.Controls.Add(this.button16);
+            this.panel14.Controls.Add(this.dataGridView5);
+            this.panel14.Location = new System.Drawing.Point(615, 322);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(626, 225);
+            this.panel14.TabIndex = 385;
+            this.panel14.Visible = false;
+            // 
+            // label36
+            // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label36.AutoSize = true;
+            this.label36.ForeColor = System.Drawing.Color.Brown;
+            this.label36.Location = new System.Drawing.Point(10, 8);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(176, 19);
+            this.label36.TabIndex = 286;
+            this.label36.Text = "Edit Shotblasting Details";
+            // 
+            // button16
+            // 
+            this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
+            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.Location = new System.Drawing.Point(540, 3);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(81, 30);
+            this.button16.TabIndex = 118;
+            this.button16.Text = "Close";
+            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(1, 34);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.Size = new System.Drawing.Size(622, 188);
+            this.dataGridView5.TabIndex = 0;
+            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.label27.ForeColor = System.Drawing.Color.Brown;
+            this.label27.Location = new System.Drawing.Point(808, 721);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(18, 19);
+            this.label27.TabIndex = 296;
+            this.label27.Text = "0";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label41);
+            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Controls.Add(this.panel14);
+            this.panel6.Controls.Add(this.panel3);
+            this.panel6.Controls.Add(this.textBox3);
+            this.panel6.Controls.Add(this.groupBox2);
+            this.panel6.Controls.Add(this.dataGridView3);
+            this.panel6.Controls.Add(this.aci_vCardNo1);
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Controls.Add(this.label28);
+            this.panel6.Controls.Add(this.label27);
+            this.panel6.Controls.Add(this.label26);
+            this.panel6.Controls.Add(this.label25);
+            this.panel6.Controls.Add(this.label24);
+            this.panel6.Controls.Add(this.label17);
+            this.panel6.Controls.Add(this.panel2);
+            this.panel6.Controls.Add(this.panel1);
+            this.panel6.Controls.Add(this.txtxplanQty);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.groupBox1);
+            this.panel6.Controls.Add(this.txtStartDate);
+            this.panel6.Controls.Add(this.txtPartNo);
+            this.panel6.Controls.Add(this.Pq_dRevDate);
+            this.panel6.Controls.Add(this.Pq_RequestNo);
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.Pq_vRevNo);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.Pq_vDocNo);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.txtRCNo);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.txtModel);
+            this.panel6.Controls.Add(this.txtPartName);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label64);
+            this.panel6.Controls.Add(this.label65);
+            this.panel6.Controls.Add(this.button10);
+            this.panel6.Controls.Add(this.button8);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.label30);
+            this.panel6.Controls.Add(this.label31);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1364, 749);
+            this.panel6.TabIndex = 3;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(926, 386);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(272, 103);
+            this.dataGridView3.TabIndex = 298;
+            this.dataGridView3.Visible = false;
             // 
             // panel1
             // 
@@ -1099,7 +1084,6 @@
             this.Employee_Name.Name = "Employee_Name";
             this.Employee_Name.Size = new System.Drawing.Size(156, 27);
             this.Employee_Name.TabIndex = 296;
-            this.Employee_Name.SelectedIndexChanged += new System.EventHandler(this.Employee_Name_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -1146,7 +1130,7 @@
             this.button4.Text = "Update &Inspection";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Visible = false;
             // 
             // button1
             // 
@@ -1160,7 +1144,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 29);
             this.button1.TabIndex = 291;
-            this.button1.Text = "&Inspection";
+            this.button1.Text = "&Save";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -1177,7 +1161,6 @@
             this.Shift.Name = "Shift";
             this.Shift.Size = new System.Drawing.Size(84, 27);
             this.Shift.TabIndex = 290;
-            this.Shift.SelectedIndexChanged += new System.EventHandler(this.Shift_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -1199,7 +1182,6 @@
             this.PD_Reject_Qty.Size = new System.Drawing.Size(87, 26);
             this.PD_Reject_Qty.TabIndex = 287;
             this.PD_Reject_Qty.TextChanged += new System.EventHandler(this.PD_Reject_Qty_TextChanged);
-            this.PD_Reject_Qty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PD_Reject_Qty_KeyPress);
             // 
             // label14
             // 
@@ -1220,8 +1202,6 @@
             this.PD_OK_Qty.Name = "PD_OK_Qty";
             this.PD_OK_Qty.Size = new System.Drawing.Size(80, 26);
             this.PD_OK_Qty.TabIndex = 285;
-            this.PD_OK_Qty.TextChanged += new System.EventHandler(this.PD_OK_Qty_TextChanged);
-            this.PD_OK_Qty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PD_OK_Qty_KeyPress);
             // 
             // label13
             // 
@@ -1272,7 +1252,6 @@
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Visible = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -1292,7 +1271,6 @@
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Visible = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label10
             // 
@@ -1322,7 +1300,6 @@
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Visible = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnsave
             // 
@@ -1340,7 +1317,6 @@
             this.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnsave.UseVisualStyleBackColor = true;
             this.btnsave.Visible = false;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // txtStartDate
             // 
@@ -1388,7 +1364,6 @@
             this.Pq_RequestNo.Size = new System.Drawing.Size(209, 26);
             this.Pq_RequestNo.TabIndex = 12;
             this.Pq_RequestNo.Visible = false;
-            this.Pq_RequestNo.TextChanged += new System.EventHandler(this.Pq_RequestNo_TextChanged);
             // 
             // label12
             // 
@@ -1604,7 +1579,6 @@
             this.button8.Text = "E&xcel";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel7
             // 
@@ -1621,9 +1595,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(23, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 19);
+            this.label5.Size = new System.Drawing.Size(200, 19);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Final Inspection Details";
+            this.label5.Text = "Shotblasting Entry Details";
             // 
             // panel8
             // 
@@ -1640,7 +1614,7 @@
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(1089, 561);
+            this.label30.Location = new System.Drawing.Point(1089, 721);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(183, 19);
             this.label30.TabIndex = 299;
@@ -1652,46 +1626,46 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
             this.label31.ForeColor = System.Drawing.Color.Brown;
-            this.label31.Location = new System.Drawing.Point(1268, 562);
+            this.label31.Location = new System.Drawing.Point(1268, 722);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(18, 19);
             this.label31.TabIndex = 300;
             this.label31.Text = "0";
             // 
-            // Inspected_Production_Data_Entry
+            // Sandblasting_Entry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1364, 589);
+            this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.panel6);
-            this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Inspected_Production_Data_Entry";
-            this.Text = "Production_Data_Entry";
-            this.Load += new System.EventHandler(this.Production_Data_Entry_Load);
-            this.Shown += new System.EventHandler(this.Production_Data_Entry_Shown);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.Font = new System.Drawing.Font("Cambria", 12F);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Sandblasting_Entry";
+            this.Text = "Sandblasting_Entry";
+            this.Load += new System.EventHandler(this.Sandblasting_Entry_Load);
+            this.Shown += new System.EventHandler(this.Sandblasting_Entry_Shown);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1702,81 +1676,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox Pq_dRevDate;
-        private System.Windows.Forms.TextBox Pq_RequestNo;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox Pq_vRevNo;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox Pq_vDocNo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtRCNo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtModel;
-        private System.Windows.Forms.TextBox txtPartName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox txtStartDate;
-        private System.Windows.Forms.TextBox txtPartNo;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox PD_Reject_Qty;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox PD_OK_Qty;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox PD_CreatedBy;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtxplanQty;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox Shift;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnsave;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox aci_vCardNo1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lbl_Prod_Qty;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker PD_Date;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox Employee_Name;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox prod_ok;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.TextBox ROTSTATUS;
         private System.Windows.Forms.Panel panel12;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
@@ -1797,25 +1712,84 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox Rejection;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TextBox aci_vCardNo1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox prod_rej;
-        private System.Windows.Forms.TextBox prod_ok;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_Prod_Qty;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtxplanQty;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox Employee_Name;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.DateTimePicker PD_Date;
+        private System.Windows.Forms.ComboBox Shift;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox PD_Reject_Qty;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox PD_OK_Qty;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox PD_CreatedBy;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtStartDate;
+        private System.Windows.Forms.TextBox txtPartNo;
+        private System.Windows.Forms.TextBox Pq_dRevDate;
+        private System.Windows.Forms.TextBox Pq_RequestNo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox Pq_vRevNo;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Pq_vDocNo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtRCNo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtPartName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
     }
 }

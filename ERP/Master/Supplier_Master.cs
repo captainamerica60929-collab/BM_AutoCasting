@@ -8,6 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using Maintanence_Printing_Tool;
 using System.Data.SqlClient;
+using CRM_App.Common;
+
+using System.Linq;
 
 namespace LarchERP.Master
 {
@@ -955,7 +958,64 @@ namespace LarchERP.Master
             catch { }
         }
 
-       
+        private void SM_TINNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
 
-   }
+                string code = SM_TINNo.Text.Trim();
+
+                StateInfo state = IndianStates.states.FirstOrDefault(x =>
+                    x.Code.Equals(code, StringComparison.OrdinalIgnoreCase));
+
+                if (state != null)
+                {
+                    SM_CSTNo.Text = state.Name;
+                    //txtStateShortName.Text = state.ShortName;
+                }
+                else
+                {
+                    SM_CSTNo.Clear();
+                    //txtStateShortName.Clear();
+
+                    MessageBox.Show(
+                        "Invalid State Code",
+                        "State",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void SM_CSTNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    e.SuppressKeyPress = true;
+
+            //    string code = txtStateCode.Text.Trim();
+
+            //    StateInfo state = states.FirstOrDefault(x =>
+            //        x.Code.Equals(code, StringComparison.OrdinalIgnoreCase));
+
+            //    if (state != null)
+            //    {
+            //        txtStateName.Text = state.Name;
+            //        txtStateShortName.Text = state.ShortName;
+            //    }
+            //    else
+            //    {
+            //        txtStateName.Clear();
+            //        txtStateShortName.Clear();
+
+            //        MessageBox.Show(
+            //            "Invalid State Code",
+            //            "State",
+            //            MessageBoxButtons.OK,
+            //            MessageBoxIcon.Warning);
+            //    }
+            //}
+        }
+    }
 }

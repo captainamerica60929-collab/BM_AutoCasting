@@ -422,6 +422,7 @@ namespace CRM_App.Transaction
         private void button1_Click_1(object sender, EventArgs e)
         {
             change_Color(sender);
+            //GRN_Approval ObjGrin_Against_PO_Print = new GRN_Approval();
             GRN_Approval ObjGrin_Against_PO_Print = new GRN_Approval();
 
             BodyPanel.Controls.Clear();

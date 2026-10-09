@@ -33,6 +33,7 @@ namespace CRM_App
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.lblForgotAccount = new System.Windows.Forms.Label();
             this.lblResetPassword = new System.Windows.Forms.Label();
             this.btnMinimize = new System.Windows.Forms.Button();
@@ -41,6 +42,9 @@ namespace CRM_App
             this.btnSignIn = new CRM_App.RoundedButton();
             this.txtpassword = new CRM_App.RoundedTextBox();
             this.txtusername = new CRM_App.RoundedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlLogoBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblForgotAccount
@@ -116,6 +120,9 @@ namespace CRM_App
             // pnlLogoBox
             // 
             this.pnlLogoBox.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLogoBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogoBox.BackgroundImage")));
+            this.pnlLogoBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLogoBox.Controls.Add(this.pictureBox1);
             this.pnlLogoBox.Location = new System.Drawing.Point(633, 128);
             this.pnlLogoBox.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLogoBox.Name = "pnlLogoBox";
@@ -183,6 +190,16 @@ namespace CRM_App
             this.txtusername.TabIndex = 0;
             this.txtusername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(353, 228);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,11 +223,15 @@ namespace CRM_App
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.LoginForm_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
+            this.pnlLogoBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private PictureBox pictureBox1;
     }
 }

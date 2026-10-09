@@ -35,8 +35,9 @@ namespace CRM_App.production
             Load_Part_Number();
             LoadRouteCardNo();
             loadpalt();
-         
- 
+            Load_Model();
+
+
             LoadReqNo();
             Pq_Route_Card_Start_Date.MinDate = System.DateTime.Now.AddDays(-3);
             //LoadMachineNO();
@@ -103,6 +104,23 @@ namespace CRM_App.production
             {
             }
         }
+        public void Load_Model()
+        {
+            try
+            {
+                // DataTable dt = dbFunctions.getTable("pr_LoadMachine '" + Pq_vPart_No.SelectedValue.ToString() + "'");
+                DataTable dt = dbFunctions.getTable("Pr_Get_Mold_dropdown ");
+                Model.DataSource = dt;
+                Model.DisplayMember = "IM_PartName";
+                Model.ValueMember = "IM_PartName";
+                Model.SelectedIndex = -1;
+                //isReqNo_Load = true;
+            }
+            catch
+            {
+            }
+        }
+
 
         private void LoadRMSpec()
 
@@ -182,6 +200,7 @@ namespace CRM_App.production
                         Pq_vPart_Name.Text = dt.Rows[0]["IM_PartNo"].ToString();
                     Pq_vModel.Text = dt.Rows[0]["ML_Model"].ToString();
                     Pq_Mould_Name.Text = dt.Rows[0]["MLD_Mold"].ToString();
+                    Model.SelectedValue = dt.Rows[0]["MLD_Mold"].ToString();
                     //Pq_Mould_Number.Text = dt.Rows[0]["IM_MouldNumer"].ToString();
                     Pq_Mould_Number.Text = dt.Rows[0]["MLD_MouldNo"].ToString();
                     // Pq_Machine_Name.Text = dt.Rows[0]["MM_MachineName"].ToString();
@@ -191,7 +210,7 @@ namespace CRM_App.production
                     MachineID = dt.Rows[0]["MM_ID"].ToString();
                     Mould_ID = dt.Rows[0]["MLD_ID"].ToString();
                     part_price.Text = dt.Rows[0]["IM_Sales_Price"].ToString();
-
+                    Customer.Text = dt.Rows[0]["IM_Customer"].ToString();
                     
 
                     Pq_RM_Spec.Text = "";
@@ -543,7 +562,7 @@ namespace CRM_App.production
                 com.Parameters.Add("@Pq_RM_Grade", SqlDbType.VarChar).Value = Pq_RM_Grade.Text.ToString();
 
                 com.Parameters.Add("@Pq_RM_Plan_Qty", SqlDbType.VarChar).Value = Pq_RM_Plan_Qty.Text.ToString();
-                com.Parameters.Add("@Pq_vModel", SqlDbType.VarChar).Value = Pq_vModel.Text.ToString();
+                com.Parameters.Add("@Pq_vModel", SqlDbType.VarChar).Value = Model.Text.ToString();
                 //com.Parameters.Add("@Pq_Operation", SqlDbType.Int).Value = MLD_Customer.SelectedValue.ToString();
                 com.Parameters.Add("@Pq_Machine_ID", SqlDbType.Int).Value = MachineID;
                 com.Parameters.Add("@Pq_Machine_Name", SqlDbType.VarChar).Value = Pq_Machine_Name.Text.ToString();
@@ -896,6 +915,11 @@ namespace CRM_App.production
                 //textBox6.Text = "";
                 //dataGridView2.Visible = false;
             }
+        }
+
+        private void Pq_vModel_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

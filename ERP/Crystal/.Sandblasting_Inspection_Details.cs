@@ -16,14 +16,14 @@ namespace CRM_App.Crystal {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class RouteCard_Print : ReportClass {
+    public class Sandblasting_Inspection_Details : ReportClass {
         
-        public RouteCard_Print() {
+        public Sandblasting_Inspection_Details() {
         }
         
         public override string ResourceName {
             get {
-                return "RouteCard_Print.rpt";
+                return ".Sandblasting_Inspection_Details.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace CRM_App.Crystal {
         
         public override string FullResourceName {
             get {
-                return "CRM_App.Crystal.RouteCard_Print.rpt";
+                return "CRM_App.Crystal..Sandblasting_Inspection_Details.rpt";
             }
             set {
                 // Do nothing
@@ -90,57 +90,17 @@ namespace CRM_App.Crystal {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_id {
+        public CrystalDecisions.Shared.IParameterField Parameter_PD_Route_Card_ID {
             get {
                 return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Sandblasting_Inspection_Detailsrpt_PD_Route_Card_ID {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Final_Inspection_Detailsrpt_PD_Route_Card_ID {
-            get {
-                return this.DataDefinition.ParameterFields[2];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Flittling_Inspection_Detailsrpt_PD_Route_Card_ID {
-            get {
-                return this.DataDefinition.ParameterFields[3];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Invoice_Issue_Detailsrpt_RC_No {
-            get {
-                return this.DataDefinition.ParameterFields[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Production_Detailsrpt_PD_Route_Card_ID {
-            get {
-                return this.DataDefinition.ParameterFields[5];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedRouteCard_Print : Component, ICachedReport {
+    public class CachedSandblasting_Inspection_Details : Component, ICachedReport {
         
-        public CachedRouteCard_Print() {
+        public CachedSandblasting_Inspection_Details() {
         }
         
         [Browsable(false)]
@@ -177,7 +137,7 @@ namespace CRM_App.Crystal {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            RouteCard_Print rpt = new RouteCard_Print();
+            Sandblasting_Inspection_Details rpt = new Sandblasting_Inspection_Details();
             rpt.Site = this.Site;
             return rpt;
         }

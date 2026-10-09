@@ -74,6 +74,8 @@
             this.Menus = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printBarcodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flittlingInspectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sandblastingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -647,17 +649,19 @@
             this.Menus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem,
             this.printBarcodeToolStripMenuItem,
+            this.flittlingInspectionToolStripMenuItem,
+            this.sandblastingToolStripMenuItem,
             this.deleteToolStripMenuItem,
             this.toolStripMenuItem1});
             this.Menus.Name = "Menus";
-            this.Menus.Size = new System.Drawing.Size(208, 124);
+            this.Menus.Size = new System.Drawing.Size(240, 184);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.editToolStripMenuItem.Image = global::CRM_App.Properties.Resources._069;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
             this.editToolStripMenuItem.Text = "Production";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -666,9 +670,27 @@
             this.printBarcodeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.printBarcodeToolStripMenuItem.Image = global::CRM_App.Properties.Resources._088;
             this.printBarcodeToolStripMenuItem.Name = "printBarcodeToolStripMenuItem";
-            this.printBarcodeToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.printBarcodeToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
             this.printBarcodeToolStripMenuItem.Text = "Inprocess QC";
             this.printBarcodeToolStripMenuItem.Click += new System.EventHandler(this.printBarcodeToolStripMenuItem_Click);
+            // 
+            // flittlingInspectionToolStripMenuItem
+            // 
+            this.flittlingInspectionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.flittlingInspectionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("flittlingInspectionToolStripMenuItem.Image")));
+            this.flittlingInspectionToolStripMenuItem.Name = "flittlingInspectionToolStripMenuItem";
+            this.flittlingInspectionToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
+            this.flittlingInspectionToolStripMenuItem.Text = "Fettling Inspection";
+            this.flittlingInspectionToolStripMenuItem.Click += new System.EventHandler(this.flittlingInspectionToolStripMenuItem_Click);
+            // 
+            // sandblastingToolStripMenuItem
+            // 
+            this.sandblastingToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.sandblastingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sandblastingToolStripMenuItem.Image")));
+            this.sandblastingToolStripMenuItem.Name = "sandblastingToolStripMenuItem";
+            this.sandblastingToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
+            this.sandblastingToolStripMenuItem.Text = "Shortblasting";
+            this.sandblastingToolStripMenuItem.Click += new System.EventHandler(this.sandblastingToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -676,7 +698,7 @@
             this.deleteToolStripMenuItem.Image = global::CRM_App.Properties.Resources._085;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.ShowShortcutKeys = false;
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
             this.deleteToolStripMenuItem.Text = "Final Inspection";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -685,7 +707,7 @@
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem1.Image = global::CRM_App.Properties.Resources.Barcode;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(207, 30);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(239, 30);
             this.toolStripMenuItem1.Text = "Print Barcode";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -764,5 +786,7 @@
         private System.Windows.Forms.ComboBox plant;
         private System.Windows.Forms.Label label10;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
+        private System.Windows.Forms.ToolStripMenuItem flittlingInspectionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sandblastingToolStripMenuItem;
     }
 }

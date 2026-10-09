@@ -204,6 +204,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\StateInfo.cs" />
+    <Compile Include="Crystal\.Sandblasting_Inspection_Details.cs">
+      <DependentUpon>.Sandblasting_Inspection_Details.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Crystal\Flittling_Inspection_Details.cs">
+      <DependentUpon>Flittling_Inspection_Details.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Crystal\RouteCard_Print - backup.cs">
+      <DependentUpon>RouteCard_Print - backup.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Production\Flittling_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\Flittling_Entry.Designer.cs">
+      <DependentUpon>Flittling_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\Sandblasting_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\Sandblasting_Entry.Designer.cs">
+      <DependentUpon>Sandblasting_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\GRN_APPROVAL_NEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\GRN_APPROVAL_NEW.Designer.cs">
+      <DependentUpon>GRN_APPROVAL_NEW.cs</DependentUpon>
+    </Compile>
     <Compile Include="VectorIcons.cs" />
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
@@ -1291,6 +1328,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>F001.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Crystal\.Sandblasting_Inspection_Details.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>.Sandblasting_Inspection_Details.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal\Flittling_Inspection_Details.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Flittling_Inspection_Details1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crystal\Maintanance\DC_Print_1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DC_Print_11.cs</LastGenOutput>
@@ -1406,6 +1451,10 @@
     <EmbeddedResource Include="Crystal\Production_wise_dashbord_desigh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Production_wise_dashbord_desigh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal\RouteCard_Print - backup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RouteCard_Print - backup.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Crystal\Sub_FG.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1818,6 +1867,9 @@
       <DependentUpon>AllList_Route_Card.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Production\Flittling_Entry.resx">
+      <DependentUpon>Flittling_Entry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Production\Monthly_Pro_Schedule.resx">
       <DependentUpon>Monthly_Pro_Schedule.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1841,6 +1893,9 @@
     <EmbeddedResource Include="Production\Inspected_Production_Data_Entry.resx">
       <DependentUpon>Inspected_Production_Data_Entry.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\Sandblasting_Entry.resx">
+      <DependentUpon>Sandblasting_Entry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\Sub_part_Issuse_new.resx">
       <DependentUpon>Sub_part_Issuse_new.cs</DependentUpon>
@@ -2062,6 +2117,9 @@
     <EmbeddedResource Include="Transaction\Calibration_List.resx">
       <DependentUpon>Calibration_List.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\GRN_APPROVAL_NEW.resx">
+      <DependentUpon>GRN_APPROVAL_NEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\New_Work_Order.resx">
       <DependentUpon>New_Work_Order.cs</DependentUpon>
@@ -2597,14 +2655,17 @@
   <ItemGroup>
     <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Transaction\backup\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SkiaSharp.1.68.0\build\net45\SkiaSharp.targets" Condition="Exists('..\packages\SkiaSharp.1.68.0\build\net45\SkiaSharp.targets')" />

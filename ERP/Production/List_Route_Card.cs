@@ -634,5 +634,43 @@ namespace CRM_App.Transaction
                 //MessageBox.Show(ex.Message);
             }
         }
+
+        private void flittlingInspectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Flittling_Entry ObjFlittling_Entry = new Flittling_Entry();
+            dbFunctions.Route_Card_ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+            panel2.Controls.Clear();
+            panel2.Visible = true;
+
+            panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            if (ObjFlittling_Entry.IsDisposed)
+            {
+                ObjFlittling_Entry = new Flittling_Entry();
+            }
+            ObjFlittling_Entry.TopLevel = false;
+            ObjFlittling_Entry.FormBorderStyle = FormBorderStyle.None;
+            ObjFlittling_Entry.Dock = DockStyle.Fill;
+            panel2.Controls.Add(ObjFlittling_Entry);
+            ObjFlittling_Entry.Show();
+        }
+
+        private void sandblastingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sandblasting_Entry ObjFlittling_Entry = new Sandblasting_Entry();
+            dbFunctions.Route_Card_ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+            panel2.Controls.Clear();
+            panel2.Visible = true;
+
+            panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            if (ObjFlittling_Entry.IsDisposed)
+            {
+                ObjFlittling_Entry = new Sandblasting_Entry();
+            }
+            ObjFlittling_Entry.TopLevel = false;
+            ObjFlittling_Entry.FormBorderStyle = FormBorderStyle.None;
+            ObjFlittling_Entry.Dock = DockStyle.Fill;
+            panel2.Controls.Add(ObjFlittling_Entry);
+            ObjFlittling_Entry.Show();
+        }
     }
 }

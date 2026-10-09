@@ -41,6 +41,13 @@ namespace CRM_App.Production
                 DataTable dd1 = dbFunctions.getTable("pr_Print_Production_Route_Card  " + dbFunctions.Route_Card_ID + "");
                 oRpt.Subreports["Production_Details.rpt"].SetDataSource(dd1);
 
+
+
+                DataTable dd4 = dbFunctions.getTable("pr_Print_Production_FLITTLING_Inspection  " + dbFunctions.Route_Card_ID + "");
+                oRpt.Subreports["Flittling_Inspection_Details.rpt"].SetDataSource(dd4);
+
+                DataTable dd3 = dbFunctions.getTable("pr_Print_Production_Sandblasting_Inspection  " + dbFunctions.Route_Card_ID + "");
+                oRpt.Subreports[".Sandblasting_Inspection_Details.rpt"].SetDataSource(dd3);
                 //ReportDocument subreport1 = oRpt.Subreports[0];
                 //subreport1.SetDataSource(dd1);
 

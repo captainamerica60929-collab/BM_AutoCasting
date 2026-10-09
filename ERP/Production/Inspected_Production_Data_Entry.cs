@@ -48,7 +48,7 @@ namespace CRM_App.Production
                 if (comboBox1.Text == "Manual")
                 {
                     aci_vCardNo1.Visible = false;
-                    DataTable dt = dbFunctions.getTable("pr_get_Production_Request  '" + dbFunctions.Route_Card_ID + "'");
+                    DataTable dt = dbFunctions.getTable("pr_get_Production_Final_Request  '" + dbFunctions.Route_Card_ID + "'");
                     //ID = dt.Rows[0]["Pq_iid"].ToString();
                     Part_ID = dt.Rows[0]["Pq_iPart_ID"].ToString();
                     txtRCNo.Text = dt.Rows[0]["Pq_Route_Card_No"].ToString();
@@ -1032,6 +1032,26 @@ namespace CRM_App.Production
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Load1();
+        }
+
+        private void Pq_RequestNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Employee_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Shift_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

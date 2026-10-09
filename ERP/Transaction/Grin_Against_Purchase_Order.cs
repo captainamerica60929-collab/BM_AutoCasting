@@ -317,11 +317,11 @@ namespace CRM_App.Transaction
             }
             else
             {
-                if (Podc_Description.Text.Equals(""))
-                {
-                    MessageBox.Show("Document Name Should Not be Empty", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                //if (Podc_Description.Text.Equals(""))
+                //{
+                //    MessageBox.Show("Document Name Should Not be Empty", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    return;
+                //}
 
                 DialogResult result = MessageBox.Show("Everything is correct?", "Confirmation",
                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -678,6 +678,11 @@ namespace CRM_App.Transaction
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

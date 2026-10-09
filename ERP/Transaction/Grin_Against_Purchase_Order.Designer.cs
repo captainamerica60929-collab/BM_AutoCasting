@@ -108,7 +108,6 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -117,10 +116,10 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button1.BackColor = System.Drawing.Color.PaleGreen;
             this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(972, 178);
+            this.button1.Location = new System.Drawing.Point(993, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 31);
             this.button1.TabIndex = 100;
@@ -140,10 +139,10 @@
             // 
             // GRN_dGross_Total
             // 
-            this.GRN_dGross_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_dGross_Total.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_dGross_Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GRN_dGross_Total.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRN_dGross_Total.Location = new System.Drawing.Point(975, 150);
+            this.GRN_dGross_Total.Location = new System.Drawing.Point(996, 161);
             this.GRN_dGross_Total.Name = "GRN_dGross_Total";
             this.GRN_dGross_Total.Size = new System.Drawing.Size(123, 26);
             this.GRN_dGross_Total.TabIndex = 108;
@@ -151,11 +150,11 @@
             // 
             // label29
             // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(864, 153);
+            this.label29.Location = new System.Drawing.Point(885, 164);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(95, 19);
             this.label29.TabIndex = 109;
@@ -171,10 +170,10 @@
             // 
             // GRN_dSubTotal
             // 
-            this.GRN_dSubTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_dSubTotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_dSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GRN_dSubTotal.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRN_dSubTotal.Location = new System.Drawing.Point(975, 1);
+            this.GRN_dSubTotal.Location = new System.Drawing.Point(996, 12);
             this.GRN_dSubTotal.Name = "GRN_dSubTotal";
             this.GRN_dSubTotal.Size = new System.Drawing.Size(123, 26);
             this.GRN_dSubTotal.TabIndex = 98;
@@ -227,10 +226,10 @@
             // 
             // GRN_dGST_Percentage1
             // 
-            this.GRN_dGST_Percentage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_dGST_Percentage1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_dGST_Percentage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GRN_dGST_Percentage1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRN_dGST_Percentage1.Location = new System.Drawing.Point(894, 91);
+            this.GRN_dGST_Percentage1.Location = new System.Drawing.Point(915, 102);
             this.GRN_dGST_Percentage1.Name = "GRN_dGST_Percentage1";
             this.GRN_dGST_Percentage1.Size = new System.Drawing.Size(49, 26);
             this.GRN_dGST_Percentage1.TabIndex = 103;
@@ -239,10 +238,10 @@
             // 
             // GRN_dGST_Percentage2
             // 
-            this.GRN_dGST_Percentage2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_dGST_Percentage2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_dGST_Percentage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GRN_dGST_Percentage2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRN_dGST_Percentage2.Location = new System.Drawing.Point(894, 121);
+            this.GRN_dGST_Percentage2.Location = new System.Drawing.Point(915, 132);
             this.GRN_dGST_Percentage2.Name = "GRN_dGST_Percentage2";
             this.GRN_dGST_Percentage2.Size = new System.Drawing.Size(49, 26);
             this.GRN_dGST_Percentage2.TabIndex = 102;
@@ -251,10 +250,10 @@
             // 
             // GRN_dGST_Amount2
             // 
-            this.GRN_dGST_Amount2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_dGST_Amount2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_dGST_Amount2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GRN_dGST_Amount2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRN_dGST_Amount2.Location = new System.Drawing.Point(975, 121);
+            this.GRN_dGST_Amount2.Location = new System.Drawing.Point(996, 132);
             this.GRN_dGST_Amount2.Name = "GRN_dGST_Amount2";
             this.GRN_dGST_Amount2.Size = new System.Drawing.Size(123, 26);
             this.GRN_dGST_Amount2.TabIndex = 100;
@@ -275,11 +274,11 @@
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(789, 4);
+            this.label10.Location = new System.Drawing.Point(810, 15);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(171, 19);
             this.label10.TabIndex = 93;
@@ -309,10 +308,10 @@
             // 
             // GRN_dFreight
             // 
-            this.GRN_dFreight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_dFreight.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_dFreight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GRN_dFreight.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRN_dFreight.Location = new System.Drawing.Point(975, 31);
+            this.GRN_dFreight.Location = new System.Drawing.Point(996, 42);
             this.GRN_dFreight.Name = "GRN_dFreight";
             this.GRN_dFreight.Size = new System.Drawing.Size(123, 26);
             this.GRN_dFreight.TabIndex = 88;
@@ -321,11 +320,11 @@
             // 
             // label26
             // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(902, 61);
+            this.label26.Location = new System.Drawing.Point(923, 72);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(56, 19);
             this.label26.TabIndex = 87;
@@ -333,11 +332,11 @@
             // 
             // label25
             // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(836, 34);
+            this.label25.Location = new System.Drawing.Point(857, 45);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(127, 19);
             this.label25.TabIndex = 89;
@@ -345,10 +344,10 @@
             // 
             // GRN_dOthers
             // 
-            this.GRN_dOthers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_dOthers.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_dOthers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GRN_dOthers.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRN_dOthers.Location = new System.Drawing.Point(975, 61);
+            this.GRN_dOthers.Location = new System.Drawing.Point(996, 72);
             this.GRN_dOthers.Name = "GRN_dOthers";
             this.GRN_dOthers.Size = new System.Drawing.Size(123, 26);
             this.GRN_dOthers.TabIndex = 86;
@@ -357,10 +356,10 @@
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(881, 178);
+            this.button2.Location = new System.Drawing.Point(902, 189);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 31);
             this.button2.TabIndex = 122;
@@ -393,10 +392,10 @@
             // 
             // GRN_dGST_Amount1
             // 
-            this.GRN_dGST_Amount1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_dGST_Amount1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_dGST_Amount1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GRN_dGST_Amount1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRN_dGST_Amount1.Location = new System.Drawing.Point(975, 91);
+            this.GRN_dGST_Amount1.Location = new System.Drawing.Point(996, 102);
             this.GRN_dGST_Amount1.Name = "GRN_dGST_Amount1";
             this.GRN_dGST_Amount1.Size = new System.Drawing.Size(123, 26);
             this.GRN_dGST_Amount1.TabIndex = 90;
@@ -427,7 +426,8 @@
             // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.Controls.Add(this.button4);
             this.panel9.Controls.Add(this.button11);
@@ -457,16 +457,16 @@
             this.panel9.Controls.Add(this.label36);
             this.panel9.Controls.Add(this.label37);
             this.panel9.Controls.Add(this.label38);
-            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Location = new System.Drawing.Point(2, 404);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1104, 209);
+            this.panel9.Size = new System.Drawing.Size(1249, 253);
             this.panel9.TabIndex = 78;
             // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.button4.Location = new System.Drawing.Point(587, 53);
+            this.button4.Location = new System.Drawing.Point(841, 43);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(149, 27);
             this.button4.TabIndex = 155;
@@ -479,7 +479,7 @@
             // 
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button11.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.button11.Location = new System.Drawing.Point(396, 53);
+            this.button11.Location = new System.Drawing.Point(650, 49);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(185, 27);
             this.button11.TabIndex = 154;
@@ -494,7 +494,7 @@
             this.Podc_FileName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Podc_FileName.Location = new System.Drawing.Point(481, 20);
             this.Podc_FileName.Name = "Podc_FileName";
-            this.Podc_FileName.Size = new System.Drawing.Size(22, 16);
+            this.Podc_FileName.Size = new System.Drawing.Size(21, 16);
             this.Podc_FileName.TabIndex = 153;
             this.Podc_FileName.Text = "--";
             // 
@@ -536,11 +536,11 @@
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(950, 123);
+            this.label15.Location = new System.Drawing.Point(971, 134);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(23, 19);
             this.label15.TabIndex = 146;
@@ -548,11 +548,11 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(946, 94);
+            this.label7.Location = new System.Drawing.Point(967, 105);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(23, 19);
             this.label7.TabIndex = 145;
@@ -560,12 +560,12 @@
             // 
             // GRN_vGST_Type2
             // 
-            this.GRN_vGST_Type2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_vGST_Type2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_vGST_Type2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GRN_vGST_Type2.FormattingEnabled = true;
             this.GRN_vGST_Type2.Items.AddRange(new object[] {
             "SGST"});
-            this.GRN_vGST_Type2.Location = new System.Drawing.Point(787, 120);
+            this.GRN_vGST_Type2.Location = new System.Drawing.Point(808, 131);
             this.GRN_vGST_Type2.Name = "GRN_vGST_Type2";
             this.GRN_vGST_Type2.Size = new System.Drawing.Size(103, 27);
             this.GRN_vGST_Type2.TabIndex = 124;
@@ -573,13 +573,13 @@
             // 
             // GRN_vGST_Type1
             // 
-            this.GRN_vGST_Type1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GRN_vGST_Type1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GRN_vGST_Type1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GRN_vGST_Type1.FormattingEnabled = true;
             this.GRN_vGST_Type1.Items.AddRange(new object[] {
             "SGST",
             "IGST"});
-            this.GRN_vGST_Type1.Location = new System.Drawing.Point(787, 90);
+            this.GRN_vGST_Type1.Location = new System.Drawing.Point(808, 101);
             this.GRN_vGST_Type1.Name = "GRN_vGST_Type1";
             this.GRN_vGST_Type1.Size = new System.Drawing.Size(103, 27);
             this.GRN_vGST_Type1.TabIndex = 123;
@@ -587,11 +587,11 @@
             // 
             // label35
             // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Red;
-            this.label35.Location = new System.Drawing.Point(823, 34);
+            this.label35.Location = new System.Drawing.Point(844, 45);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(16, 19);
             this.label35.TabIndex = 141;
@@ -599,11 +599,11 @@
             // 
             // label36
             // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Red;
-            this.label36.Location = new System.Drawing.Point(890, 61);
+            this.label36.Location = new System.Drawing.Point(911, 72);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(16, 19);
             this.label36.TabIndex = 142;
@@ -611,11 +611,11 @@
             // 
             // label37
             // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(765, 93);
+            this.label37.Location = new System.Drawing.Point(786, 104);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(16, 19);
             this.label37.TabIndex = 143;
@@ -623,11 +623,11 @@
             // 
             // label38
             // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.Red;
-            this.label38.Location = new System.Drawing.Point(764, 121);
+            this.label38.Location = new System.Drawing.Point(789, 134);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(16, 19);
             this.label38.TabIndex = 144;
@@ -636,7 +636,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar1.Location = new System.Drawing.Point(840, 173);
+            this.monthCalendar1.Location = new System.Drawing.Point(887, 173);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 91;
             this.monthCalendar1.Visible = false;
@@ -684,7 +684,7 @@
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel8.Location = new System.Drawing.Point(5, 31);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1095, 2);
+            this.panel8.Size = new System.Drawing.Size(1142, 2);
             this.panel8.TabIndex = 1;
             // 
             // label9
@@ -721,25 +721,29 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.panel9);
             this.splitContainer1.Panel1.Controls.Add(this.panel6);
             this.splitContainer1.Panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel9);
-            this.splitContainer1.Size = new System.Drawing.Size(1104, 610);
-            this.splitContainer1.SplitterDistance = 397;
+            this.splitContainer1.Panel1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
+            this.splitContainer1.Size = new System.Drawing.Size(1200, 712);
+            this.splitContainer1.SplitterDistance = 683;
             this.splitContainer1.TabIndex = 56;
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel6.Controls.Add(this.monthCalendar1);
             this.panel6.Controls.Add(this.dataGridView1);
@@ -762,10 +766,9 @@
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.PO_vDelivery);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1104, 397);
+            this.panel6.Size = new System.Drawing.Size(1151, 401);
             this.panel6.TabIndex = 0;
             // 
             // dataGridView1
@@ -778,7 +781,8 @@
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridView1.Location = new System.Drawing.Point(3, 137);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1096, 257);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1136, 257);
             this.dataGridView1.TabIndex = 90;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
@@ -814,7 +818,7 @@
             this.panel4.Controls.Add(this.label33);
             this.panel4.Location = new System.Drawing.Point(2, 34);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1098, 102);
+            this.panel4.Size = new System.Drawing.Size(1145, 102);
             this.panel4.TabIndex = 77;
             // 
             // label18
@@ -982,7 +986,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Red;
-            this.label33.Location = new System.Drawing.Point(634, 73);
+            this.label33.Location = new System.Drawing.Point(681, 73);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(16, 19);
             this.label33.TabIndex = 142;
@@ -998,7 +1002,7 @@
             this.button10.ForeColor = System.Drawing.SystemColors.WindowText;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(1018, 0);
+            this.button10.Location = new System.Drawing.Point(1065, 0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(81, 30);
             this.button10.TabIndex = 0;
@@ -1017,7 +1021,7 @@
             this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(942, 2);
+            this.button8.Location = new System.Drawing.Point(989, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(74, 27);
             this.button8.TabIndex = 1;
@@ -1035,7 +1039,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(834, 2);
+            this.button9.Location = new System.Drawing.Point(881, 2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 27);
             this.button9.TabIndex = 2;
@@ -1063,7 +1067,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 610);
+            this.ClientSize = new System.Drawing.Size(1178, 712);
             this.Controls.Add(this.splitContainer1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Grin_Against_Purchase_Order";
@@ -1072,7 +1076,6 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

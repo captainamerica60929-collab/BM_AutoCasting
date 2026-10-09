@@ -52,6 +52,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtGrade = new System.Windows.Forms.RichTextBox();
+            this.POD_Note = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.IM_Type = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
@@ -119,10 +123,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtGrade = new System.Windows.Forms.RichTextBox();
-            this.POD_Note = new System.Windows.Forms.RichTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.UOM = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -397,6 +398,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.UOM);
             this.panel1.Controls.Add(this.txtGrade);
             this.panel1.Controls.Add(this.POD_Note);
             this.panel1.Controls.Add(this.label7);
@@ -429,6 +431,44 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1115, 159);
             this.panel1.TabIndex = 12;
+            // 
+            // txtGrade
+            // 
+            this.txtGrade.Location = new System.Drawing.Point(70, 69);
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(424, 85);
+            this.txtGrade.TabIndex = 144;
+            this.txtGrade.Text = "";
+            // 
+            // POD_Note
+            // 
+            this.POD_Note.Location = new System.Drawing.Point(500, 69);
+            this.POD_Note.Name = "POD_Note";
+            this.POD_Note.Size = new System.Drawing.Size(488, 85);
+            this.POD_Note.TabIndex = 143;
+            this.POD_Note.Text = "";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(505, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 19);
+            this.label7.TabIndex = 142;
+            this.label7.Text = "Note :";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(12, 72);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 19);
+            this.label18.TabIndex = 141;
+            this.label18.Text = "Grade :";
             // 
             // IM_Type
             // 
@@ -560,6 +600,7 @@
             this.POD_iUOM.ReadOnly = true;
             this.POD_iUOM.Size = new System.Drawing.Size(108, 26);
             this.POD_iUOM.TabIndex = 88;
+            this.POD_iUOM.Visible = false;
             // 
             // label3
             // 
@@ -1234,43 +1275,17 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // txtGrade
+            // UOM
             // 
-            this.txtGrade.Location = new System.Drawing.Point(70, 69);
-            this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(424, 85);
-            this.txtGrade.TabIndex = 144;
-            this.txtGrade.Text = "";
-            // 
-            // POD_Note
-            // 
-            this.POD_Note.Location = new System.Drawing.Point(500, 69);
-            this.POD_Note.Name = "POD_Note";
-            this.POD_Note.Size = new System.Drawing.Size(488, 85);
-            this.POD_Note.TabIndex = 143;
-            this.POD_Note.Text = "";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(505, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 19);
-            this.label7.TabIndex = 142;
-            this.label7.Text = "Note :";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(12, 72);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 19);
-            this.label18.TabIndex = 141;
-            this.label18.Text = "Grade :";
+            this.UOM.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UOM.FormattingEnabled = true;
+            this.UOM.Items.AddRange(new object[] {
+            "SGST",
+            "IGST"});
+            this.UOM.Location = new System.Drawing.Point(464, 3);
+            this.UOM.Name = "UOM";
+            this.UOM.Size = new System.Drawing.Size(108, 27);
+            this.UOM.TabIndex = 146;
             // 
             // Purchase_Order_Amendment
             // 
@@ -1395,6 +1410,6 @@
         private System.Windows.Forms.RichTextBox POD_Note;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label18;
-
+        private System.Windows.Forms.ComboBox UOM;
     }
 }

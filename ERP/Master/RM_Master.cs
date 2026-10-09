@@ -24,7 +24,9 @@ namespace CRM_App.Master
             Load_UOM();
             LoadCurrency();
             Load_Mould();
-            
+            Load_UOM_PKG();
+
+
             comboBox1.Text = "Active";
         }
         private void Loadasoe()
@@ -121,6 +123,20 @@ namespace CRM_App.Master
             catch
             {
             }
+        } 
+        public void Load_UOM_PKG()
+        {
+            try
+            {
+                DataTable dt = dbFunctions.getTable("pr_LoadUOM_Nos");
+                Packing_UOM.DataSource = dt;
+                Packing_UOM.DisplayMember = "UM_UOM";
+                Packing_UOM.ValueMember = "UM_UOM";
+                Packing_UOM.SelectedIndex = 0;
+            }
+            catch
+            {
+            }
         }
 
         private void IM_MaxStock_KeyPress(object sender, KeyPressEventArgs e)
@@ -135,12 +151,12 @@ namespace CRM_App.Master
         public bool Validate()
         {
                
-                if ((string.IsNullOrEmpty(IM_Supplier.Text.Trim())))
-                {
-                    ErrorMessage = "Supplier Should Not be Empty";
-                    IM_Supplier.Focus();
-                    return true;
-                }
+                //if ((string.IsNullOrEmpty(IM_Supplier.Text.Trim())))
+                //{
+                //    ErrorMessage = "Supplier Should Not be Empty";
+                //    IM_Supplier.Focus();
+                //    return true;
+                //}
 
                 if ((string.IsNullOrEmpty(IM_PartNo.Text.Trim())))
                 {
@@ -268,7 +284,7 @@ namespace CRM_App.Master
 
                 com.Parameters.Add("@IM_ID", SqlDbType.Int).Value = ID;
                 com.Parameters.Add("@IM_Type", SqlDbType.Int).Value ="3";
-                com.Parameters.Add("@IM_Supplier", SqlDbType.Int).Value = IM_Supplier.SelectedValue.ToString();
+                com.Parameters.Add("@IM_Supplier", SqlDbType.Int).Value = "1";//IM_Supplier.SelectedValue.ToString();
                 com.Parameters.Add("@IM_PartNo", SqlDbType.VarChar).Value = IM_PartNo.Text.ToString();
                 com.Parameters.Add("@IM_PartName", SqlDbType.VarChar).Value = IM_PartName.Text.ToString();
                 com.Parameters.Add("@IM_Mate_Standard", SqlDbType.VarChar).Value = IM_Mate_Standard.Text.ToString();
@@ -286,6 +302,8 @@ namespace CRM_App.Master
                 com.Parameters.Add("@IM_Color", SqlDbType.VarChar).Value = IM_Color.Text;
                 com.Parameters.Add("@IM_aoe", SqlDbType.VarChar).Value = IM_aoe.Text;
                 com.Parameters.Add("@IM_Status", SqlDbType.VarChar).Value = (comboBox1.Text == "Active") ? 'A' : 'D';
+                com.Parameters.Add("@IM_Lead_UOM", SqlDbType.VarChar).Value = Lead_UOM.Text;
+                com.Parameters.Add("@IM_PackingStd", SqlDbType.VarChar).Value = Packing_UOM.Text;
 
                 com.ExecuteNonQuery();
                 com.Connection.Close();
@@ -311,7 +329,7 @@ namespace CRM_App.Master
                 com.CommandType = CommandType.StoredProcedure;
                 com.CommandText = "pr_Insert_Item_Master_BO11";
                 com.Parameters.Add("@IM_Type", SqlDbType.Int).Value = "3";
-                com.Parameters.Add("@IM_Supplier", SqlDbType.Int).Value = IM_Supplier.SelectedValue.ToString();
+                com.Parameters.Add("@IM_Supplier", SqlDbType.Int).Value = "1";//IM_Supplier.SelectedValue.ToString();
                 com.Parameters.Add("@IM_PartNo", SqlDbType.VarChar).Value = IM_PartNo.Text.ToString();
                 com.Parameters.Add("@IM_PartName", SqlDbType.VarChar).Value = IM_PartName.Text.ToString();
                 com.Parameters.Add("@IM_Mate_Standard", SqlDbType.VarChar).Value = IM_Mate_Standard.Text.ToString();
@@ -328,6 +346,9 @@ namespace CRM_App.Master
                 com.Parameters.Add("@IM_Status", SqlDbType.VarChar).Value = (comboBox1.Text == "Active") ? 'A' : 'D';
                 com.Parameters.Add("@IM_Color", SqlDbType.VarChar).Value = IM_Color.Text;
                 com.Parameters.Add("@IM_aoe", SqlDbType.VarChar).Value = IM_aoe.Text;
+                com.Parameters.Add("@IM_Lead_UOM", SqlDbType.VarChar).Value = Lead_UOM.Text;
+                com.Parameters.Add("@IM_PackingStd", SqlDbType.VarChar).Value = Packing_UOM.Text;
+
                 com.ExecuteNonQuery();
                 com.Connection.Close();
                 MessageBox.Show("Details Saved Successfully ", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -376,6 +397,8 @@ namespace CRM_App.Master
                 string s = dt.Rows[0]["IM_Status"].ToString(); 
                 comboBox1.Text = (dt.Rows[0]["IM_Status"].ToString().Trim().Equals("A")) ? "Active" : "Inactive";
                 btnsave.Text = "&Update";
+                Packing_UOM.SelectedValue = dt.Rows[0]["IM_PackingStd"].ToString();
+                Lead_UOM.Text = dt.Rows[0]["IM_Lead_UOM"].ToString();
                 IM_Supplier.Focus();
             }
         }
