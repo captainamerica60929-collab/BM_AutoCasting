@@ -31,6 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Purchase_Order));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.Applicable = new System.Windows.Forms.ComboBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.Insurance = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.TestReport = new System.Windows.Forms.TextBox();
+            this.Warranty = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
             this.PO_vGST_Type2 = new System.Windows.Forms.ComboBox();
             this.PO_vGST_Type1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -140,18 +152,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txt_Rows = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.label42 = new System.Windows.Forms.Label();
-            this.Warranty = new System.Windows.Forms.TextBox();
-            this.TestReport = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.Insurance = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
+            this.UOM = new System.Windows.Forms.ComboBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.Advance = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -185,10 +188,12 @@
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.Advance);
+            this.panel9.Controls.Add(this.label50);
             this.panel9.Controls.Add(this.label49);
             this.panel9.Controls.Add(this.label48);
             this.panel9.Controls.Add(this.label47);
-            this.panel9.Controls.Add(this.comboBox1);
+            this.panel9.Controls.Add(this.Applicable);
             this.panel9.Controls.Add(this.label46);
             this.panel9.Controls.Add(this.Insurance);
             this.panel9.Controls.Add(this.label45);
@@ -236,6 +241,151 @@
             this.panel9.Size = new System.Drawing.Size(1160, 253);
             this.panel9.TabIndex = 0;
             // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.Black;
+            this.label49.Location = new System.Drawing.Point(371, 4);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(101, 19);
+            this.label49.TabIndex = 144;
+            this.label49.Text = "Commission :";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Black;
+            this.label48.Location = new System.Drawing.Point(358, 4);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(17, 19);
+            this.label48.TabIndex = 143;
+            this.label48.Text = "/";
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.Black;
+            this.label47.Location = new System.Drawing.Point(366, 3);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(0, 19);
+            this.label47.TabIndex = 142;
+            // 
+            // Applicable
+            // 
+            this.Applicable.BackColor = System.Drawing.SystemColors.Window;
+            this.Applicable.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Applicable.FormattingEnabled = true;
+            this.Applicable.Items.AddRange(new object[] {
+            "Applicable ",
+            "Not Applicable "});
+            this.Applicable.Location = new System.Drawing.Point(473, 1);
+            this.Applicable.Name = "Applicable";
+            this.Applicable.Size = new System.Drawing.Size(124, 27);
+            this.Applicable.TabIndex = 141;
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.Location = new System.Drawing.Point(277, 3);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(86, 19);
+            this.label46.TabIndex = 140;
+            this.label46.Text = "Installation";
+            // 
+            // Insurance
+            // 
+            this.Insurance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Insurance.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Insurance.Location = new System.Drawing.Point(147, 159);
+            this.Insurance.Name = "Insurance";
+            this.Insurance.Size = new System.Drawing.Size(276, 26);
+            this.Insurance.TabIndex = 139;
+            // 
+            // label45
+            // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Black;
+            this.label45.Location = new System.Drawing.Point(349, 135);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(65, 19);
+            this.label45.TabIndex = 138;
+            this.label45.Text = "Report :";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Location = new System.Drawing.Point(58, 161);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(86, 19);
+            this.label44.TabIndex = 137;
+            this.label44.Text = "Insurance :";
+            // 
+            // label43
+            // 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Black;
+            this.label43.Location = new System.Drawing.Point(343, 113);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(41, 19);
+            this.label43.TabIndex = 136;
+            this.label43.Text = "Test ";
+            // 
+            // TestReport
+            // 
+            this.TestReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TestReport.Font = new System.Drawing.Font("Cambria", 11F);
+            this.TestReport.Location = new System.Drawing.Point(420, 115);
+            this.TestReport.Multiline = true;
+            this.TestReport.Name = "TestReport";
+            this.TestReport.Size = new System.Drawing.Size(243, 41);
+            this.TestReport.TabIndex = 135;
+            // 
+            // Warranty
+            // 
+            this.Warranty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Warranty.Font = new System.Drawing.Font("Cambria", 11F);
+            this.Warranty.Location = new System.Drawing.Point(146, 116);
+            this.Warranty.Multiline = true;
+            this.Warranty.Name = "Warranty";
+            this.Warranty.Size = new System.Drawing.Size(183, 41);
+            this.Warranty.TabIndex = 134;
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.Location = new System.Drawing.Point(60, 116);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(83, 19);
+            this.label42.TabIndex = 133;
+            this.label42.Text = "Warranty :";
+            // 
             // PO_vGST_Type2
             // 
             this.PO_vGST_Type2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -279,8 +429,7 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(891, 175);
@@ -293,14 +442,12 @@
             // 
             // PO_vWarrenty_Class
             // 
-            this.PO_vWarrenty_Class.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.PO_vWarrenty_Class.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PO_vWarrenty_Class.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_vWarrenty_Class.Location = new System.Drawing.Point(148, 189);
+            this.PO_vWarrenty_Class.Location = new System.Drawing.Point(146, 190);
             this.PO_vWarrenty_Class.Multiline = true;
             this.PO_vWarrenty_Class.Name = "PO_vWarrenty_Class";
-            this.PO_vWarrenty_Class.Size = new System.Drawing.Size(508, 57);
+            this.PO_vWarrenty_Class.Size = new System.Drawing.Size(517, 57);
             this.PO_vWarrenty_Class.TabIndex = 5;
             this.PO_vWarrenty_Class.Text = "1. Raw material Test certificate to be sent along with material.                \r" +
     "\n2. Material Lot No to be mentioned in the invoice and test reports.";
@@ -361,13 +508,11 @@
             // 
             // PO_vInspection
             // 
-            this.PO_vInspection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.PO_vInspection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PO_vInspection.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PO_vInspection.Location = new System.Drawing.Point(420, 87);
             this.PO_vInspection.Name = "PO_vInspection";
-            this.PO_vInspection.Size = new System.Drawing.Size(178, 26);
+            this.PO_vInspection.Size = new System.Drawing.Size(243, 26);
             this.PO_vInspection.TabIndex = 4;
             this.PO_vInspection.Text = "At our end after Delivery.";
             // 
@@ -386,14 +531,12 @@
             // 
             // PO_vPayment_Terms
             // 
-            this.PO_vPayment_Terms.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.PO_vPayment_Terms.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PO_vPayment_Terms.Font = new System.Drawing.Font("Cambria", 11F);
-            this.PO_vPayment_Terms.Location = new System.Drawing.Point(147, 90);
+            this.PO_vPayment_Terms.Location = new System.Drawing.Point(147, 89);
             this.PO_vPayment_Terms.Multiline = true;
             this.PO_vPayment_Terms.Name = "PO_vPayment_Terms";
-            this.PO_vPayment_Terms.Size = new System.Drawing.Size(180, 20);
+            this.PO_vPayment_Terms.Size = new System.Drawing.Size(180, 23);
             this.PO_vPayment_Terms.TabIndex = 3;
             this.PO_vPayment_Terms.Text = "As per Supplier terms";
             this.PO_vPayment_Terms.TextChanged += new System.EventHandler(this.PO_vPayment_Terms_TextChanged);
@@ -477,14 +620,12 @@
             // 
             // PO_vDelivery
             // 
-            this.PO_vDelivery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.PO_vDelivery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PO_vDelivery.Font = new System.Drawing.Font("Cambria", 11F);
             this.PO_vDelivery.Location = new System.Drawing.Point(146, 59);
             this.PO_vDelivery.Multiline = true;
             this.PO_vDelivery.Name = "PO_vDelivery";
-            this.PO_vDelivery.Size = new System.Drawing.Size(451, 26);
+            this.PO_vDelivery.Size = new System.Drawing.Size(517, 26);
             this.PO_vDelivery.TabIndex = 2;
             this.PO_vDelivery.Text = "At our Factory located at Ayyanambakkam on or Before ";
             // 
@@ -517,13 +658,11 @@
             // 
             // PO_vMode_Of_Despatch
             // 
-            this.PO_vMode_Of_Despatch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.PO_vMode_Of_Despatch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PO_vMode_Of_Despatch.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PO_vMode_Of_Despatch.Location = new System.Drawing.Point(147, 31);
             this.PO_vMode_Of_Despatch.Name = "PO_vMode_Of_Despatch";
-            this.PO_vMode_Of_Despatch.Size = new System.Drawing.Size(451, 26);
+            this.PO_vMode_Of_Despatch.Size = new System.Drawing.Size(516, 26);
             this.PO_vMode_Of_Despatch.TabIndex = 1;
             this.PO_vMode_Of_Despatch.Text = "By Road Transport with Proper Packing Conditions.";
             // 
@@ -555,8 +694,6 @@
             // 
             // PO_vFreight
             // 
-            this.PO_vFreight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.PO_vFreight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PO_vFreight.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PO_vFreight.Location = new System.Drawing.Point(147, 1);
@@ -709,8 +846,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -729,7 +865,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 275);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1159, 110);
+            this.dataGridView1.Size = new System.Drawing.Size(1159, 108);
             this.dataGridView1.TabIndex = 8;
             // 
             // POD_vItem_ID
@@ -1053,6 +1189,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.UOM);
             this.panel1.Controls.Add(this.POD_vTotal_Price);
             this.panel1.Controls.Add(this.label41);
             this.panel1.Controls.Add(this.txtGrade);
@@ -1300,6 +1437,7 @@
             this.POD_iUOM.ReadOnly = true;
             this.POD_iUOM.Size = new System.Drawing.Size(74, 26);
             this.POD_iUOM.TabIndex = 7;
+            this.POD_iUOM.Visible = false;
             // 
             // label3
             // 
@@ -1535,157 +1673,39 @@
             this.txt_Rows.Text = "Rows :";
             this.txt_Rows.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label42
+            // UOM
             // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.UOM.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UOM.FormattingEnabled = true;
+            this.UOM.Items.AddRange(new object[] {
+            "SGST",
+            "IGST"});
+            this.UOM.Location = new System.Drawing.Point(785, 5);
+            this.UOM.Name = "UOM";
+            this.UOM.Size = new System.Drawing.Size(74, 27);
+            this.UOM.TabIndex = 145;
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(60, 116);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(83, 19);
-            this.label42.TabIndex = 133;
-            this.label42.Text = "Warranty :";
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.Black;
+            this.label50.Location = new System.Drawing.Point(426, 163);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(76, 19);
+            this.label50.TabIndex = 145;
+            this.label50.Text = "Advance :";
             // 
-            // Warranty
+            // Advance
             // 
-            this.Warranty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Warranty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Warranty.Font = new System.Drawing.Font("Cambria", 11F);
-            this.Warranty.Location = new System.Drawing.Point(146, 115);
-            this.Warranty.Multiline = true;
-            this.Warranty.Name = "Warranty";
-            this.Warranty.Size = new System.Drawing.Size(183, 41);
-            this.Warranty.TabIndex = 134;
-            // 
-            // TestReport
-            // 
-            this.TestReport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.TestReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TestReport.Font = new System.Drawing.Font("Cambria", 11F);
-            this.TestReport.Location = new System.Drawing.Point(420, 115);
-            this.TestReport.Multiline = true;
-            this.TestReport.Name = "TestReport";
-            this.TestReport.Size = new System.Drawing.Size(178, 41);
-            this.TestReport.TabIndex = 135;
-            // 
-            // label43
-            // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(343, 113);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(41, 19);
-            this.label43.TabIndex = 136;
-            this.label43.Text = "Test ";
-            // 
-            // label44
-            // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(58, 161);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(86, 19);
-            this.label44.TabIndex = 137;
-            this.label44.Text = "Insurance :";
-            // 
-            // label45
-            // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.Black;
-            this.label45.Location = new System.Drawing.Point(349, 135);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(65, 19);
-            this.label45.TabIndex = 138;
-            this.label45.Text = "Report :";
-            // 
-            // Insurance
-            // 
-            this.Insurance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Insurance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Insurance.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Insurance.Location = new System.Drawing.Point(147, 159);
-            this.Insurance.Name = "Insurance";
-            this.Insurance.Size = new System.Drawing.Size(453, 26);
-            this.Insurance.TabIndex = 139;
-            // 
-            // label46
-            // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Location = new System.Drawing.Point(277, 3);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(86, 19);
-            this.label46.TabIndex = 140;
-            this.label46.Text = "Installation";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Applicable ",
-            "Not Applicable "});
-            this.comboBox1.Location = new System.Drawing.Point(473, 1);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 27);
-            this.comboBox1.TabIndex = 141;
-            // 
-            // label47
-            // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.Black;
-            this.label47.Location = new System.Drawing.Point(366, 3);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(0, 19);
-            this.label47.TabIndex = 142;
-            // 
-            // label48
-            // 
-            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.Black;
-            this.label48.Location = new System.Drawing.Point(358, 4);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(17, 19);
-            this.label48.TabIndex = 143;
-            this.label48.Text = "/";
-            // 
-            // label49
-            // 
-            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.Black;
-            this.label49.Location = new System.Drawing.Point(371, 4);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(101, 19);
-            this.label49.TabIndex = 144;
-            this.label49.Text = "Commission :";
+            this.Advance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Advance.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Advance.Location = new System.Drawing.Point(504, 161);
+            this.Advance.Name = "Advance";
+            this.Advance.Size = new System.Drawing.Size(159, 26);
+            this.Advance.TabIndex = 146;
             // 
             // Purchase_Order
             // 
@@ -1829,7 +1849,7 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Applicable;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox Insurance;
         private System.Windows.Forms.Label label45;
@@ -1838,5 +1858,8 @@
         private System.Windows.Forms.TextBox TestReport;
         private System.Windows.Forms.TextBox Warranty;
         private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox UOM;
+        private System.Windows.Forms.TextBox Advance;
+        private System.Windows.Forms.Label label50;
     }
 }

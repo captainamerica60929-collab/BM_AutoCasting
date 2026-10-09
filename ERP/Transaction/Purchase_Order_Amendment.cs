@@ -32,6 +32,21 @@ namespace CRM_App.Transaction
             LoadPO_No();
             LoadAmend_No();
             LoadItemType();
+            Load_UOM();
+        }
+        public void Load_UOM()
+        {
+            try
+            {
+                DataTable dt = dbFunctions.getTable("pr_LoadUOM_Nos");
+                UOM.DataSource = dt;
+                UOM.DisplayMember = "UM_UOM";
+                UOM.ValueMember = "UM_UOM";
+                UOM.SelectedIndex = 0;
+            }
+            catch
+            {
+            }
         }
 
         public void LoadPO_No()
@@ -173,7 +188,7 @@ namespace CRM_App.Transaction
 
 
             POD_vSource.Text = dt.Rows[0]["Source"].ToString();
-            POD_iUOM.Text = dt.Rows[0]["UOM"].ToString();
+            UOM.Text = dt.Rows[0]["UOM"].ToString();
             IM_Type.Text = dt.Rows[0]["Type"].ToString();
             POD_vPacking_Std.Text = dt.Rows[0]["Packing Std"].ToString();
             POD_dUnit_Price.Text = dt.Rows[0]["Unit Price"].ToString();
@@ -331,7 +346,7 @@ namespace CRM_App.Transaction
                 com.Parameters.Add("@POD_vSpec", SqlDbType.VarChar).Value = txtGrade.Text.ToString();
                 com.Parameters.Add("@POD_vSource", SqlDbType.VarChar).Value = POD_vSource.Text.ToString();
                 com.Parameters.Add("@POD_vPacking_Std", SqlDbType.VarChar).Value = POD_vPacking_Std.Text.ToString();
-                com.Parameters.Add("@POD_iUOM", SqlDbType.VarChar).Value = POD_iUOM.Text.ToString();
+                com.Parameters.Add("@POD_iUOM", SqlDbType.VarChar).Value = UOM.Text.ToString();
                 com.Parameters.Add("@POD_dQty", SqlDbType.Decimal).Value = POD_dQty.Text.ToString();
                 com.Parameters.Add("@POD_dUnit_Price", SqlDbType.Decimal).Value = POD_dUnit_Price.Text.ToString();
                 com.Parameters.Add("@POD_dTotal_Amount", SqlDbType.Decimal).Value = txtTotalPrice.Text.ToString();

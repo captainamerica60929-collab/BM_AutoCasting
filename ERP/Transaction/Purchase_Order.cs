@@ -83,6 +83,11 @@ namespace CRM_App.Transaction
                 com.Parameters.Add("@PO_vPayment_Terms", SqlDbType.VarChar).Value = PO_vPayment_Terms.Text.ToString();
                 com.Parameters.Add("@PO_vInspection", SqlDbType.VarChar).Value = PO_vInspection.Text.ToString();
                 com.Parameters.Add("@PO_vWarrenty_Class", SqlDbType.VarChar).Value = PO_vWarrenty_Class.Text.ToString();
+                com.Parameters.Add("@PO_Warranty", SqlDbType.VarChar).Value = Warranty.Text.ToString();
+                com.Parameters.Add("@PO_Advance", SqlDbType.VarChar).Value = Advance.Text.ToString();
+                com.Parameters.Add("@PO_TestReport", SqlDbType.VarChar).Value = TestReport.Text.ToString();
+                com.Parameters.Add("@PO_Insurance", SqlDbType.VarChar).Value = Insurance.Text.ToString();
+                com.Parameters.Add("@PO_Applicable", SqlDbType.VarChar).Value = Applicable.Text.ToString();
                
 
                 com.Parameters.Add("@PO_vCreatedby", SqlDbType.VarChar).Value = dbFunctions.username;
@@ -111,7 +116,7 @@ namespace CRM_App.Transaction
             dataGridView1["POD_iType", rowid].Value = IM_Type.Text;
             dataGridView1["POD_vSource1", rowid].Value = POD_vSource.Text;
             //dataGridView1["POD_vPartName", rowid].Value = txtGrade.Text;
-            dataGridView1["POD_iUOM1", rowid].Value = POD_iUOM.Text;
+            dataGridView1["POD_iUOM1", rowid].Value = UOM.Text;
             dataGridView1["POD_dQty1", rowid].Value = POD_dQty.Text;
             dataGridView1["POD_vPacking_Std1", rowid].Value = POD_vPacking_Std.Text;
             dataGridView1["POD_dUnit_Price1", rowid].Value = POD_dUnit_Price.Text;
@@ -288,8 +293,8 @@ namespace CRM_App.Transaction
         {
             dbFunctions.DGVStyleAutoSizeColumn(dataGridView1);
             dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-      
-        
+
+            Load_UOM();
             LoadPo_No();
             LoadSupplier();
             LoadItemType();
@@ -297,7 +302,20 @@ namespace CRM_App.Transaction
 
             PO_vDelivery.Text = "At our Factory located at Ayyanambakkam on or Before " + PO_dPO_Date.Value.AddDays(15).ToString("dd-MMM-yyyy");
         }
-
+        public void Load_UOM()
+        {
+            try
+            {
+                DataTable dt = dbFunctions.getTable("pr_LoadUOM_Nos");
+                UOM.DataSource = dt;
+                UOM.DisplayMember = "UM_UOM";
+                UOM.ValueMember = "UM_UOM";
+                UOM.SelectedIndex = 0;
+            }
+            catch
+            {
+            }
+        }
 
         public void LoadItemType()
         {
@@ -545,7 +563,7 @@ namespace CRM_App.Transaction
                         //POD_vSpec.Text = dt.Rows[0]["IM_PartName"].ToString();
                         POD_vSource.Text = dt.Rows[0]["IM_RMSource"].ToString();
                         txtGrade.Text = dt.Rows[0]["IM_PartName"].ToString();
-                        POD_iUOM.Text = dt.Rows[0]["UM_UOM"].ToString();
+                        UOM.Text = dt.Rows[0]["UM_UOM"].ToString();
                         textBox1.Text = dt.Rows[0]["IM_HSNCode"].ToString();
                         POD_vPacking_Std.Text = dt.Rows[0]["IM_PackingStandard"].ToString();
                         POD_dUnit_Price.Text = dt.Rows[0]["IM_Purchase_Price"].ToString();
