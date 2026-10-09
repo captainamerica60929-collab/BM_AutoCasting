@@ -129,10 +129,10 @@ namespace CRM_App.Master
             try
             {
                 DataTable dt = dbFunctions.getTable("pr_LoadUOM_Nos");
-                comboBox3.DataSource = dt;
-                comboBox3.DisplayMember = "UM_UOM";
-                comboBox3.ValueMember = "UM_ID";
-                comboBox3.SelectedIndex = 0;
+                Packing_UOM.DataSource = dt;
+                Packing_UOM.DisplayMember = "UM_UOM";
+                Packing_UOM.ValueMember = "UM_UOM";
+                Packing_UOM.SelectedIndex = 0;
             }
             catch
             {
@@ -302,6 +302,8 @@ namespace CRM_App.Master
                 com.Parameters.Add("@IM_Color", SqlDbType.VarChar).Value = IM_Color.Text;
                 com.Parameters.Add("@IM_aoe", SqlDbType.VarChar).Value = IM_aoe.Text;
                 com.Parameters.Add("@IM_Status", SqlDbType.VarChar).Value = (comboBox1.Text == "Active") ? 'A' : 'D';
+                com.Parameters.Add("@IM_Lead_UOM", SqlDbType.VarChar).Value = Lead_UOM.Text;
+                com.Parameters.Add("@IM_PackingStd", SqlDbType.VarChar).Value = Packing_UOM.Text;
 
                 com.ExecuteNonQuery();
                 com.Connection.Close();
@@ -344,6 +346,9 @@ namespace CRM_App.Master
                 com.Parameters.Add("@IM_Status", SqlDbType.VarChar).Value = (comboBox1.Text == "Active") ? 'A' : 'D';
                 com.Parameters.Add("@IM_Color", SqlDbType.VarChar).Value = IM_Color.Text;
                 com.Parameters.Add("@IM_aoe", SqlDbType.VarChar).Value = IM_aoe.Text;
+                com.Parameters.Add("@IM_Lead_UOM", SqlDbType.VarChar).Value = Lead_UOM.Text;
+                com.Parameters.Add("@IM_PackingStd", SqlDbType.VarChar).Value = Packing_UOM.Text;
+
                 com.ExecuteNonQuery();
                 com.Connection.Close();
                 MessageBox.Show("Details Saved Successfully ", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -392,6 +397,8 @@ namespace CRM_App.Master
                 string s = dt.Rows[0]["IM_Status"].ToString(); 
                 comboBox1.Text = (dt.Rows[0]["IM_Status"].ToString().Trim().Equals("A")) ? "Active" : "Inactive";
                 btnsave.Text = "&Update";
+                Packing_UOM.SelectedValue = dt.Rows[0]["IM_PackingStd"].ToString();
+                Lead_UOM.Text = dt.Rows[0]["IM_Lead_UOM"].ToString();
                 IM_Supplier.Focus();
             }
         }

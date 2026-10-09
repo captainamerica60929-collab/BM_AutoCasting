@@ -65,32 +65,68 @@ namespace CRM_App.Maintanace
             {
                 if (row.IsNewRow) continue;
 
-                if (int.TryParse(row.Cells["After PM Prod. Shot"]?.Value?.ToString(), out int shot) &&
-                    int.TryParse(row.Cells["Frequency"]?.Value?.ToString(), out int freq) &&
-                    freq > 0)
+                if (double.TryParse(row.Cells["Remaining Shots"]?.Value?.ToString(), out double remainingShots) &&
+                    double.TryParse(row.Cells["Mold Life"]?.Value?.ToString(), out double moldLife) &&
+                    moldLife > 0)
                 {
-                    double percentage = (double)shot / freq * 100;
+                    double remainingPercentage = (remainingShots / moldLife) * 100;
 
-                    DataGridViewCell targetCell = row.Cells["After PM Prod. Shot"];
+                    DataGridViewCell targetCell = row.Cells["Remaining Shots"];
 
-                    if (percentage >= 95)
+                    if (remainingPercentage <= 10)
                     {
+                        // Red - critically low
                         targetCell.Style.BackColor = Color.Red;
                         targetCell.Style.ForeColor = Color.White;
                     }
-                    else if (percentage >= 80)
+                    else if (remainingPercentage <= 25)
                     {
+                        // Yellow - warning
                         targetCell.Style.BackColor = Color.Yellow;
                         targetCell.Style.ForeColor = Color.Black;
                     }
                     else
                     {
-                        targetCell.Style.BackColor = dataGridView1.DefaultCellStyle.BackColor;
-                        targetCell.Style.ForeColor = dataGridView1.DefaultCellStyle.ForeColor;
+                        // Green - sufficient remaining life
+                        targetCell.Style.BackColor = Color.Green;
+                        targetCell.Style.ForeColor = Color.White;
                     }
                 }
             }
         }
+
+        //public void ApplyColumnColoring()
+        //{
+        //    foreach (DataGridViewRow row in dataGridView1.Rows)
+        //    {
+        //        if (row.IsNewRow) continue;
+
+        //        if (int.TryParse(row.Cells["After PM Prod. Shot"]?.Value?.ToString(), out int shot) &&
+        //            int.TryParse(row.Cells["Frequency"]?.Value?.ToString(), out int freq) &&
+        //            freq > 0)
+        //        {
+        //            double percentage = (double)shot / freq * 100;
+
+        //            DataGridViewCell targetCell = row.Cells["After PM Prod. Shot"];
+
+        //            if (percentage >= 95)
+        //            {
+        //                targetCell.Style.BackColor = Color.Red;
+        //                targetCell.Style.ForeColor = Color.White;
+        //            }
+        //            else if (percentage >= 80)
+        //            {
+        //                targetCell.Style.BackColor = Color.Yellow;
+        //                targetCell.Style.ForeColor = Color.Black;
+        //            }
+        //            else
+        //            {
+        //                targetCell.Style.BackColor = dataGridView1.DefaultCellStyle.BackColor;
+        //                targetCell.Style.ForeColor = dataGridView1.DefaultCellStyle.ForeColor;
+        //            }
+        //        }
+        //    }
+        //}
 
         private void CalculateAndColorRows()
         {

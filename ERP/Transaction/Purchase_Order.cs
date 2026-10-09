@@ -120,7 +120,7 @@ namespace CRM_App.Transaction
             dataGridView1["Note", rowid].Value = richTextBox1.Text;
             rowid += 1;
 
-            calulate();
+           // calulate();
             POD_vPart_No.Text = "";
             POD_vSource.Text = "";
             POD_iUOM.Text = "";
@@ -653,6 +653,7 @@ namespace CRM_App.Transaction
                 label19.Text = "Name :";
             }
             LoadItem();
+            Get_Material_section();
         }
 
             //POD_dUnit_Price.Enabled = false;
@@ -898,7 +899,40 @@ namespace CRM_App.Transaction
                 }
             }
         }
+        public void Get_Material_section()
+        {
 
+            if (checkBox1.Checked == true)
+            {
+                try
+                {
+                    DataTable dt = dbFunctions.getTable("pr_GetMetireal_PartNoall '" + PO_vSupplier_Name.SelectedValue.ToString() + "', '" + IM_Type.SelectedValue.ToString() + "'");
+                    POD_vPart_No.DataSource = dt;
+                    POD_vPart_No.DisplayMember = "IM_PartNo";
+                    POD_vPart_No.ValueMember = "IM_ID";
+                    POD_vPart_No.SelectedIndex = -1;
+                    isLoadItem = true;
+                }
+                catch
+                {
+                }
+            }
+            else
+            {
+                try
+                {
+                    DataTable dt = dbFunctions.getTable("pr_GetMetireal_PartNo '" + PO_vSupplier_Name.SelectedValue.ToString() + "'");
+                    POD_vPart_No.DataSource = dt;
+                    POD_vPart_No.DisplayMember = "IM_PartNo";
+                    POD_vPart_No.ValueMember = "IM_ID";
+                    POD_vPart_No.SelectedIndex = -1;
+                    isLoadItem = true;
+                }
+                catch
+                {
+                }
+            }
+        }
         private void PO_vPO_NO_TextChanged(object sender, EventArgs e)
         {
 
@@ -916,7 +950,7 @@ namespace CRM_App.Transaction
 
         private void POD_vPacking_Std_TextChanged(object sender, EventArgs e)
         {
-            calulate();
+            //calulate();
         }
 
         private void POD_dUnit_Price_TextChanged(object sender, EventArgs e)

@@ -139,7 +139,7 @@
             this.LoginTime.ForeColor = System.Drawing.SystemColors.GrayText;
             this.LoginTime.Location = new System.Drawing.Point(1527, 731);
             this.LoginTime.Name = "LoginTime";
-            this.LoginTime.Size = new System.Drawing.Size(14, 16);
+            this.LoginTime.Size = new System.Drawing.Size(13, 16);
             this.LoginTime.TabIndex = 20;
             this.LoginTime.Text = "-";
             this.LoginTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,7 +152,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label3.Location = new System.Drawing.Point(1428, 731);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 16);
+            this.label3.Size = new System.Drawing.Size(101, 16);
             this.label3.TabIndex = 19;
             this.label3.Text = "| Login Time :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -165,7 +165,7 @@
             this.User.ForeColor = System.Drawing.SystemColors.GrayText;
             this.User.Location = new System.Drawing.Point(1276, 730);
             this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(14, 16);
+            this.User.Size = new System.Drawing.Size(13, 16);
             this.User.TabIndex = 18;
             this.User.Text = "-";
             this.User.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -178,7 +178,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label2.Location = new System.Drawing.Point(1200, 730);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 17;
             this.label2.Text = "Welcome :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,7 +191,7 @@
             this.Status_Main.ForeColor = System.Drawing.SystemColors.GrayText;
             this.Status_Main.Location = new System.Drawing.Point(3, 730);
             this.Status_Main.Name = "Status_Main";
-            this.Status_Main.Size = new System.Drawing.Size(66, 16);
+            this.Status_Main.Size = new System.Drawing.Size(65, 16);
             this.Status_Main.TabIndex = 70;
             this.Status_Main.Text = "Version :";
             // 
@@ -269,7 +269,7 @@
             this.label20.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label20.Location = new System.Drawing.Point(38, 1);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(42, 44);
+            this.label20.Size = new System.Drawing.Size(41, 44);
             this.label20.TabIndex = 27;
             this.label20.Text = "0";
             // 
@@ -334,7 +334,7 @@
             this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label18.Location = new System.Drawing.Point(38, 1);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 44);
+            this.label18.Size = new System.Drawing.Size(41, 44);
             this.label18.TabIndex = 27;
             this.label18.Text = "0";
             // 
@@ -399,7 +399,7 @@
             this.label16.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label16.Location = new System.Drawing.Point(38, 1);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 44);
+            this.label16.Size = new System.Drawing.Size(41, 44);
             this.label16.TabIndex = 27;
             this.label16.Text = "0";
             // 
@@ -464,7 +464,7 @@
             this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label14.Location = new System.Drawing.Point(38, 1);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 44);
+            this.label14.Size = new System.Drawing.Size(41, 44);
             this.label14.TabIndex = 27;
             this.label14.Text = "0";
             // 
@@ -632,7 +632,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(38, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 44);
+            this.label1.Size = new System.Drawing.Size(41, 44);
             this.label1.TabIndex = 27;
             this.label1.Text = "0";
             // 
@@ -699,7 +699,7 @@
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label6.Location = new System.Drawing.Point(38, 1);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 44);
+            this.label6.Size = new System.Drawing.Size(41, 44);
             this.label6.TabIndex = 27;
             this.label6.Text = "0";
             this.label6.Visible = false;
@@ -767,7 +767,7 @@
             this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label8.Location = new System.Drawing.Point(38, 1);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 44);
+            this.label8.Size = new System.Drawing.Size(41, 44);
             this.label8.TabIndex = 27;
             this.label8.Text = "0";
             this.label8.Visible = false;
@@ -830,7 +830,7 @@
             this.button2.ForeColor = System.Drawing.Color.DimGray;
             this.button2.Image = global::CRM_App.Properties.Resources.p_removebg_preview;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(804, 3);
+            this.button2.Location = new System.Drawing.Point(804, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 63);
             this.button2.TabIndex = 26;

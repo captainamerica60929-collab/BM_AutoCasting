@@ -235,6 +235,12 @@
     <Compile Include="Production\Sandblasting_Entry.Designer.cs">
       <DependentUpon>Sandblasting_Entry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\GRN_APPROVAL_NEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\GRN_APPROVAL_NEW.Designer.cs">
+      <DependentUpon>GRN_APPROVAL_NEW.cs</DependentUpon>
+    </Compile>
     <Compile Include="VectorIcons.cs" />
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
@@ -2111,6 +2117,9 @@
     <EmbeddedResource Include="Transaction\Calibration_List.resx">
       <DependentUpon>Calibration_List.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\GRN_APPROVAL_NEW.resx">
+      <DependentUpon>GRN_APPROVAL_NEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\New_Work_Order.resx">
       <DependentUpon>New_Work_Order.cs</DependentUpon>

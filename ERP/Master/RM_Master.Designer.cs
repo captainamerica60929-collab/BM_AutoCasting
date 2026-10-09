@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RM_Master));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.Packing_UOM = new System.Windows.Forms.ComboBox();
+            this.Lead_UOM = new System.Windows.Forms.ComboBox();
             this.IM_aoe = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -83,21 +85,19 @@
             this.ArrowButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnDisplay = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.btnDisplay = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -111,8 +111,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel6.Controls.Add(this.comboBox3);
-            this.panel6.Controls.Add(this.comboBox2);
+            this.panel6.Controls.Add(this.Packing_UOM);
+            this.panel6.Controls.Add(this.Lead_UOM);
             this.panel6.Controls.Add(this.IM_aoe);
             this.panel6.Controls.Add(this.label25);
             this.panel6.Controls.Add(this.label24);
@@ -169,6 +169,28 @@
             this.panel6.TabIndex = 0;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel6_Paint);
             // 
+            // Packing_UOM
+            // 
+            this.Packing_UOM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Packing_UOM.FormattingEnabled = true;
+            this.Packing_UOM.Location = new System.Drawing.Point(1142, 40);
+            this.Packing_UOM.Name = "Packing_UOM";
+            this.Packing_UOM.Size = new System.Drawing.Size(58, 27);
+            this.Packing_UOM.TabIndex = 321;
+            // 
+            // Lead_UOM
+            // 
+            this.Lead_UOM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Lead_UOM.FormattingEnabled = true;
+            this.Lead_UOM.Items.AddRange(new object[] {
+            "Hrs",
+            "Mins",
+            "Secs"});
+            this.Lead_UOM.Location = new System.Drawing.Point(1142, 8);
+            this.Lead_UOM.Name = "Lead_UOM";
+            this.Lead_UOM.Size = new System.Drawing.Size(58, 27);
+            this.Lead_UOM.TabIndex = 320;
+            // 
             // IM_aoe
             // 
             this.IM_aoe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -184,9 +206,9 @@
             this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.Location = new System.Drawing.Point(651, 75);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(37, 19);
+            this.label25.Size = new System.Drawing.Size(45, 19);
             this.label25.TabIndex = 319;
-            this.label25.Text = "DE :";
+            this.label25.Text = "OEE :";
             // 
             // label24
             // 
@@ -736,6 +758,58 @@
             this.panel3.Size = new System.Drawing.Size(1212, 28);
             this.panel3.TabIndex = 1;
             // 
+            // textBoxX1
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX1.Border.Class = "TextBoxBorder";
+            this.textBoxX1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX1.Location = new System.Drawing.Point(81, 2);
+            this.textBoxX1.Name = "textBoxX1";
+            this.textBoxX1.Size = new System.Drawing.Size(276, 24);
+            this.textBoxX1.TabIndex = 6;
+            this.textBoxX1.WatermarkColor = System.Drawing.Color.Gray;
+            this.textBoxX1.WatermarkText = "Search";
+            this.textBoxX1.TextChanged += new System.EventHandler(this.textBoxX1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(25, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Search";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1212, 334);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 540);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1212, 22);
+            this.statusStrip1.TabIndex = 52;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.ForeColor = System.Drawing.Color.Blue;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(39, 17);
+            this.txtStatus.Text = "Ready";
+            // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -773,21 +847,6 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // textBoxX1
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(81, 2);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(276, 24);
-            this.textBoxX1.TabIndex = 6;
-            this.textBoxX1.WatermarkColor = System.Drawing.Color.Gray;
-            this.textBoxX1.WatermarkText = "Search";
-            this.textBoxX1.TextChanged += new System.EventHandler(this.textBoxX1_TextChanged);
             // 
             // panel5
             // 
@@ -833,16 +892,6 @@
             this.btnDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDisplay.UseVisualStyleBackColor = true;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(25, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Search";
             // 
             // btnClear
             // 
@@ -900,55 +949,6 @@
             this.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnsave.UseVisualStyleBackColor = true;
             this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1212, 334);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txtStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 540);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1212, 22);
-            this.statusStrip1.TabIndex = 52;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.ForeColor = System.Drawing.Color.Blue;
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(39, 17);
-            this.txtStatus.Text = "Ready";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Hrs",
-            "Mins",
-            "Secs"});
-            this.comboBox2.Location = new System.Drawing.Point(1142, 8);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(58, 27);
-            this.comboBox2.TabIndex = 320;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1142, 40);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(58, 27);
-            this.comboBox3.TabIndex = 321;
             // 
             // RM_Master
             // 
@@ -1050,7 +1050,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ComboBox IM_aoe;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox Packing_UOM;
+        private System.Windows.Forms.ComboBox Lead_UOM;
     }
 }

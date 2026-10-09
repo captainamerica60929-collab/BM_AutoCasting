@@ -285,14 +285,14 @@ namespace CRM_App.Production
             }
             else
             {
-                if (idl)
-                {
+                //if (idl)
+                //{
                     insert();
-                }
-                else
-                {
-                    MessageBox.Show("Please enter the IDL reason", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Please enter the IDL reason", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //}
 
             }
         }

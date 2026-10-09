@@ -29,8 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Purchase_Order));
-            this.button10 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.PO_vGST_Type2 = new System.Windows.Forms.ComboBox();
+            this.PO_vGST_Type1 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.PO_vWarrenty_Class = new System.Windows.Forms.TextBox();
+            this.PO_dGrand_Total = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.PO_dSub_Total = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.PO_vInspection = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.PO_vPayment_Terms = new System.Windows.Forms.TextBox();
+            this.PO_dExcise_Duty_Percent = new System.Windows.Forms.TextBox();
+            this.PO_dFreight_Charge_Percentage = new System.Windows.Forms.TextBox();
+            this.PO_dVAT_CST_Percentage = new System.Windows.Forms.TextBox();
+            this.PO_dInsurence_Charge_Percentage = new System.Windows.Forms.TextBox();
+            this.PO_dVAR_CST_Amount = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.PO_vDelivery = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.PO_dExcise_Duty_Amount = new System.Windows.Forms.TextBox();
+            this.PO_vMode_Of_Despatch = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.PO_vFreight = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PO_dFreight_Charge = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.PO_dInsurence_Charge = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.POD_vItem_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +129,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.PO_iAmendment_No = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.PO_dAmendment_Date = new System.Windows.Forms.DateTimePicker();
             this.button9 = new System.Windows.Forms.Button();
@@ -102,95 +137,557 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.PO_vGST_Type2 = new System.Windows.Forms.ComboBox();
-            this.PO_vGST_Type1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.PO_vWarrenty_Class = new System.Windows.Forms.TextBox();
-            this.PO_dGrand_Total = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.PO_dSub_Total = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.PO_vInspection = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.PO_vPayment_Terms = new System.Windows.Forms.TextBox();
-            this.PO_dExcise_Duty_Percent = new System.Windows.Forms.TextBox();
-            this.PO_dFreight_Charge_Percentage = new System.Windows.Forms.TextBox();
-            this.PO_dVAT_CST_Percentage = new System.Windows.Forms.TextBox();
-            this.PO_dInsurence_Charge_Percentage = new System.Windows.Forms.TextBox();
-            this.PO_dVAR_CST_Amount = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.PO_vDelivery = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.PO_dExcise_Duty_Amount = new System.Windows.Forms.TextBox();
-            this.PO_vMode_Of_Despatch = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.PO_vFreight = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PO_dFreight_Charge = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.PO_dInsurence_Charge = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txt_Rows = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.label42 = new System.Windows.Forms.Label();
+            this.Warranty = new System.Windows.Forms.TextBox();
+            this.TestReport = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.Insurance = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button10
-            // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(1008, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(81, 30);
-            this.button10.TabIndex = 6;
-            this.button10.Text = "Close";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.panel9);
             this.splitContainer1.Panel1.Controls.Add(this.panel6);
             this.splitContainer1.Panel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel9);
-            this.splitContainer1.Size = new System.Drawing.Size(1094, 609);
-            this.splitContainer1.SplitterDistance = 364;
+            this.splitContainer1.Size = new System.Drawing.Size(1165, 681);
+            this.splitContainer1.SplitterDistance = 647;
             this.splitContainer1.TabIndex = 53;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.label49);
+            this.panel9.Controls.Add(this.label48);
+            this.panel9.Controls.Add(this.label47);
+            this.panel9.Controls.Add(this.comboBox1);
+            this.panel9.Controls.Add(this.label46);
+            this.panel9.Controls.Add(this.Insurance);
+            this.panel9.Controls.Add(this.label45);
+            this.panel9.Controls.Add(this.label44);
+            this.panel9.Controls.Add(this.label43);
+            this.panel9.Controls.Add(this.TestReport);
+            this.panel9.Controls.Add(this.Warranty);
+            this.panel9.Controls.Add(this.label42);
+            this.panel9.Controls.Add(this.PO_vGST_Type2);
+            this.panel9.Controls.Add(this.PO_vGST_Type1);
+            this.panel9.Controls.Add(this.button2);
+            this.panel9.Controls.Add(this.button1);
+            this.panel9.Controls.Add(this.PO_vWarrenty_Class);
+            this.panel9.Controls.Add(this.PO_dGrand_Total);
+            this.panel9.Controls.Add(this.label29);
+            this.panel9.Controls.Add(this.PO_dSub_Total);
+            this.panel9.Controls.Add(this.label28);
+            this.panel9.Controls.Add(this.PO_vInspection);
+            this.panel9.Controls.Add(this.label22);
+            this.panel9.Controls.Add(this.PO_vPayment_Terms);
+            this.panel9.Controls.Add(this.PO_dExcise_Duty_Percent);
+            this.panel9.Controls.Add(this.PO_dFreight_Charge_Percentage);
+            this.panel9.Controls.Add(this.PO_dVAT_CST_Percentage);
+            this.panel9.Controls.Add(this.PO_dInsurence_Charge_Percentage);
+            this.panel9.Controls.Add(this.PO_dVAR_CST_Amount);
+            this.panel9.Controls.Add(this.label17);
+            this.panel9.Controls.Add(this.PO_vDelivery);
+            this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.PO_dExcise_Duty_Amount);
+            this.panel9.Controls.Add(this.PO_vMode_Of_Despatch);
+            this.panel9.Controls.Add(this.label6);
+            this.panel9.Controls.Add(this.label10);
+            this.panel9.Controls.Add(this.PO_vFreight);
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Controls.Add(this.PO_dFreight_Charge);
+            this.panel9.Controls.Add(this.label26);
+            this.panel9.Controls.Add(this.label25);
+            this.panel9.Controls.Add(this.PO_dInsurence_Charge);
+            this.panel9.Controls.Add(this.label32);
+            this.panel9.Controls.Add(this.label33);
+            this.panel9.Controls.Add(this.label36);
+            this.panel9.Controls.Add(this.label34);
+            this.panel9.Location = new System.Drawing.Point(1, 391);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1160, 253);
+            this.panel9.TabIndex = 0;
+            // 
+            // PO_vGST_Type2
+            // 
+            this.PO_vGST_Type2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_vGST_Type2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_vGST_Type2.FormattingEnabled = true;
+            this.PO_vGST_Type2.Items.AddRange(new object[] {
+            "CGST"});
+            this.PO_vGST_Type2.Location = new System.Drawing.Point(844, 117);
+            this.PO_vGST_Type2.Name = "PO_vGST_Type2";
+            this.PO_vGST_Type2.Size = new System.Drawing.Size(103, 27);
+            this.PO_vGST_Type2.TabIndex = 13;
+            this.PO_vGST_Type2.Text = "CGST";
+            // 
+            // PO_vGST_Type1
+            // 
+            this.PO_vGST_Type1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_vGST_Type1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_vGST_Type1.FormattingEnabled = true;
+            this.PO_vGST_Type1.Items.AddRange(new object[] {
+            "SGST",
+            "IGST"});
+            this.PO_vGST_Type1.Location = new System.Drawing.Point(844, 88);
+            this.PO_vGST_Type1.Name = "PO_vGST_Type1";
+            this.PO_vGST_Type1.Size = new System.Drawing.Size(103, 27);
+            this.PO_vGST_Type1.TabIndex = 10;
+            this.PO_vGST_Type1.Text = "SGST";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1070, 175);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 31);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(891, 175);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 27);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Submit For Approval";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // PO_vWarrenty_Class
+            // 
+            this.PO_vWarrenty_Class.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PO_vWarrenty_Class.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_vWarrenty_Class.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_vWarrenty_Class.Location = new System.Drawing.Point(148, 189);
+            this.PO_vWarrenty_Class.Multiline = true;
+            this.PO_vWarrenty_Class.Name = "PO_vWarrenty_Class";
+            this.PO_vWarrenty_Class.Size = new System.Drawing.Size(508, 57);
+            this.PO_vWarrenty_Class.TabIndex = 5;
+            this.PO_vWarrenty_Class.Text = "1. Raw material Test certificate to be sent along with material.                \r" +
+    "\n2. Material Lot No to be mentioned in the invoice and test reports.";
+            // 
+            // PO_dGrand_Total
+            // 
+            this.PO_dGrand_Total.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dGrand_Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dGrand_Total.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dGrand_Total.Location = new System.Drawing.Point(1032, 147);
+            this.PO_dGrand_Total.Name = "PO_dGrand_Total";
+            this.PO_dGrand_Total.ReadOnly = true;
+            this.PO_dGrand_Total.Size = new System.Drawing.Size(123, 26);
+            this.PO_dGrand_Total.TabIndex = 17;
+            this.PO_dGrand_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PO_dGrand_Total.TextChanged += new System.EventHandler(this.PO_dGrand_Total_TextChanged);
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(888, 152);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(140, 19);
+            this.label29.TabIndex = 16;
+            this.label29.Text = "Grand Total Value :";
+            // 
+            // PO_dSub_Total
+            // 
+            this.PO_dSub_Total.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dSub_Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dSub_Total.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dSub_Total.Location = new System.Drawing.Point(1032, 1);
+            this.PO_dSub_Total.Name = "PO_dSub_Total";
+            this.PO_dSub_Total.ReadOnly = true;
+            this.PO_dSub_Total.Size = new System.Drawing.Size(123, 26);
+            this.PO_dSub_Total.TabIndex = 6;
+            this.PO_dSub_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PO_dSub_Total.TextChanged += new System.EventHandler(this.PO_dSub_Total_TextChanged);
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Black;
+            this.label28.Location = new System.Drawing.Point(60, 193);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(83, 19);
+            this.label28.TabIndex = 121;
+            this.label28.Text = "Remarks :-";
+            // 
+            // PO_vInspection
+            // 
+            this.PO_vInspection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PO_vInspection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_vInspection.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_vInspection.Location = new System.Drawing.Point(420, 87);
+            this.PO_vInspection.Name = "PO_vInspection";
+            this.PO_vInspection.Size = new System.Drawing.Size(178, 26);
+            this.PO_vInspection.TabIndex = 4;
+            this.PO_vInspection.Text = "At our end after Delivery.";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(334, 88);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(89, 19);
+            this.label22.TabIndex = 119;
+            this.label22.Text = "Inspection :";
+            // 
+            // PO_vPayment_Terms
+            // 
+            this.PO_vPayment_Terms.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PO_vPayment_Terms.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_vPayment_Terms.Font = new System.Drawing.Font("Cambria", 11F);
+            this.PO_vPayment_Terms.Location = new System.Drawing.Point(147, 90);
+            this.PO_vPayment_Terms.Multiline = true;
+            this.PO_vPayment_Terms.Name = "PO_vPayment_Terms";
+            this.PO_vPayment_Terms.Size = new System.Drawing.Size(180, 20);
+            this.PO_vPayment_Terms.TabIndex = 3;
+            this.PO_vPayment_Terms.Text = "As per Supplier terms";
+            this.PO_vPayment_Terms.TextChanged += new System.EventHandler(this.PO_vPayment_Terms_TextChanged);
+            // 
+            // PO_dExcise_Duty_Percent
+            // 
+            this.PO_dExcise_Duty_Percent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dExcise_Duty_Percent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dExcise_Duty_Percent.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dExcise_Duty_Percent.Location = new System.Drawing.Point(960, 89);
+            this.PO_dExcise_Duty_Percent.Name = "PO_dExcise_Duty_Percent";
+            this.PO_dExcise_Duty_Percent.Size = new System.Drawing.Size(55, 26);
+            this.PO_dExcise_Duty_Percent.TabIndex = 11;
+            this.PO_dExcise_Duty_Percent.TextChanged += new System.EventHandler(this.PO_dExcise_Duty_Percent_TextChanged);
+            // 
+            // PO_dFreight_Charge_Percentage
+            // 
+            this.PO_dFreight_Charge_Percentage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dFreight_Charge_Percentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dFreight_Charge_Percentage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dFreight_Charge_Percentage.Location = new System.Drawing.Point(960, 30);
+            this.PO_dFreight_Charge_Percentage.Name = "PO_dFreight_Charge_Percentage";
+            this.PO_dFreight_Charge_Percentage.Size = new System.Drawing.Size(55, 26);
+            this.PO_dFreight_Charge_Percentage.TabIndex = 7;
+            this.PO_dFreight_Charge_Percentage.Text = "0.00";
+            this.PO_dFreight_Charge_Percentage.TextChanged += new System.EventHandler(this.PO_dFreight_Charge_Percentage_TextChanged);
+            // 
+            // PO_dVAT_CST_Percentage
+            // 
+            this.PO_dVAT_CST_Percentage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dVAT_CST_Percentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dVAT_CST_Percentage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dVAT_CST_Percentage.Location = new System.Drawing.Point(960, 118);
+            this.PO_dVAT_CST_Percentage.Name = "PO_dVAT_CST_Percentage";
+            this.PO_dVAT_CST_Percentage.Size = new System.Drawing.Size(55, 26);
+            this.PO_dVAT_CST_Percentage.TabIndex = 14;
+            this.PO_dVAT_CST_Percentage.TextChanged += new System.EventHandler(this.PO_dVAT_CST_Percentage_TextChanged);
+            // 
+            // PO_dInsurence_Charge_Percentage
+            // 
+            this.PO_dInsurence_Charge_Percentage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dInsurence_Charge_Percentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dInsurence_Charge_Percentage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dInsurence_Charge_Percentage.Location = new System.Drawing.Point(960, 59);
+            this.PO_dInsurence_Charge_Percentage.Name = "PO_dInsurence_Charge_Percentage";
+            this.PO_dInsurence_Charge_Percentage.Size = new System.Drawing.Size(55, 26);
+            this.PO_dInsurence_Charge_Percentage.TabIndex = 9;
+            this.PO_dInsurence_Charge_Percentage.Text = "0.00";
+            this.PO_dInsurence_Charge_Percentage.TextChanged += new System.EventHandler(this.PO_dInsurence_Charge_Percentage_TextChanged);
+            // 
+            // PO_dVAR_CST_Amount
+            // 
+            this.PO_dVAR_CST_Amount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dVAR_CST_Amount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dVAR_CST_Amount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dVAR_CST_Amount.Location = new System.Drawing.Point(1032, 118);
+            this.PO_dVAR_CST_Amount.Name = "PO_dVAR_CST_Amount";
+            this.PO_dVAR_CST_Amount.ReadOnly = true;
+            this.PO_dVAR_CST_Amount.Size = new System.Drawing.Size(123, 26);
+            this.PO_dVAR_CST_Amount.TabIndex = 15;
+            this.PO_dVAR_CST_Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PO_dVAR_CST_Amount.TextChanged += new System.EventHandler(this.PO_dVAR_CST_Amount_TextChanged);
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(20, 90);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(124, 19);
+            this.label17.TabIndex = 117;
+            this.label17.Text = "Payment Terms :";
+            // 
+            // PO_vDelivery
+            // 
+            this.PO_vDelivery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PO_vDelivery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_vDelivery.Font = new System.Drawing.Font("Cambria", 11F);
+            this.PO_vDelivery.Location = new System.Drawing.Point(146, 59);
+            this.PO_vDelivery.Multiline = true;
+            this.PO_vDelivery.Name = "PO_vDelivery";
+            this.PO_vDelivery.Size = new System.Drawing.Size(451, 26);
+            this.PO_vDelivery.TabIndex = 2;
+            this.PO_vDelivery.Text = "At our Factory located at Ayyanambakkam on or Before ";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(70, 59);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 19);
+            this.label13.TabIndex = 115;
+            this.label13.Text = "Delivery :";
+            // 
+            // PO_dExcise_Duty_Amount
+            // 
+            this.PO_dExcise_Duty_Amount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dExcise_Duty_Amount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dExcise_Duty_Amount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dExcise_Duty_Amount.Location = new System.Drawing.Point(1032, 89);
+            this.PO_dExcise_Duty_Amount.Name = "PO_dExcise_Duty_Amount";
+            this.PO_dExcise_Duty_Amount.ReadOnly = true;
+            this.PO_dExcise_Duty_Amount.Size = new System.Drawing.Size(123, 26);
+            this.PO_dExcise_Duty_Amount.TabIndex = 12;
+            this.PO_dExcise_Duty_Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PO_dExcise_Duty_Amount.TextChanged += new System.EventHandler(this.PO_dExcise_Duty_Amount_TextChanged);
+            // 
+            // PO_vMode_Of_Despatch
+            // 
+            this.PO_vMode_Of_Despatch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PO_vMode_Of_Despatch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_vMode_Of_Despatch.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_vMode_Of_Despatch.Location = new System.Drawing.Point(147, 31);
+            this.PO_vMode_Of_Despatch.Name = "PO_vMode_Of_Despatch";
+            this.PO_vMode_Of_Despatch.Size = new System.Drawing.Size(451, 26);
+            this.PO_vMode_Of_Despatch.TabIndex = 1;
+            this.PO_vMode_Of_Despatch.Text = "By Road Transport with Proper Packing Conditions.";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(0, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(143, 19);
+            this.label6.TabIndex = 113;
+            this.label6.Text = "Mode Of Despatch :";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(844, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(171, 19);
+            this.label10.TabIndex = 93;
+            this.label10.Text = "Sub Total(Basic Value) :";
+            // 
+            // PO_vFreight
+            // 
+            this.PO_vFreight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PO_vFreight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_vFreight.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_vFreight.Location = new System.Drawing.Point(147, 1);
+            this.PO_vFreight.Name = "PO_vFreight";
+            this.PO_vFreight.Size = new System.Drawing.Size(125, 26);
+            this.PO_vFreight.TabIndex = 0;
+            this.PO_vFreight.Text = "Extra as Actuals.";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(76, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 19);
+            this.label2.TabIndex = 111;
+            this.label2.Text = "Freight :";
+            // 
+            // PO_dFreight_Charge
+            // 
+            this.PO_dFreight_Charge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dFreight_Charge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dFreight_Charge.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dFreight_Charge.Location = new System.Drawing.Point(1032, 30);
+            this.PO_dFreight_Charge.Name = "PO_dFreight_Charge";
+            this.PO_dFreight_Charge.ReadOnly = true;
+            this.PO_dFreight_Charge.Size = new System.Drawing.Size(123, 26);
+            this.PO_dFreight_Charge.TabIndex = 8;
+            this.PO_dFreight_Charge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PO_dFreight_Charge.TextChanged += new System.EventHandler(this.PO_dFreight_Charge_TextChanged);
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(813, 62);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(146, 19);
+            this.label26.TabIndex = 87;
+            this.label26.Text = "Insurence Charges :";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(832, 33);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(127, 19);
+            this.label25.TabIndex = 89;
+            this.label25.Text = "Freight Charges :";
+            // 
+            // PO_dInsurence_Charge
+            // 
+            this.PO_dInsurence_Charge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PO_dInsurence_Charge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PO_dInsurence_Charge.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PO_dInsurence_Charge.Location = new System.Drawing.Point(1032, 59);
+            this.PO_dInsurence_Charge.Name = "PO_dInsurence_Charge";
+            this.PO_dInsurence_Charge.ReadOnly = true;
+            this.PO_dInsurence_Charge.Size = new System.Drawing.Size(123, 26);
+            this.PO_dInsurence_Charge.TabIndex = 86;
+            this.PO_dInsurence_Charge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PO_dInsurence_Charge.TextChanged += new System.EventHandler(this.PO_dInsurence_Charge_TextChanged);
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Red;
+            this.label32.Location = new System.Drawing.Point(820, 33);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(16, 19);
+            this.label32.TabIndex = 129;
+            this.label32.Text = "*";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Red;
+            this.label33.Location = new System.Drawing.Point(801, 62);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(16, 19);
+            this.label33.TabIndex = 130;
+            this.label33.Text = "*";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Red;
+            this.label36.Location = new System.Drawing.Point(828, 120);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(16, 19);
+            this.label36.TabIndex = 132;
+            this.label36.Text = "*";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Red;
+            this.label34.Location = new System.Drawing.Point(828, 91);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(16, 19);
+            this.label34.TabIndex = 131;
+            this.label34.Text = "*";
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel6.Controls.Add(this.dataGridView1);
             this.panel6.Controls.Add(this.panel4);
@@ -205,10 +702,9 @@
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Location = new System.Drawing.Point(2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1094, 364);
+            this.panel6.Size = new System.Drawing.Size(1163, 383);
             this.panel6.TabIndex = 0;
             // 
             // dataGridView1
@@ -233,7 +729,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 275);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1086, 115);
+            this.dataGridView1.Size = new System.Drawing.Size(1159, 110);
             this.dataGridView1.TabIndex = 8;
             // 
             // POD_vItem_ID
@@ -329,7 +825,7 @@
             this.panel4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(2, 34);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1088, 103);
+            this.panel4.Size = new System.Drawing.Size(1157, 103);
             this.panel4.TabIndex = 77;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -587,7 +1083,7 @@
             this.panel1.Controls.Add(this.label39);
             this.panel1.Location = new System.Drawing.Point(2, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 140);
+            this.panel1.Size = new System.Drawing.Size(1157, 140);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -623,7 +1119,7 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(500, 70);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(488, 59);
+            this.richTextBox1.Size = new System.Drawing.Size(524, 59);
             this.richTextBox1.TabIndex = 108;
             this.richTextBox1.Text = "";
             // 
@@ -832,7 +1328,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(574, 44);
+            this.label16.Location = new System.Drawing.Point(563, 44);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 19);
             this.label16.TabIndex = 87;
@@ -875,7 +1371,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(562, 46);
+            this.label27.Location = new System.Drawing.Point(551, 46);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(16, 19);
             this.label27.TabIndex = 101;
@@ -914,6 +1410,25 @@
             this.label11.Text = "Amendment No :";
             this.label11.Visible = false;
             // 
+            // button10
+            // 
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(1077, 0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(81, 30);
+            this.button10.TabIndex = 6;
+            this.button10.Text = "Close";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -924,7 +1439,7 @@
             this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(932, 2);
+            this.button8.Location = new System.Drawing.Point(1001, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(74, 27);
             this.button8.TabIndex = 5;
@@ -952,7 +1467,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(824, 2);
+            this.button9.Location = new System.Drawing.Point(893, 2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 27);
             this.button9.TabIndex = 4;
@@ -988,7 +1503,7 @@
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel8.Location = new System.Drawing.Point(5, 31);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1086, 2);
+            this.panel8.Size = new System.Drawing.Size(1155, 2);
             this.panel8.TabIndex = 1;
             // 
             // label14
@@ -1003,451 +1518,6 @@
             this.label14.Text = "Amendment Date :";
             this.label14.Visible = false;
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.PO_vGST_Type2);
-            this.panel9.Controls.Add(this.PO_vGST_Type1);
-            this.panel9.Controls.Add(this.button2);
-            this.panel9.Controls.Add(this.button1);
-            this.panel9.Controls.Add(this.PO_vWarrenty_Class);
-            this.panel9.Controls.Add(this.PO_dGrand_Total);
-            this.panel9.Controls.Add(this.label29);
-            this.panel9.Controls.Add(this.PO_dSub_Total);
-            this.panel9.Controls.Add(this.label28);
-            this.panel9.Controls.Add(this.PO_vInspection);
-            this.panel9.Controls.Add(this.label22);
-            this.panel9.Controls.Add(this.PO_vPayment_Terms);
-            this.panel9.Controls.Add(this.PO_dExcise_Duty_Percent);
-            this.panel9.Controls.Add(this.PO_dFreight_Charge_Percentage);
-            this.panel9.Controls.Add(this.PO_dVAT_CST_Percentage);
-            this.panel9.Controls.Add(this.PO_dInsurence_Charge_Percentage);
-            this.panel9.Controls.Add(this.PO_dVAR_CST_Amount);
-            this.panel9.Controls.Add(this.label17);
-            this.panel9.Controls.Add(this.PO_vDelivery);
-            this.panel9.Controls.Add(this.label13);
-            this.panel9.Controls.Add(this.PO_dExcise_Duty_Amount);
-            this.panel9.Controls.Add(this.PO_vMode_Of_Despatch);
-            this.panel9.Controls.Add(this.label6);
-            this.panel9.Controls.Add(this.label10);
-            this.panel9.Controls.Add(this.PO_vFreight);
-            this.panel9.Controls.Add(this.label2);
-            this.panel9.Controls.Add(this.PO_dFreight_Charge);
-            this.panel9.Controls.Add(this.label26);
-            this.panel9.Controls.Add(this.label25);
-            this.panel9.Controls.Add(this.PO_dInsurence_Charge);
-            this.panel9.Controls.Add(this.label32);
-            this.panel9.Controls.Add(this.label33);
-            this.panel9.Controls.Add(this.label36);
-            this.panel9.Controls.Add(this.label34);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1094, 241);
-            this.panel9.TabIndex = 0;
-            // 
-            // PO_vGST_Type2
-            // 
-            this.PO_vGST_Type2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_vGST_Type2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_vGST_Type2.FormattingEnabled = true;
-            this.PO_vGST_Type2.Items.AddRange(new object[] {
-            "CGST"});
-            this.PO_vGST_Type2.Location = new System.Drawing.Point(778, 117);
-            this.PO_vGST_Type2.Name = "PO_vGST_Type2";
-            this.PO_vGST_Type2.Size = new System.Drawing.Size(103, 27);
-            this.PO_vGST_Type2.TabIndex = 13;
-            this.PO_vGST_Type2.Text = "CGST";
-            // 
-            // PO_vGST_Type1
-            // 
-            this.PO_vGST_Type1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_vGST_Type1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_vGST_Type1.FormattingEnabled = true;
-            this.PO_vGST_Type1.Items.AddRange(new object[] {
-            "SGST",
-            "IGST"});
-            this.PO_vGST_Type1.Location = new System.Drawing.Point(778, 88);
-            this.PO_vGST_Type1.Name = "PO_vGST_Type1";
-            this.PO_vGST_Type1.Size = new System.Drawing.Size(103, 27);
-            this.PO_vGST_Type1.TabIndex = 10;
-            this.PO_vGST_Type1.Text = "SGST";
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1004, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 31);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(825, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 31);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Submit For Approval";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // PO_vWarrenty_Class
-            // 
-            this.PO_vWarrenty_Class.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_vWarrenty_Class.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_vWarrenty_Class.Location = new System.Drawing.Point(148, 177);
-            this.PO_vWarrenty_Class.Multiline = true;
-            this.PO_vWarrenty_Class.Name = "PO_vWarrenty_Class";
-            this.PO_vWarrenty_Class.Size = new System.Drawing.Size(669, 57);
-            this.PO_vWarrenty_Class.TabIndex = 5;
-            this.PO_vWarrenty_Class.Text = "1. Raw material Test certificate to be sent along with material.                \r" +
-    "\n2. Material Lot No to be mentioned in the invoice and test reports.";
-            // 
-            // PO_dGrand_Total
-            // 
-            this.PO_dGrand_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dGrand_Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dGrand_Total.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dGrand_Total.Location = new System.Drawing.Point(966, 147);
-            this.PO_dGrand_Total.Name = "PO_dGrand_Total";
-            this.PO_dGrand_Total.ReadOnly = true;
-            this.PO_dGrand_Total.Size = new System.Drawing.Size(123, 26);
-            this.PO_dGrand_Total.TabIndex = 17;
-            this.PO_dGrand_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PO_dGrand_Total.TextChanged += new System.EventHandler(this.PO_dGrand_Total_TextChanged);
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(822, 152);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(140, 19);
-            this.label29.TabIndex = 16;
-            this.label29.Text = "Grand Total Value :";
-            // 
-            // PO_dSub_Total
-            // 
-            this.PO_dSub_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dSub_Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dSub_Total.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dSub_Total.Location = new System.Drawing.Point(966, 1);
-            this.PO_dSub_Total.Name = "PO_dSub_Total";
-            this.PO_dSub_Total.ReadOnly = true;
-            this.PO_dSub_Total.Size = new System.Drawing.Size(123, 26);
-            this.PO_dSub_Total.TabIndex = 6;
-            this.PO_dSub_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PO_dSub_Total.TextChanged += new System.EventHandler(this.PO_dSub_Total_TextChanged);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(60, 179);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(83, 19);
-            this.label28.TabIndex = 121;
-            this.label28.Text = "Remarks :-";
-            // 
-            // PO_vInspection
-            // 
-            this.PO_vInspection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_vInspection.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_vInspection.Location = new System.Drawing.Point(147, 147);
-            this.PO_vInspection.Name = "PO_vInspection";
-            this.PO_vInspection.Size = new System.Drawing.Size(451, 26);
-            this.PO_vInspection.TabIndex = 4;
-            this.PO_vInspection.Text = "At our end after Delivery.";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(54, 150);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(89, 19);
-            this.label22.TabIndex = 119;
-            this.label22.Text = "Inspection :";
-            // 
-            // PO_vPayment_Terms
-            // 
-            this.PO_vPayment_Terms.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_vPayment_Terms.Font = new System.Drawing.Font("Cambria", 11F);
-            this.PO_vPayment_Terms.Location = new System.Drawing.Point(147, 103);
-            this.PO_vPayment_Terms.Multiline = true;
-            this.PO_vPayment_Terms.Name = "PO_vPayment_Terms";
-            this.PO_vPayment_Terms.Size = new System.Drawing.Size(451, 41);
-            this.PO_vPayment_Terms.TabIndex = 3;
-            this.PO_vPayment_Terms.Text = "As per Supplier terms";
-            this.PO_vPayment_Terms.TextChanged += new System.EventHandler(this.PO_vPayment_Terms_TextChanged);
-            // 
-            // PO_dExcise_Duty_Percent
-            // 
-            this.PO_dExcise_Duty_Percent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dExcise_Duty_Percent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dExcise_Duty_Percent.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dExcise_Duty_Percent.Location = new System.Drawing.Point(894, 89);
-            this.PO_dExcise_Duty_Percent.Name = "PO_dExcise_Duty_Percent";
-            this.PO_dExcise_Duty_Percent.Size = new System.Drawing.Size(55, 26);
-            this.PO_dExcise_Duty_Percent.TabIndex = 11;
-            this.PO_dExcise_Duty_Percent.TextChanged += new System.EventHandler(this.PO_dExcise_Duty_Percent_TextChanged);
-            // 
-            // PO_dFreight_Charge_Percentage
-            // 
-            this.PO_dFreight_Charge_Percentage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dFreight_Charge_Percentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dFreight_Charge_Percentage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dFreight_Charge_Percentage.Location = new System.Drawing.Point(894, 30);
-            this.PO_dFreight_Charge_Percentage.Name = "PO_dFreight_Charge_Percentage";
-            this.PO_dFreight_Charge_Percentage.Size = new System.Drawing.Size(55, 26);
-            this.PO_dFreight_Charge_Percentage.TabIndex = 7;
-            this.PO_dFreight_Charge_Percentage.Text = "0.00";
-            this.PO_dFreight_Charge_Percentage.TextChanged += new System.EventHandler(this.PO_dFreight_Charge_Percentage_TextChanged);
-            // 
-            // PO_dVAT_CST_Percentage
-            // 
-            this.PO_dVAT_CST_Percentage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dVAT_CST_Percentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dVAT_CST_Percentage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dVAT_CST_Percentage.Location = new System.Drawing.Point(894, 118);
-            this.PO_dVAT_CST_Percentage.Name = "PO_dVAT_CST_Percentage";
-            this.PO_dVAT_CST_Percentage.Size = new System.Drawing.Size(55, 26);
-            this.PO_dVAT_CST_Percentage.TabIndex = 14;
-            this.PO_dVAT_CST_Percentage.TextChanged += new System.EventHandler(this.PO_dVAT_CST_Percentage_TextChanged);
-            // 
-            // PO_dInsurence_Charge_Percentage
-            // 
-            this.PO_dInsurence_Charge_Percentage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dInsurence_Charge_Percentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dInsurence_Charge_Percentage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dInsurence_Charge_Percentage.Location = new System.Drawing.Point(894, 59);
-            this.PO_dInsurence_Charge_Percentage.Name = "PO_dInsurence_Charge_Percentage";
-            this.PO_dInsurence_Charge_Percentage.Size = new System.Drawing.Size(55, 26);
-            this.PO_dInsurence_Charge_Percentage.TabIndex = 9;
-            this.PO_dInsurence_Charge_Percentage.Text = "0.00";
-            this.PO_dInsurence_Charge_Percentage.TextChanged += new System.EventHandler(this.PO_dInsurence_Charge_Percentage_TextChanged);
-            // 
-            // PO_dVAR_CST_Amount
-            // 
-            this.PO_dVAR_CST_Amount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dVAR_CST_Amount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dVAR_CST_Amount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dVAR_CST_Amount.Location = new System.Drawing.Point(966, 118);
-            this.PO_dVAR_CST_Amount.Name = "PO_dVAR_CST_Amount";
-            this.PO_dVAR_CST_Amount.ReadOnly = true;
-            this.PO_dVAR_CST_Amount.Size = new System.Drawing.Size(123, 26);
-            this.PO_dVAR_CST_Amount.TabIndex = 15;
-            this.PO_dVAR_CST_Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PO_dVAR_CST_Amount.TextChanged += new System.EventHandler(this.PO_dVAR_CST_Amount_TextChanged);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(20, 104);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(124, 19);
-            this.label17.TabIndex = 117;
-            this.label17.Text = "Payment Terms :";
-            // 
-            // PO_vDelivery
-            // 
-            this.PO_vDelivery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_vDelivery.Font = new System.Drawing.Font("Cambria", 11F);
-            this.PO_vDelivery.Location = new System.Drawing.Point(147, 59);
-            this.PO_vDelivery.Multiline = true;
-            this.PO_vDelivery.Name = "PO_vDelivery";
-            this.PO_vDelivery.Size = new System.Drawing.Size(451, 41);
-            this.PO_vDelivery.TabIndex = 2;
-            this.PO_vDelivery.Text = "At our Factory located at Ayyanambakkam on or Before ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(70, 59);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 19);
-            this.label13.TabIndex = 115;
-            this.label13.Text = "Delivery :";
-            // 
-            // PO_dExcise_Duty_Amount
-            // 
-            this.PO_dExcise_Duty_Amount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dExcise_Duty_Amount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dExcise_Duty_Amount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dExcise_Duty_Amount.Location = new System.Drawing.Point(966, 89);
-            this.PO_dExcise_Duty_Amount.Name = "PO_dExcise_Duty_Amount";
-            this.PO_dExcise_Duty_Amount.ReadOnly = true;
-            this.PO_dExcise_Duty_Amount.Size = new System.Drawing.Size(123, 26);
-            this.PO_dExcise_Duty_Amount.TabIndex = 12;
-            this.PO_dExcise_Duty_Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PO_dExcise_Duty_Amount.TextChanged += new System.EventHandler(this.PO_dExcise_Duty_Amount_TextChanged);
-            // 
-            // PO_vMode_Of_Despatch
-            // 
-            this.PO_vMode_Of_Despatch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_vMode_Of_Despatch.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_vMode_Of_Despatch.Location = new System.Drawing.Point(147, 31);
-            this.PO_vMode_Of_Despatch.Name = "PO_vMode_Of_Despatch";
-            this.PO_vMode_Of_Despatch.Size = new System.Drawing.Size(451, 26);
-            this.PO_vMode_Of_Despatch.TabIndex = 1;
-            this.PO_vMode_Of_Despatch.Text = "By Road Transport with Proper Packing Conditions.";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(0, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 19);
-            this.label6.TabIndex = 113;
-            this.label6.Text = "Mode Of Despatch :";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(778, 3);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(171, 19);
-            this.label10.TabIndex = 93;
-            this.label10.Text = "Sub Total(Basic Value) :";
-            // 
-            // PO_vFreight
-            // 
-            this.PO_vFreight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_vFreight.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_vFreight.Location = new System.Drawing.Point(147, 1);
-            this.PO_vFreight.Name = "PO_vFreight";
-            this.PO_vFreight.Size = new System.Drawing.Size(451, 26);
-            this.PO_vFreight.TabIndex = 0;
-            this.PO_vFreight.Text = "Extra as Actuals.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(74, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 19);
-            this.label2.TabIndex = 111;
-            this.label2.Text = "Freight :";
-            // 
-            // PO_dFreight_Charge
-            // 
-            this.PO_dFreight_Charge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dFreight_Charge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dFreight_Charge.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dFreight_Charge.Location = new System.Drawing.Point(966, 30);
-            this.PO_dFreight_Charge.Name = "PO_dFreight_Charge";
-            this.PO_dFreight_Charge.ReadOnly = true;
-            this.PO_dFreight_Charge.Size = new System.Drawing.Size(123, 26);
-            this.PO_dFreight_Charge.TabIndex = 8;
-            this.PO_dFreight_Charge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PO_dFreight_Charge.TextChanged += new System.EventHandler(this.PO_dFreight_Charge_TextChanged);
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(747, 62);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(146, 19);
-            this.label26.TabIndex = 87;
-            this.label26.Text = "Insurence Charges :";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(766, 33);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(127, 19);
-            this.label25.TabIndex = 89;
-            this.label25.Text = "Freight Charges :";
-            // 
-            // PO_dInsurence_Charge
-            // 
-            this.PO_dInsurence_Charge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PO_dInsurence_Charge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PO_dInsurence_Charge.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_dInsurence_Charge.Location = new System.Drawing.Point(966, 59);
-            this.PO_dInsurence_Charge.Name = "PO_dInsurence_Charge";
-            this.PO_dInsurence_Charge.ReadOnly = true;
-            this.PO_dInsurence_Charge.Size = new System.Drawing.Size(123, 26);
-            this.PO_dInsurence_Charge.TabIndex = 86;
-            this.PO_dInsurence_Charge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PO_dInsurence_Charge.TextChanged += new System.EventHandler(this.PO_dInsurence_Charge_TextChanged);
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(754, 33);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(16, 19);
-            this.label32.TabIndex = 129;
-            this.label32.Text = "*";
-            // 
-            // label33
-            // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.Red;
-            this.label33.Location = new System.Drawing.Point(735, 62);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(16, 19);
-            this.label33.TabIndex = 130;
-            this.label33.Text = "*";
-            // 
-            // label36
-            // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Red;
-            this.label36.Location = new System.Drawing.Point(762, 120);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(16, 19);
-            this.label36.TabIndex = 132;
-            this.label36.Text = "*";
-            // 
-            // label34
-            // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Red;
-            this.label34.Location = new System.Drawing.Point(762, 91);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(16, 19);
-            this.label34.TabIndex = 131;
-            this.label34.Text = "*";
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -1458,27 +1528,180 @@
             this.txt_Rows.BackColor = System.Drawing.Color.Transparent;
             this.txt_Rows.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Rows.ForeColor = System.Drawing.Color.Blue;
-            this.txt_Rows.Location = new System.Drawing.Point(1088, 445);
+            this.txt_Rows.Location = new System.Drawing.Point(1159, 517);
             this.txt_Rows.Name = "txt_Rows";
             this.txt_Rows.Size = new System.Drawing.Size(193, 19);
             this.txt_Rows.TabIndex = 54;
             this.txt_Rows.Text = "Rows :";
             this.txt_Rows.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.Location = new System.Drawing.Point(60, 116);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(83, 19);
+            this.label42.TabIndex = 133;
+            this.label42.Text = "Warranty :";
+            // 
+            // Warranty
+            // 
+            this.Warranty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Warranty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Warranty.Font = new System.Drawing.Font("Cambria", 11F);
+            this.Warranty.Location = new System.Drawing.Point(146, 115);
+            this.Warranty.Multiline = true;
+            this.Warranty.Name = "Warranty";
+            this.Warranty.Size = new System.Drawing.Size(183, 41);
+            this.Warranty.TabIndex = 134;
+            // 
+            // TestReport
+            // 
+            this.TestReport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.TestReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TestReport.Font = new System.Drawing.Font("Cambria", 11F);
+            this.TestReport.Location = new System.Drawing.Point(420, 115);
+            this.TestReport.Multiline = true;
+            this.TestReport.Name = "TestReport";
+            this.TestReport.Size = new System.Drawing.Size(178, 41);
+            this.TestReport.TabIndex = 135;
+            // 
+            // label43
+            // 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Black;
+            this.label43.Location = new System.Drawing.Point(343, 113);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(41, 19);
+            this.label43.TabIndex = 136;
+            this.label43.Text = "Test ";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Location = new System.Drawing.Point(58, 161);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(86, 19);
+            this.label44.TabIndex = 137;
+            this.label44.Text = "Insurance :";
+            // 
+            // label45
+            // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Black;
+            this.label45.Location = new System.Drawing.Point(349, 135);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(65, 19);
+            this.label45.TabIndex = 138;
+            this.label45.Text = "Report :";
+            // 
+            // Insurance
+            // 
+            this.Insurance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Insurance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Insurance.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Insurance.Location = new System.Drawing.Point(147, 159);
+            this.Insurance.Name = "Insurance";
+            this.Insurance.Size = new System.Drawing.Size(453, 26);
+            this.Insurance.TabIndex = 139;
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.Location = new System.Drawing.Point(277, 3);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(86, 19);
+            this.label46.TabIndex = 140;
+            this.label46.Text = "Installation";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Applicable ",
+            "Not Applicable "});
+            this.comboBox1.Location = new System.Drawing.Point(473, 1);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(124, 27);
+            this.comboBox1.TabIndex = 141;
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.Black;
+            this.label47.Location = new System.Drawing.Point(366, 3);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(0, 19);
+            this.label47.TabIndex = 142;
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Black;
+            this.label48.Location = new System.Drawing.Point(358, 4);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(17, 19);
+            this.label48.TabIndex = 143;
+            this.label48.Text = "/";
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.Black;
+            this.label49.Location = new System.Drawing.Point(371, 4);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(101, 19);
+            this.label49.TabIndex = 144;
+            this.label49.Text = "Commission :";
+            // 
             // Purchase_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 609);
+            this.ClientSize = new System.Drawing.Size(1165, 681);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.txt_Rows);
             this.Name = "Purchase_Order";
             this.Text = "Purchase_Order";
             this.Load += new System.EventHandler(this.Purchase_Order_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1486,8 +1709,6 @@
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1605,5 +1826,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn POD_dUnit_Price1;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtTotalPrice1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox Insurance;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox TestReport;
+        private System.Windows.Forms.TextBox Warranty;
+        private System.Windows.Forms.Label label42;
     }
 }
