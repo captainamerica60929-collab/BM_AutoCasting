@@ -85,19 +85,19 @@
             this.ArrowButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.btnDisplay = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -185,7 +185,9 @@
             this.Lead_UOM.Items.AddRange(new object[] {
             "Hrs",
             "Mins",
-            "Secs"});
+            "Secs",
+            "Month",
+            "Days"});
             this.Lead_UOM.Location = new System.Drawing.Point(1142, 8);
             this.Lead_UOM.Name = "Lead_UOM";
             this.Lead_UOM.Size = new System.Drawing.Size(58, 27);
@@ -758,58 +760,6 @@
             this.panel3.Size = new System.Drawing.Size(1212, 28);
             this.panel3.TabIndex = 1;
             // 
-            // textBoxX1
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(81, 2);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(276, 24);
-            this.textBoxX1.TabIndex = 6;
-            this.textBoxX1.WatermarkColor = System.Drawing.Color.Gray;
-            this.textBoxX1.WatermarkText = "Search";
-            this.textBoxX1.TextChanged += new System.EventHandler(this.textBoxX1_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(25, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Search";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1212, 334);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txtStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 540);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1212, 22);
-            this.statusStrip1.TabIndex = 52;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.ForeColor = System.Drawing.Color.Blue;
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(39, 17);
-            this.txtStatus.Text = "Ready";
-            // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -847,6 +797,21 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textBoxX1
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX1.Border.Class = "TextBoxBorder";
+            this.textBoxX1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX1.Location = new System.Drawing.Point(81, 2);
+            this.textBoxX1.Name = "textBoxX1";
+            this.textBoxX1.Size = new System.Drawing.Size(276, 24);
+            this.textBoxX1.TabIndex = 6;
+            this.textBoxX1.WatermarkColor = System.Drawing.Color.Gray;
+            this.textBoxX1.WatermarkText = "Search";
+            this.textBoxX1.TextChanged += new System.EventHandler(this.textBoxX1_TextChanged);
             // 
             // panel5
             // 
@@ -892,6 +857,16 @@
             this.btnDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDisplay.UseVisualStyleBackColor = true;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(25, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Search";
             // 
             // btnClear
             // 
@@ -949,6 +924,33 @@
             this.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnsave.UseVisualStyleBackColor = true;
             this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1212, 334);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 540);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1212, 22);
+            this.statusStrip1.TabIndex = 52;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.ForeColor = System.Drawing.Color.Blue;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(39, 17);
+            this.txtStatus.Text = "Ready";
             // 
             // RM_Master
             // 
