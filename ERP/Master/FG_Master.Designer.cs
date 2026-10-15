@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FG_Master));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.Customers = new System.Windows.Forms.ComboBox();
             this.IM_aoe = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.IM_Tool_Cost = new System.Windows.Forms.TextBox();
@@ -97,9 +100,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Customers = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -172,6 +172,36 @@
             this.panel6.Size = new System.Drawing.Size(1139, 174);
             this.panel6.TabIndex = 0;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(792, 92);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(22, 25);
+            this.label26.TabIndex = 318;
+            this.label26.Text = "*";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(807, 111);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(87, 19);
+            this.label25.TabIndex = 317;
+            this.label25.Text = "Max Stock :";
+            // 
+            // Customers
+            // 
+            this.Customers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Customers.FormattingEnabled = true;
+            this.Customers.Location = new System.Drawing.Point(899, 105);
+            this.Customers.Name = "Customers";
+            this.Customers.Size = new System.Drawing.Size(228, 27);
+            this.Customers.TabIndex = 316;
+            // 
             // IM_aoe
             // 
             this.IM_aoe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -187,9 +217,9 @@
             this.label24.ForeColor = System.Drawing.Color.Black;
             this.label24.Location = new System.Drawing.Point(629, 76);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(41, 19);
+            this.label24.Size = new System.Drawing.Size(45, 19);
             this.label24.TabIndex = 315;
-            this.label24.Text = "WE :";
+            this.label24.Text = "OEE :";
             this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // IM_Tool_Cost
@@ -941,36 +971,6 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(39, 17);
             this.txtStatus.Text = "Ready";
-            // 
-            // Customers
-            // 
-            this.Customers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Customers.FormattingEnabled = true;
-            this.Customers.Location = new System.Drawing.Point(899, 105);
-            this.Customers.Name = "Customers";
-            this.Customers.Size = new System.Drawing.Size(228, 27);
-            this.Customers.TabIndex = 316;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(807, 111);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(87, 19);
-            this.label25.TabIndex = 317;
-            this.label25.Text = "Max Stock :";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(792, 92);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(22, 25);
-            this.label26.TabIndex = 318;
-            this.label26.Text = "*";
             // 
             // FG_Master
             // 
