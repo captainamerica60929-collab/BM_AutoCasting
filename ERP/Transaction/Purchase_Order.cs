@@ -975,5 +975,15 @@ namespace CRM_App.Transaction
         {
             calulate();
         }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UOM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -187,11 +187,11 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(807, 111);
+            this.label25.Location = new System.Drawing.Point(812, 109);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(87, 19);
+            this.label25.Size = new System.Drawing.Size(84, 19);
             this.label25.TabIndex = 317;
-            this.label25.Text = "Max Stock :";
+            this.label25.Text = "Customer :";
             // 
             // Customers
             // 

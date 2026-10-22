@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Purchase_Order));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.Advance = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -111,6 +113,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UOM = new System.Windows.Forms.ComboBox();
             this.POD_vTotal_Price = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.txtGrade = new System.Windows.Forms.RichTextBox();
@@ -152,9 +155,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txt_Rows = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.UOM = new System.Windows.Forms.ComboBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.Advance = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -240,6 +240,29 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1160, 253);
             this.panel9.TabIndex = 0;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // Advance
+            // 
+            this.Advance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Advance.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Advance.Location = new System.Drawing.Point(504, 161);
+            this.Advance.Name = "Advance";
+            this.Advance.Size = new System.Drawing.Size(159, 26);
+            this.Advance.TabIndex = 146;
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.Black;
+            this.label50.Location = new System.Drawing.Point(426, 163);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(76, 19);
+            this.label50.TabIndex = 145;
+            this.label50.Text = "Advance :";
             // 
             // label49
             // 
@@ -627,7 +650,7 @@
             this.PO_vDelivery.Name = "PO_vDelivery";
             this.PO_vDelivery.Size = new System.Drawing.Size(517, 26);
             this.PO_vDelivery.TabIndex = 2;
-            this.PO_vDelivery.Text = "At our Factory located at Ayyanambakkam on or Before ";
+            this.PO_vDelivery.Text = "At our Factory located at Mettupalayam";
             // 
             // label13
             // 
@@ -1224,6 +1247,19 @@
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // UOM
+            // 
+            this.UOM.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UOM.FormattingEnabled = true;
+            this.UOM.Items.AddRange(new object[] {
+            "SGST",
+            "IGST"});
+            this.UOM.Location = new System.Drawing.Point(785, 5);
+            this.UOM.Name = "UOM";
+            this.UOM.Size = new System.Drawing.Size(74, 27);
+            this.UOM.TabIndex = 145;
+            this.UOM.SelectedIndexChanged += new System.EventHandler(this.UOM_SelectedIndexChanged);
+            // 
             // POD_vTotal_Price
             // 
             this.POD_vTotal_Price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1672,40 +1708,6 @@
             this.txt_Rows.TabIndex = 54;
             this.txt_Rows.Text = "Rows :";
             this.txt_Rows.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // UOM
-            // 
-            this.UOM.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UOM.FormattingEnabled = true;
-            this.UOM.Items.AddRange(new object[] {
-            "SGST",
-            "IGST"});
-            this.UOM.Location = new System.Drawing.Point(785, 5);
-            this.UOM.Name = "UOM";
-            this.UOM.Size = new System.Drawing.Size(74, 27);
-            this.UOM.TabIndex = 145;
-            // 
-            // label50
-            // 
-            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.Color.Black;
-            this.label50.Location = new System.Drawing.Point(426, 163);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(76, 19);
-            this.label50.TabIndex = 145;
-            this.label50.Text = "Advance :";
-            // 
-            // Advance
-            // 
-            this.Advance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Advance.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Advance.Location = new System.Drawing.Point(504, 161);
-            this.Advance.Name = "Advance";
-            this.Advance.Size = new System.Drawing.Size(159, 26);
-            this.Advance.TabIndex = 146;
             // 
             // Purchase_Order
             // 

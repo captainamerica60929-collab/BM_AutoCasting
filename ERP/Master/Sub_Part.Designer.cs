@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sub_Part));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.IM_aoe = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.IM_Tool_Cost = new System.Windows.Forms.TextBox();
             this.IM_PackingStandard = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -94,8 +96,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.IM_aoe = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -163,6 +163,25 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1139, 174);
             this.panel6.TabIndex = 0;
+            // 
+            // IM_aoe
+            // 
+            this.IM_aoe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.IM_aoe.FormattingEnabled = true;
+            this.IM_aoe.Location = new System.Drawing.Point(692, 72);
+            this.IM_aoe.Name = "IM_aoe";
+            this.IM_aoe.Size = new System.Drawing.Size(95, 27);
+            this.IM_aoe.TabIndex = 316;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(629, 76);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(45, 19);
+            this.label24.TabIndex = 317;
+            this.label24.Text = "OEE :";
             // 
             // IM_Tool_Cost
             // 
@@ -906,25 +925,6 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(39, 17);
             this.txtStatus.Text = "Ready";
-            // 
-            // IM_aoe
-            // 
-            this.IM_aoe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.IM_aoe.FormattingEnabled = true;
-            this.IM_aoe.Location = new System.Drawing.Point(692, 72);
-            this.IM_aoe.Name = "IM_aoe";
-            this.IM_aoe.Size = new System.Drawing.Size(95, 27);
-            this.IM_aoe.TabIndex = 316;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(629, 76);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(62, 19);
-            this.label24.TabIndex = 317;
-            this.label24.Text = "AS/OE :";
             // 
             // Sub_Part
             // 
