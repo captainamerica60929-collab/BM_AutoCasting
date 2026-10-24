@@ -698,9 +698,9 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(0, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 19);
+            this.label6.Size = new System.Drawing.Size(139, 19);
             this.label6.TabIndex = 113;
-            this.label6.Text = "Mode Of Despatch :";
+            this.label6.Text = "Mode Of Dispatch :";
             // 
             // label10
             // 
@@ -1055,23 +1055,21 @@
             // 
             this.PO_vSupplier_Qtn_Ref.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PO_vSupplier_Qtn_Ref.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PO_vSupplier_Qtn_Ref.Location = new System.Drawing.Point(901, 11);
+            this.PO_vSupplier_Qtn_Ref.Location = new System.Drawing.Point(899, 8);
             this.PO_vSupplier_Qtn_Ref.Name = "PO_vSupplier_Qtn_Ref";
-            this.PO_vSupplier_Qtn_Ref.Size = new System.Drawing.Size(172, 26);
+            this.PO_vSupplier_Qtn_Ref.Size = new System.Drawing.Size(174, 26);
             this.PO_vSupplier_Qtn_Ref.TabIndex = 5;
-            this.PO_vSupplier_Qtn_Ref.Visible = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(767, 13);
+            this.label9.Location = new System.Drawing.Point(798, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 19);
+            this.label9.Size = new System.Drawing.Size(92, 19);
             this.label9.TabIndex = 87;
-            this.label9.Text = "Supplier Qtn Ref :";
-            this.label9.Visible = false;
+            this.label9.Text = "Qtn Ref No :";
             // 
             // label18
             // 
@@ -1123,11 +1121,11 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(769, 46);
+            this.label24.Location = new System.Drawing.Point(782, 48);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(111, 19);
+            this.label24.Size = new System.Drawing.Size(112, 19);
             this.label24.TabIndex = 83;
-            this.label24.Text = "Delivery Date :";
+            this.label24.Text = "Qutation Date :";
             this.label24.Click += new System.EventHandler(this.Label24_Click);
             // 
             // PO_vSupplier_Qtn_Date
@@ -1579,7 +1577,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(509, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 16);
+            this.label11.Size = new System.Drawing.Size(117, 16);
             this.label11.TabIndex = 2;
             this.label11.Text = "Amendment No :";
             this.label11.Visible = false;
@@ -1687,7 +1685,7 @@
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(186, 9);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 16);
+            this.label14.Size = new System.Drawing.Size(131, 16);
             this.label14.TabIndex = 0;
             this.label14.Text = "Amendment Date :";
             this.label14.Visible = false;

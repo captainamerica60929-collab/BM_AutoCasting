@@ -15,7 +15,7 @@ namespace LarchERP.Master
     public partial class Mold_Master : Form
     {
         public string arrow = "Up";
-        public int Distance = 268;
+        public int Distance = 320;
         public string ID = "";
         public bool isPartNoLoad = false;
         string ErrorMessage = "";
@@ -732,6 +732,11 @@ namespace LarchERP.Master
             {
                 label11.Text = "ISIR Approval Date :";
             }
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -184,33 +184,105 @@ namespace CRM_App.Transaction
         }
 
 
+        //void calulate()
+        //{
+        //    try
+        //    {
+        //        decimal Gross_tot = 0m;
+        //        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+        //        {
+        //            Gross_tot += decimal.Parse(dataGridView1.Rows[i].Cells["txtTotalPrice1"].Value.ToString());
+
+        //        }
+        //        PO_dSub_Total.Text = Gross_tot.ToString("0.00");
+
+        //        PO_dFreight_Charge.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dFreight_Charge_Percentage.Text)) / 100)))).ToString("0.00");
+        //        PO_dInsurence_Charge.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dInsurence_Charge_Percentage.Text)) / 100)))).ToString("0.00");
+        //        PO_dExcise_Duty_Amount.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dExcise_Duty_Percent.Text)) / 100)))).ToString("0.00");
+        //        PO_dVAR_CST_Amount.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dVAT_CST_Percentage.Text)) / 100)))).ToString("0.00");
+        //        POD_vTotal_Price.Text = (Decimal.Parse(POD_dQty.Text) * Decimal.Parse(POD_dUnit_Price.Text)).ToString("0.00");
+
+
+
+        //        PO_dGrand_Total.Text = (Decimal.Parse(PO_dSub_Total.Text) + ((Decimal.Parse(PO_dFreight_Charge.Text) + ((Decimal.Parse(PO_dInsurence_Charge.Text) + ((Decimal.Parse(PO_dExcise_Duty_Amount.Text) + Decimal.Parse(PO_dVAR_CST_Amount.Text)))))))).ToString("0.00");
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //    }
+        //}
+
+        private decimal GetDecimal(string value)
+        {
+            decimal result;
+            return decimal.TryParse(value, out result) ? result : 0m;
+        }
+
         void calulate()
         {
             try
             {
                 decimal Gross_tot = 0m;
+
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
-                    Gross_tot += decimal.Parse(dataGridView1.Rows[i].Cells["txtTotalPrice1"].Value.ToString());
+                    if (dataGridView1.Rows[i].IsNewRow)
+                        continue;
 
+                    object cellValue =
+                        dataGridView1.Rows[i].Cells["txtTotalPrice1"].Value;
+
+                    Gross_tot += GetDecimal(
+                        cellValue == null ? "0" : cellValue.ToString()
+                    );
                 }
+
                 PO_dSub_Total.Text = Gross_tot.ToString("0.00");
 
-                PO_dFreight_Charge.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dFreight_Charge_Percentage.Text)) / 100)))).ToString("0.00");
-                PO_dInsurence_Charge.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dInsurence_Charge_Percentage.Text)) / 100)))).ToString("0.00");
-                PO_dExcise_Duty_Amount.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dExcise_Duty_Percent.Text)) / 100)))).ToString("0.00");
-                PO_dVAR_CST_Amount.Text = (((Decimal.Parse(PO_dSub_Total.Text) * (Decimal.Parse((PO_dVAT_CST_Percentage.Text)) / 100)))).ToString("0.00");
-                POD_vTotal_Price.Text = (Decimal.Parse(POD_vPacking_Std.Text) * Decimal.Parse(POD_dUnit_Price.Text)).ToString("0.00");
+                decimal subtotal = Gross_tot;
 
+                decimal freightPercent =
+                    GetDecimal(PO_dFreight_Charge_Percentage.Text);
 
+                decimal insurancePercent =
+                    GetDecimal(PO_dInsurence_Charge_Percentage.Text);
 
-                PO_dGrand_Total.Text = (Decimal.Parse(PO_dSub_Total.Text) + ((Decimal.Parse(PO_dFreight_Charge.Text) + ((Decimal.Parse(PO_dInsurence_Charge.Text) + ((Decimal.Parse(PO_dExcise_Duty_Amount.Text) + Decimal.Parse(PO_dVAR_CST_Amount.Text)))))))).ToString("0.00");
+                decimal excisePercent =
+                    GetDecimal(PO_dExcise_Duty_Percent.Text);
 
+                decimal vatPercent =
+                    GetDecimal(PO_dVAT_CST_Percentage.Text);
+
+                decimal qty = GetDecimal(POD_dQty.Text);
+                decimal unitPrice = GetDecimal(POD_dUnit_Price.Text);
+
+                decimal freight = subtotal * freightPercent / 100m;
+                decimal insurance = subtotal * insurancePercent / 100m;
+                decimal excise = subtotal * excisePercent / 100m;
+                decimal vat = subtotal * vatPercent / 100m;
+
+                PO_dFreight_Charge.Text = freight.ToString("0.00");
+                PO_dInsurence_Charge.Text = insurance.ToString("0.00");
+                PO_dExcise_Duty_Amount.Text = excise.ToString("0.00");
+                PO_dVAR_CST_Amount.Text = vat.ToString("0.00");
+
+                POD_vTotal_Price.Text = (qty * unitPrice).ToString("0.00");
+
+                decimal grandTotal = subtotal + freight + insurance + excise + vat;
+
+                PO_dGrand_Total.Text = grandTotal.ToString("0.00");
             }
             catch (Exception ex)
             {
+                MessageBox.Show(
+                    "Calculation error: " + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
+
         void calulate_Qty()
         {
             try
@@ -300,7 +372,7 @@ namespace CRM_App.Transaction
             LoadItemType();
             IM_Type.Text = "RM";
 
-            PO_vDelivery.Text = "At our Factory located at Ayyanambakkam on or Before " + PO_dPO_Date.Value.AddDays(15).ToString("dd-MMM-yyyy");
+           // PO_vDelivery.Text = "At our Factory located at Ayyanambakkam on or Before " + PO_dPO_Date.Value.AddDays(15).ToString("dd-MMM-yyyy");
         }
         public void Load_UOM()
         {

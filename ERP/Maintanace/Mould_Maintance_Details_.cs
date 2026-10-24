@@ -15,7 +15,7 @@ namespace LarchERP.Master
     public partial class Mould_Maintance_Details : Form
     {
         public string arrow = "Up";
-        public int Distance = 183;
+        public int Distance = 210;
         public string ID = "";
         string ErrorMessage = "";
         public Mould_Maintance_Details()

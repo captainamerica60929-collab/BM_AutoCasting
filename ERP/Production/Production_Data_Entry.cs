@@ -361,48 +361,131 @@ namespace CRM_App.Production
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 10)
+            if (e.ColumnIndex == 13)
             {
                 getdata();
             }
         }
 
 
+        //public void getdata()
+        //{
+        //    panel3.Visible = true;
+        //    try
+        //    {
+        //        dataGridView2.Columns.RemoveAt(6);
+        //    }
+        //    catch { }
+        //    dataGridView2.DataSource = null;
+        //    DataTable dt = dbFunctions.getTable("pr_edit_Production_Detail  " + dbFunctions.Route_Card_ID);
+        //    dataGridView2.DataSource = dt;
+        //    dbFunctions.DGVStyleAutoSizeColumn(dataGridView2);
+        //    dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+
+        //    //dataGridView2.Columns[1].ReadOnly = true;
+        //    //dataGridView2.Columns[2].ReadOnly = true;
+        //    dataGridView2.Columns[1].Width = 100;
+        //    dataGridView2.Columns[2].Width = 100;
+        //    dataGridView2.Columns[5].Width = 100;
+        //    dataGridView2.Columns[3].Width = 100;
+        //    dataGridView2.Columns[4].Width = 100;
+        //    //dataGridView2.Columns["Time1"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+        //    //dataGridView2.Columns["Time2"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+        //    dataGridView2.Columns["Time1"].DefaultCellStyle.Format = "dd-MM-yyyy hh:mm tt";
+        //    dataGridView2.Columns["Time2"].DefaultCellStyle.Format = "dd-MM-yyyy hh:mm tt";
+
+
+        //    DataGridViewButtonColumn doWork = new DataGridViewButtonColumn();
+        //    doWork.HeaderText = " ";
+        //    doWork.Text = "Update";
+        //    dataGridView2.Columns.Insert(8, doWork);
+        //    dataGridView2.Columns[8].Width = 93;
+        //    for (int i = 0; i < dataGridView2.Rows.Count; i++)
+        //    {
+        //        dataGridView2.Rows[i].Cells[8].Value = "Update";
+        //    }
+        //}
+
         public void getdata()
         {
             panel3.Visible = true;
+
             try
             {
-                dataGridView2.Columns.RemoveAt(6);
+                dataGridView2.DataSource = null;
+                dataGridView2.Columns.Clear();
+
+                DataTable dt = dbFunctions.getTable(
+                    "pr_edit_Production_Detail " + dbFunctions.Route_Card_ID
+                );
+
+                dataGridView2.DataSource = dt;
+
+                dbFunctions.DGVStyleAutoSizeColumn(dataGridView2);
+
+                dataGridView2.AutoSizeColumnsMode =
+                    DataGridViewAutoSizeColumnsMode.None;
+
+                // Set column widths safely
+                if (dataGridView2.Columns.Count > 1)
+                    dataGridView2.Columns[1].Width = 100;
+
+                if (dataGridView2.Columns.Count > 2)
+                    dataGridView2.Columns[2].Width = 100;
+
+                if (dataGridView2.Columns.Count > 3)
+                    dataGridView2.Columns[3].Width = 100;
+
+                if (dataGridView2.Columns.Count > 4)
+                    dataGridView2.Columns[4].Width = 100;
+
+                if (dataGridView2.Columns.Count > 5)
+                    dataGridView2.Columns[5].Width = 100;
+
+                // Format time columns only if they exist
+                if (dataGridView2.Columns.Contains("Time1"))
+                {
+                    dataGridView2.Columns["Time1"]
+                        .DefaultCellStyle.Format = "dd-MM-yyyy hh:mm tt";
+                }
+
+                if (dataGridView2.Columns.Contains("Time2"))
+                {
+                    dataGridView2.Columns["Time2"]
+                        .DefaultCellStyle.Format = "dd-MM-yyyy hh:mm tt";
+                }
+
+                // Add Update button
+                // Update button
+                DataGridViewButtonColumn doWork = new DataGridViewButtonColumn();
+                doWork.Name = "Update";
+                doWork.HeaderText = "";
+                doWork.Text = "Update";
+                doWork.UseColumnTextForButtonValue = true;
+                doWork.Width = 93;
+
+                // Delete button
+                DataGridViewButtonColumn doDelete = new DataGridViewButtonColumn();
+                doDelete.Name = "Delete";
+                doDelete.HeaderText = "";
+                doDelete.Text = "Delete";
+                doDelete.UseColumnTextForButtonValue = true;
+                doDelete.Width = 93;
+
+                // Add buttons at the end
+                dataGridView2.Columns.Add(doWork);
+                dataGridView2.Columns.Add(doDelete);
             }
-            catch { }
-            dataGridView2.DataSource = null;
-            DataTable dt = dbFunctions.getTable("pr_edit_Production_Detail  " + dbFunctions.Route_Card_ID);
-            dataGridView2.DataSource = dt;
-            dbFunctions.DGVStyleAutoSizeColumn(dataGridView2);
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-
-            //dataGridView2.Columns[1].ReadOnly = true;
-            //dataGridView2.Columns[2].ReadOnly = true;
-            dataGridView2.Columns[1].Width = 100;
-            dataGridView2.Columns[2].Width = 100;
-            dataGridView2.Columns[5].Width = 100;
-            dataGridView2.Columns[3].Width = 100;
-            dataGridView2.Columns[4].Width = 100;
-            //dataGridView2.Columns["Time1"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
-            //dataGridView2.Columns["Time2"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
-            dataGridView2.Columns["Time1"].DefaultCellStyle.Format = "dd-MM-yyyy hh:mm tt";
-            dataGridView2.Columns["Time2"].DefaultCellStyle.Format = "dd-MM-yyyy hh:mm tt";
-
-
-            DataGridViewButtonColumn doWork = new DataGridViewButtonColumn();
-            doWork.HeaderText = " ";
-            doWork.Text = "Update";
-            dataGridView2.Columns.Insert(8, doWork);
-            dataGridView2.Columns[8].Width = 93;
-            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            catch (Exception Ex)
             {
-                dataGridView2.Rows[i].Cells[8].Value = "Update";
+                dbFunctions.Logs(Ex.Message, dbFunctions.username);
+
+                MessageBox.Show(
+                    Ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
 
@@ -434,6 +517,27 @@ namespace CRM_App.Production
                 //DataTable dt = dbFunctions.getTable($"EXEC pr_Update_Production_Details {dataGridView2.Rows[e.RowIndex].Cells[0].Value}, {dataGridView2.Rows[e.RowIndex].Cells[4].Value}, {dataGridView2.Rows[e.RowIndex].Cells[5].Value}, '{dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value}', '{dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value}', '{dbFunctions.username}'");
 
                 MessageBox.Show("Updated Successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                getdata();
+            } if (e.ColumnIndex == 9)
+            {
+                DataTable dt = dbFunctions.getTable(
+                "pr_delete_Production_Details1 '"
+                + dataGridView2.Rows[e.RowIndex].Cells["ID"].Value.ToString() + "','"
+                + dataGridView2.Rows[e.RowIndex].Cells["Date"].Value.ToString() + "','"
+                + dataGridView2.Rows[e.RowIndex].Cells["Shift"].Value.ToString() + "','"
+                + dataGridView2.Rows[e.RowIndex].Cells["OK"].Value.ToString() + "','"
+                + dataGridView2.Rows[e.RowIndex].Cells["Rejection"].Value.ToString() + "','"
+                + dbFunctions.username + "','"
+                + Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value).ToString("dd-MM-yyyy HH:mm:ss") + "','"
+                + Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value).ToString("dd-MM-yyyy HH:mm:ss") + "'"
+            );
+
+                //DataTable dt = dbFunctions.getTable("pr_Update_Production_Details '" + dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString() + "','" + dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString() + "','" + dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString() + "','" + dbFunctions.username + "','" + dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value.ToString() + "','" + dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value.ToString() + "'");
+                //DataTable dt = dbFunctions.getTable("pr_Update_Production_Details '" + dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString() + "','" + dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString() + "','" + dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString() + "','" + dbFunctions.username + "','" + Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value):yyyy - MM - dd HH: mm: ss + "','" + Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value):yyyy - MM - dd HH: mm: ss + "'");
+                //DataTable dt = dbFunctions.getTable($"EXEC pr_Update_Production_Details {dataGridView2.Rows[e.RowIndex].Cells[0].Value}, {dataGridView2.Rows[e.RowIndex].Cells[4].Value}, {dataGridView2.Rows[e.RowIndex].Cells[5].Value}, '{Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value):yyyy-MM-dd HH:mm:ss}', '{Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value):yyyy-MM-dd HH:mm:ss}', '{dbFunctions.username}'");
+                //DataTable dt = dbFunctions.getTable($"EXEC pr_Update_Production_Details {dataGridView2.Rows[e.RowIndex].Cells[0].Value}, {dataGridView2.Rows[e.RowIndex].Cells[4].Value}, {dataGridView2.Rows[e.RowIndex].Cells[5].Value}, '{dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value}', '{dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value}', '{dbFunctions.username}'");
+
+                MessageBox.Show("Entry Deleted Successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 getdata();
             }
         }
@@ -841,7 +945,7 @@ namespace CRM_App.Production
 
             int counttotal = (Count * qty);
 
-            int total = (a + counttotal);
+            int total = ( counttotal);
 
             // int okqty = int.Parse(dataGridView1.SelectedRows[0].Cells["OK QTY"].Value.ToString());
 

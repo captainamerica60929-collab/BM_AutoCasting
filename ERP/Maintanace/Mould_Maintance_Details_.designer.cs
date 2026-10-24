@@ -93,7 +93,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1217, 155);
+            this.dataGridView1.Size = new System.Drawing.Size(1217, 163);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel6
@@ -129,7 +129,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1217, 174);
+            this.panel6.Size = new System.Drawing.Size(1217, 184);
             this.panel6.TabIndex = 0;
             // 
             // MMD_Method
@@ -184,9 +184,9 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(457, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
+            this.label4.Size = new System.Drawing.Size(85, 19);
             this.label4.TabIndex = 122;
-            this.label4.Text = "Mold No :";
+            this.label4.Text = "Mould No :";
             // 
             // button1
             // 
@@ -456,7 +456,7 @@
             this.panel3.Controls.Add(this.btnEdit);
             this.panel3.Controls.Add(this.btnsave);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 174);
+            this.panel3.Location = new System.Drawing.Point(0, 184);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1217, 28);
             this.panel3.TabIndex = 1;
@@ -659,7 +659,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.txtStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 361);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 379);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1217, 22);
             this.statusStrip1.TabIndex = 4;
@@ -687,8 +687,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1217, 361);
-            this.splitContainer1.SplitterDistance = 202;
+            this.splitContainer1.Size = new System.Drawing.Size(1217, 379);
+            this.splitContainer1.SplitterDistance = 212;
             this.splitContainer1.TabIndex = 5;
             // 
             // txt_Rows
@@ -697,7 +697,7 @@
             this.txt_Rows.BackColor = System.Drawing.Color.Transparent;
             this.txt_Rows.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Rows.ForeColor = System.Drawing.Color.Blue;
-            this.txt_Rows.Location = new System.Drawing.Point(1028, 363);
+            this.txt_Rows.Location = new System.Drawing.Point(1028, 381);
             this.txt_Rows.Name = "txt_Rows";
             this.txt_Rows.Size = new System.Drawing.Size(190, 19);
             this.txt_Rows.TabIndex = 51;
@@ -710,7 +710,7 @@
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.Red;
-            this.label70.Location = new System.Drawing.Point(457, 362);
+            this.label70.Location = new System.Drawing.Point(457, 380);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(22, 25);
             this.label70.TabIndex = 250;
@@ -722,7 +722,7 @@
             this.label69.BackColor = System.Drawing.Color.Transparent;
             this.label69.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.Red;
-            this.label69.Location = new System.Drawing.Point(477, 362);
+            this.label69.Location = new System.Drawing.Point(477, 380);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(190, 19);
             this.label69.TabIndex = 249;
@@ -731,9 +731,9 @@
             // 
             // Mould_Maintance_Details
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 383);
+            this.ClientSize = new System.Drawing.Size(1217, 401);
             this.Controls.Add(this.label70);
             this.Controls.Add(this.label69);
             this.Controls.Add(this.txt_Rows);

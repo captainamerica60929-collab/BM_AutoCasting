@@ -16,7 +16,7 @@ namespace LarchERP.Master
     public partial class MaterialInspectionStandard : Form
     {
         public string arrow = "Up";
-        public int Distance = 284;
+        public int Distance = 300;
         public string ID = "";
         string ErrorMessage = "";
         public bool isPartLoad = false;

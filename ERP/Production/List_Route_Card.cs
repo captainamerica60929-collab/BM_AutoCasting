@@ -332,7 +332,7 @@ namespace CRM_App.Transaction
             int n = 0;
             try
             {
-                n = int.Parse(textBoxX3.Text);
+                n = int.Parse(textBoxX5.Text);
             }
             catch
             {
@@ -352,7 +352,7 @@ namespace CRM_App.Transaction
 
                 string ReplaceText = text.Replace("@PartName@", dataGridView1.SelectedRows[0].Cells["Part Name"].Value.ToString().Replace("/ " + dataGridView1.SelectedRows[0].Cells["Part No"].Value.ToString(), ""));
                 ReplaceText = ReplaceText.Replace("@PartNo@", dataGridView1.SelectedRows[0].Cells["Part No"].Value.ToString());
-                ReplaceText = ReplaceText.Replace("@Qty@", dataGridView1.SelectedRows[0].Cells["Pack Qty"].Value.ToString());
+                ReplaceText = ReplaceText.Replace("@Qty@", textBoxX3.Text);
                 ReplaceText = ReplaceText.Replace("@Barcode@", dataGridView1.SelectedRows[0].Cells["Route Card"].Value.ToString());
                 ReplaceText = ReplaceText.Replace("@Inspector@", Inspector.Text);//dataGridView1.SelectedRows[0].Cells["Inspector"].Value.ToString());
                 ReplaceText = ReplaceText.Replace("@Date@", System.DateTime.Now.ToString("dd-MMM-yyyy"));
@@ -665,6 +665,25 @@ namespace CRM_App.Transaction
             if (ObjFlittling_Entry.IsDisposed)
             {
                 ObjFlittling_Entry = new Sandblasting_Entry();
+            }
+            ObjFlittling_Entry.TopLevel = false;
+            ObjFlittling_Entry.FormBorderStyle = FormBorderStyle.None;
+            ObjFlittling_Entry.Dock = DockStyle.Fill;
+            panel2.Controls.Add(ObjFlittling_Entry);
+            ObjFlittling_Entry.Show();
+        }
+
+        private void meltingLogsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Melting_Logs ObjFlittling_Entry = new Melting_Logs();
+            dbFunctions.Route_Card_ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+            panel2.Controls.Clear();
+            panel2.Visible = true;
+
+            panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            if (ObjFlittling_Entry.IsDisposed)
+            {
+                ObjFlittling_Entry = new Melting_Logs();
             }
             ObjFlittling_Entry.TopLevel = false;
             ObjFlittling_Entry.FormBorderStyle = FormBorderStyle.None;

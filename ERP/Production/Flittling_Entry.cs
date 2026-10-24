@@ -324,35 +324,121 @@ namespace CRM_App.Production
             }
             catch (Exception ex) { }
         }
+        //private void getdata()
+        //{
+        //    panel14.Visible = true;
+        //    try
+        //    {
+        //        dataGridView5.Columns.RemoveAt(6);
+        //    }
+        //    catch { }
+        //    dataGridView5.DataSource = null;
+        //    DataTable dt = dbFunctions.getTable("pr_edit_Flittling_Detail  " + dbFunctions.Route_Card_ID);
+        //    dataGridView5.DataSource = dt;
+        //    dbFunctions.DGVStyleAutoSizeColumn(dataGridView5);
+        //    dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+
+        //    dataGridView5.Columns[1].ReadOnly = true;
+        //    dataGridView5.Columns[2].ReadOnly = true;
+        //    dataGridView5.Columns[1].Width = 100;
+        //    dataGridView5.Columns[2].Width = 100;
+        //    dataGridView5.Columns[5].Width = 100;
+        //    dataGridView5.Columns[3].Width = 100;
+        //    dataGridView5.Columns[4].Width = 100;
+        //    DataGridViewButtonColumn doWork = new DataGridViewButtonColumn();
+        //    doWork.HeaderText = " ";
+        //    doWork.Text = "Update";
+        //    DataGridViewButtonColumn dodelete = new DataGridViewButtonColumn();
+
+        //    dodelete.HeaderText = " ";
+        //    dodelete.Text = "Delete";
+        //    dataGridView5.Columns.Insert(7, dodelete);
+        //    dataGridView5.Columns.Insert(6, doWork);
+        //    dataGridView5.Columns[6].Width = 93;dataGridView5.Columns[7].Width = 93;
+        //    for (int i = 0; i < dataGridView5.Rows.Count; i++)
+        //    {
+        //        dataGridView5.Rows[i].Cells[6].Value = "Update";
+        //        dataGridView5.Rows[i].Cells[7].Value = "Delete";
+        //    }
+        //}
         private void getdata()
         {
             panel14.Visible = true;
+
             try
             {
-                dataGridView5.Columns.RemoveAt(6);
-            }
-            catch { }
-            dataGridView5.DataSource = null;
-            DataTable dt = dbFunctions.getTable("pr_edit_Flittling_Detail  " + dbFunctions.Route_Card_ID);
-            dataGridView5.DataSource = dt;
-            dbFunctions.DGVStyleAutoSizeColumn(dataGridView5);
-            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                dataGridView5.DataSource = null;
+                dataGridView5.Columns.Clear();
 
-            dataGridView5.Columns[1].ReadOnly = true;
-            dataGridView5.Columns[2].ReadOnly = true;
-            dataGridView5.Columns[1].Width = 100;
-            dataGridView5.Columns[2].Width = 100;
-            dataGridView5.Columns[5].Width = 100;
-            dataGridView5.Columns[3].Width = 100;
-            dataGridView5.Columns[4].Width = 100;
-            DataGridViewButtonColumn doWork = new DataGridViewButtonColumn();
-            doWork.HeaderText = " ";
-            doWork.Text = "Update";
-            dataGridView5.Columns.Insert(6, doWork);
-            dataGridView5.Columns[6].Width = 93;
-            for (int i = 0; i < dataGridView5.Rows.Count; i++)
+                DataTable dt = dbFunctions.getTable(
+                    "pr_edit_Flittling_Detail " + dbFunctions.Route_Card_ID
+                );
+
+                dataGridView5.DataSource = dt;
+
+                dbFunctions.DGVStyleAutoSizeColumn(dataGridView5);
+
+                dataGridView5.AutoSizeColumnsMode =
+                    DataGridViewAutoSizeColumnsMode.None;
+
+                // Set column properties only if the columns exist
+                if (dataGridView5.Columns.Count > 1)
+                {
+                    dataGridView5.Columns[1].ReadOnly = true;
+                    dataGridView5.Columns[1].Width = 100;
+                }
+
+                if (dataGridView5.Columns.Count > 2)
+                {
+                    dataGridView5.Columns[2].ReadOnly = true;
+                    dataGridView5.Columns[2].Width = 100;
+                }
+
+                if (dataGridView5.Columns.Count > 5)
+                {
+                    dataGridView5.Columns[5].Width = 100;
+                }
+
+                if (dataGridView5.Columns.Count > 3)
+                {
+                    dataGridView5.Columns[3].Width = 100;
+                }
+
+                if (dataGridView5.Columns.Count > 4)
+                {
+                    dataGridView5.Columns[4].Width = 100;
+                }
+
+                // Update button
+                DataGridViewButtonColumn doWork = new DataGridViewButtonColumn();
+                doWork.Name = "Update";
+                doWork.HeaderText = "";
+                doWork.Text = "Update";
+                doWork.UseColumnTextForButtonValue = true;
+                doWork.Width = 93;
+
+                // Delete button
+                DataGridViewButtonColumn dodelete = new DataGridViewButtonColumn();
+                dodelete.Name = "Delete";
+                dodelete.HeaderText = "";
+                dodelete.Text = "Delete";
+                dodelete.UseColumnTextForButtonValue = true;
+                dodelete.Width = 93;
+
+                // Append buttons safely, regardless of the number of data columns
+                dataGridView5.Columns.Add(doWork);
+                dataGridView5.Columns.Add(dodelete);
+            }
+            catch (Exception Ex)
             {
-                dataGridView5.Rows[i].Cells[6].Value = "Update";
+                dbFunctions.Logs(Ex.Message, dbFunctions.username);
+
+                MessageBox.Show(
+                    Ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
         public string ID1 = "0";
@@ -854,7 +940,7 @@ namespace CRM_App.Production
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 10)
+            if (e.ColumnIndex == 13)
             {
                 getdata();
             }
@@ -869,6 +955,15 @@ namespace CRM_App.Production
                 //DataTable dt = dbFunctions.getTable($"EXEC pr_Update_Production_Details {dataGridView2.Rows[e.RowIndex].Cells[0].Value}, {dataGridView2.Rows[e.RowIndex].Cells[4].Value}, {dataGridView2.Rows[e.RowIndex].Cells[5].Value}, '{dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value}', '{dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value}', '{dbFunctions.username}'");
 
                 MessageBox.Show("Qty Updated Successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                getdata();
+            }
+            if (e.ColumnIndex == 7)
+            {
+                DataTable dt = dbFunctions.getTable("pr_delete_Flittling_Details '" + dataGridView5.Rows[e.RowIndex].Cells[0].Value.ToString() + "','" + dataGridView5.Rows[e.RowIndex].Cells["OK"].Value.ToString() + "','" + dataGridView5.Rows[e.RowIndex].Cells["Rejection"].Value.ToString() + "','" + dbFunctions.username + "'");
+                //DataTable dt = dbFunctions.getTable($"EXEC pr_Update_Production_Details {dataGridView2.Rows[e.RowIndex].Cells[0].Value}, {dataGridView2.Rows[e.RowIndex].Cells[4].Value}, {dataGridView2.Rows[e.RowIndex].Cells[5].Value}, '{Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value):yyyy-MM-dd HH:mm:ss}', '{Convert.ToDateTime(dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value):yyyy-MM-dd HH:mm:ss}', '{dbFunctions.username}'");
+                //DataTable dt = dbFunctions.getTable($"EXEC pr_Update_Production_Details {dataGridView2.Rows[e.RowIndex].Cells[0].Value}, {dataGridView2.Rows[e.RowIndex].Cells[4].Value}, {dataGridView2.Rows[e.RowIndex].Cells[5].Value}, '{dataGridView2.Rows[e.RowIndex].Cells["Time1"].Value}', '{dataGridView2.Rows[e.RowIndex].Cells["Time2"].Value}', '{dbFunctions.username}'");
+
+                MessageBox.Show("Entry Deleted Successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 getdata();
             }
         }

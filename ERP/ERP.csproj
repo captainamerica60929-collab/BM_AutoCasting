@@ -229,6 +229,12 @@
     <Compile Include="Production\Flittling_Entry.Designer.cs">
       <DependentUpon>Flittling_Entry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Production\Melting_Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\Melting_Logs.Designer.cs">
+      <DependentUpon>Melting_Logs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Production\Sandblasting_Entry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1869,6 +1875,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\Flittling_Entry.resx">
       <DependentUpon>Flittling_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\Melting_Logs.resx">
+      <DependentUpon>Melting_Logs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\Monthly_Pro_Schedule.resx">
       <DependentUpon>Monthly_Pro_Schedule.cs</DependentUpon>

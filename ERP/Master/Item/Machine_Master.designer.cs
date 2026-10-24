@@ -276,9 +276,9 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(416, 150);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 19);
+            this.label10.Size = new System.Drawing.Size(130, 19);
             this.label10.TabIndex = 110;
-            this.label10.Text = "Instalattion Date :";
+            this.label10.Text = "Installation Date :";
             // 
             // MM_Mach_Address
             // 
@@ -817,7 +817,7 @@
             // 
             // Machine_Master
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 383);
             this.Controls.Add(this.label70);

@@ -73,7 +73,7 @@ namespace CRM_App.Production
         {
             Edit();
         }
-        string Pq_RM_ID = "";
+        string cPq_RM_ID = "";
         String ID1 = "0";
         public void Edit()
         {

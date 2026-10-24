@@ -320,8 +320,9 @@
             this.button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button20.Location = new System.Drawing.Point(1038, 4);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(34, 28);
+            this.button20.Size = new System.Drawing.Size(80, 28);
             this.button20.TabIndex = 314;
+            this.button20.Text = "& Print";
             this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.Button20_Click);
@@ -651,11 +652,12 @@
             this.Production_time.BackColor = System.Drawing.Color.White;
             this.Production_time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Production_time.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Production_time.Location = new System.Drawing.Point(1084, 3);
+            this.Production_time.Location = new System.Drawing.Point(1091, 3);
             this.Production_time.Name = "Production_time";
             this.Production_time.Size = new System.Drawing.Size(104, 26);
             this.Production_time.TabIndex = 294;
             this.Production_time.Text = "0";
+            this.Production_time.Visible = false;
             // 
             // label36
             // 
@@ -1212,7 +1214,7 @@
             this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(336, 6);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(124, 16);
+            this.label21.Size = new System.Drawing.Size(123, 16);
             this.label21.TabIndex = 286;
             this.label21.Text = "OK Quantity(Nos)";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1224,7 +1226,7 @@
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(50, 6);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(150, 16);
+            this.label20.Size = new System.Drawing.Size(149, 16);
             this.label20.TabIndex = 285;
             this.label20.Text = "Shift In-charge Name";
             // 
@@ -1236,7 +1238,7 @@
             this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(809, 6);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(167, 16);
+            this.label22.Size = new System.Drawing.Size(166, 16);
             this.label22.TabIndex = 287;
             this.label22.Text = "Rejection Quantity(Nos)";
             // 
@@ -1499,7 +1501,7 @@
             this.PD_OK_Qty.BackColor = System.Drawing.Color.White;
             this.PD_OK_Qty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PD_OK_Qty.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PD_OK_Qty.Location = new System.Drawing.Point(1041, 31);
+            this.PD_OK_Qty.Location = new System.Drawing.Point(1035, 15);
             this.PD_OK_Qty.Name = "PD_OK_Qty";
             this.PD_OK_Qty.ReadOnly = true;
             this.PD_OK_Qty.Size = new System.Drawing.Size(74, 26);
@@ -1510,7 +1512,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(977, 34);
+            this.label13.Location = new System.Drawing.Point(971, 17);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 19);
             this.label13.TabIndex = 284;
@@ -1615,7 +1617,7 @@
             this.btnsave.ForeColor = System.Drawing.Color.Black;
             this.btnsave.Image = ((System.Drawing.Image)(resources.GetObject("btnsave.Image")));
             this.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsave.Location = new System.Drawing.Point(1121, 31);
+            this.btnsave.Location = new System.Drawing.Point(1065, 42);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(89, 29);
             this.btnsave.TabIndex = 0;
@@ -1921,7 +1923,7 @@
             // 
             // Production_Data_Entry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1364, 589);
             this.Controls.Add(this.panel6);

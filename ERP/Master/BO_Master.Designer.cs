@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BO_Master));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.IM_aoe = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.IM_PackingStandard = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -91,8 +93,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.IM_aoe = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -157,6 +157,25 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1139, 174);
             this.panel6.TabIndex = 0;
+            // 
+            // IM_aoe
+            // 
+            this.IM_aoe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.IM_aoe.FormattingEnabled = true;
+            this.IM_aoe.Location = new System.Drawing.Point(699, 73);
+            this.IM_aoe.Name = "IM_aoe";
+            this.IM_aoe.Size = new System.Drawing.Size(95, 27);
+            this.IM_aoe.TabIndex = 320;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(636, 77);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(45, 19);
+            this.label25.TabIndex = 321;
+            this.label25.Text = "OEE :";
             // 
             // IM_PackingStandard
             // 
@@ -860,28 +879,9 @@
             this.txtStatus.Size = new System.Drawing.Size(39, 17);
             this.txtStatus.Text = "Ready";
             // 
-            // IM_aoe
-            // 
-            this.IM_aoe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.IM_aoe.FormattingEnabled = true;
-            this.IM_aoe.Location = new System.Drawing.Point(699, 73);
-            this.IM_aoe.Name = "IM_aoe";
-            this.IM_aoe.Size = new System.Drawing.Size(95, 27);
-            this.IM_aoe.TabIndex = 320;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(636, 77);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(62, 19);
-            this.label25.TabIndex = 321;
-            this.label25.Text = "AS/OE :";
-            // 
             // BO_Master
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1139, 562);
             this.Controls.Add(this.txt_Rows);

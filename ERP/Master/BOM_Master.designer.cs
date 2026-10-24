@@ -232,7 +232,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(591, 7);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(108, 16);
+            this.label15.Size = new System.Drawing.Size(107, 16);
             this.label15.TabIndex = 129;
             this.label15.Text = "Runner Reuse :";
             this.label15.Visible = false;
@@ -255,7 +255,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(495, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 16);
+            this.label13.Size = new System.Drawing.Size(55, 16);
             this.label13.TabIndex = 127;
             this.label13.Text = "RM % :";
             // 
@@ -308,9 +308,9 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(26, 139);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 16);
+            this.label10.Size = new System.Drawing.Size(103, 16);
             this.label10.TabIndex = 121;
-            this.label10.Text = "Mold Cavity :";
+            this.label10.Text = "Mould Cavity :";
             // 
             // BM_Purging_Loss
             // 
@@ -516,7 +516,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(688, 114);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(166, 16);
+            this.label11.Size = new System.Drawing.Size(165, 16);
             this.label11.TabIndex = 122;
             this.label11.Text = "Scrap Generation/Part :";
             this.label11.Visible = false;
@@ -528,7 +528,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(743, 79);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 16);
+            this.label6.Size = new System.Drawing.Size(110, 16);
             this.label6.TabIndex = 113;
             this.label6.Text = "Gross Part Wt :";
             this.label6.Visible = false;
@@ -540,7 +540,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(782, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 16);
+            this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 111;
             this.label4.Text = "Shot Wt :";
             // 
@@ -551,7 +551,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(470, 106);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 16);
+            this.label8.Size = new System.Drawing.Size(87, 16);
             this.label8.TabIndex = 117;
             this.label8.Text = "Runner Wt :";
             // 
@@ -562,9 +562,9 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(454, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 16);
+            this.label7.Size = new System.Drawing.Size(97, 16);
             this.label7.TabIndex = 115;
-            this.label7.Text = "Nett Part Wt :";
+            this.label7.Text = "Net Part Wt :";
             // 
             // label3
             // 
@@ -573,7 +573,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(333, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 16);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 109;
             this.label3.Text = "Purging Loss :";
             this.label3.Visible = false;
@@ -585,7 +585,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(73, 106);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 16);
+            this.label9.Size = new System.Drawing.Size(48, 16);
             this.label9.TabIndex = 124;
             this.label9.Text = "UOM :";
             // 
@@ -596,7 +596,7 @@
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(514, 143);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 16);
+            this.label14.Size = new System.Drawing.Size(42, 16);
             this.label14.TabIndex = 106;
             this.label14.Text = "Qty :";
             // 
@@ -607,7 +607,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(41, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(80, 16);
             this.label1.TabIndex = 104;
             this.label1.Text = "RM Grade :";
             // 
@@ -618,7 +618,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(28, 42);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 16);
+            this.label12.Size = new System.Drawing.Size(86, 16);
             this.label12.TabIndex = 101;
             this.label12.Text = "Part Name :";
             // 
@@ -914,7 +914,7 @@
             // 
             // BOM_Master
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 447);
             this.Controls.Add(this.splitContainer1);

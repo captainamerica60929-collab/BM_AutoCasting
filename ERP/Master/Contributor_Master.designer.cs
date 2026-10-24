@@ -420,7 +420,7 @@
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(46, 246);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 16);
+            this.label17.Size = new System.Drawing.Size(71, 16);
             this.label17.TabIndex = 47;
             this.label17.Text = "PAN  No :";
             // 
@@ -431,7 +431,7 @@
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(21, 219);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(97, 16);
+            this.label18.Size = new System.Drawing.Size(96, 16);
             this.label18.TabIndex = 45;
             this.label18.Text = "State Name :";
             // 
@@ -442,7 +442,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(50, 167);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 16);
+            this.label9.Size = new System.Drawing.Size(67, 16);
             this.label9.TabIndex = 27;
             this.label9.Text = "GST No :";
             // 
@@ -453,7 +453,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(388, 40);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 16);
+            this.label8.Size = new System.Drawing.Size(135, 16);
             this.label8.TabIndex = 25;
             this.label8.Text = "Shipping Address  :";
             // 
@@ -464,7 +464,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(19, 192);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 16);
+            this.label15.Size = new System.Drawing.Size(98, 16);
             this.label15.TabIndex = 51;
             this.label15.Text = "State Code  :";
             // 
@@ -475,7 +475,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(819, 223);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 16);
+            this.label7.Size = new System.Drawing.Size(72, 16);
             this.label7.TabIndex = 23;
             this.label7.Text = "Remarks :";
             // 
@@ -486,7 +486,7 @@
             this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(821, 121);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(65, 16);
+            this.label21.Size = new System.Drawing.Size(64, 16);
             this.label21.TabIndex = 39;
             this.label21.Text = "Quality :";
             // 
@@ -497,9 +497,9 @@
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(811, 42);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 16);
+            this.label14.Size = new System.Drawing.Size(78, 16);
             this.label14.TabIndex = 37;
-            this.label14.Text = "Purrchase :";
+            this.label14.Text = "Purchase :";
             // 
             // label13
             // 
@@ -508,7 +508,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(420, 196);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 16);
+            this.label13.Size = new System.Drawing.Size(103, 16);
             this.label13.TabIndex = 35;
             this.label13.Text = "Development :";
             // 
@@ -519,7 +519,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(392, 120);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 16);
+            this.label12.Size = new System.Drawing.Size(131, 16);
             this.label12.TabIndex = 33;
             this.label12.Text = "Top Management :";
             // 
@@ -530,7 +530,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(6, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.Size = new System.Drawing.Size(111, 16);
             this.label3.TabIndex = 19;
             this.label3.Text = "Billing Address :";
             // 
@@ -541,7 +541,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(70, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "Code :";
             // 
@@ -552,7 +552,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(62, 66);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 16);
+            this.label4.Size = new System.Drawing.Size(59, 16);
             this.label4.TabIndex = 21;
             this.label4.Text = "Name  :";
             // 
@@ -644,7 +644,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(565, 51);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 16);
+            this.label11.Size = new System.Drawing.Size(45, 16);
             this.label11.TabIndex = 31;
             this.label11.Text = "CST :";
             this.label11.Visible = false;
@@ -656,7 +656,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(575, 26);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 16);
+            this.label10.Size = new System.Drawing.Size(35, 16);
             this.label10.TabIndex = 29;
             this.label10.Text = "ED :";
             this.label10.Visible = false;
@@ -668,7 +668,7 @@
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(439, 17);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 16);
+            this.label16.Size = new System.Drawing.Size(77, 16);
             this.label16.TabIndex = 49;
             this.label16.Text = "MA cost  :";
             this.label16.Visible = false;
@@ -680,7 +680,7 @@
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(568, 13);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(46, 16);
+            this.label19.Size = new System.Drawing.Size(45, 16);
             this.label19.TabIndex = 43;
             this.label19.Text = "GST :";
             this.label19.Visible = false;
@@ -692,7 +692,7 @@
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(414, 44);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(102, 16);
+            this.label20.Size = new System.Drawing.Size(101, 16);
             this.label20.TabIndex = 41;
             this.label20.Text = "Vendor Code :";
             this.label20.Visible = false;
@@ -978,7 +978,7 @@
             // 
             // Contributor_Master
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 383);
             this.Controls.Add(this.label70);
