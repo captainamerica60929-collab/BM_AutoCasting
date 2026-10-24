@@ -494,7 +494,7 @@
             this.Podc_FileName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Podc_FileName.Location = new System.Drawing.Point(481, 20);
             this.Podc_FileName.Name = "Podc_FileName";
-            this.Podc_FileName.Size = new System.Drawing.Size(21, 16);
+            this.Podc_FileName.Size = new System.Drawing.Size(22, 16);
             this.Podc_FileName.TabIndex = 153;
             this.Podc_FileName.Text = "--";
             // 
@@ -650,7 +650,7 @@
             this.PO_vPO_NO.FormattingEnabled = true;
             this.PO_vPO_NO.Location = new System.Drawing.Point(107, 5);
             this.PO_vPO_NO.Name = "PO_vPO_NO";
-            this.PO_vPO_NO.Size = new System.Drawing.Size(172, 27);
+            this.PO_vPO_NO.Size = new System.Drawing.Size(203, 27);
             this.PO_vPO_NO.TabIndex = 92;
             this.PO_vPO_NO.SelectedIndexChanged += new System.EventHandler(this.PO_vPO_NO_SelectedIndexChanged);
             this.PO_vPO_NO.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PO_vPO_NO_MouseClick);
