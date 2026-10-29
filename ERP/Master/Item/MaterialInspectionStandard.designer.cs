@@ -213,7 +213,8 @@
             "RM INSPECTION",
             "INPROCESS INSPECTION",
             "FINAL INSPECTION",
-            "B/O INSPECTION"});
+            "B/O INSPECTION",
+            "Sub Part"});
             this.MS_vInspection_Type.Location = new System.Drawing.Point(135, 39);
             this.MS_vInspection_Type.Name = "MS_vInspection_Type";
             this.MS_vInspection_Type.Size = new System.Drawing.Size(297, 27);

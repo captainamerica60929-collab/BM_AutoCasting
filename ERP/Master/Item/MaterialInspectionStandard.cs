@@ -139,6 +139,10 @@ namespace LarchERP.Master
             {
                 s = "RM";
             }
+            else if(MS_vInspection_Type.Text == "Sub Part")
+            {
+                s = "SubPart";
+            }
             else
             {
                 s = "FG";

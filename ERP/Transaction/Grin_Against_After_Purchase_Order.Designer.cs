@@ -365,7 +365,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 442);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 395);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1133, 130);
             this.dataGridView1.TabIndex = 90;
@@ -379,7 +379,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.PaleGreen;
             this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1009, 585);
+            this.button1.Location = new System.Drawing.Point(1009, 538);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 31);
             this.button1.TabIndex = 123;
@@ -392,7 +392,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(921, 587);
+            this.button2.Location = new System.Drawing.Point(921, 540);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 31);
             this.button2.TabIndex = 124;
@@ -435,7 +435,7 @@
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Location = new System.Drawing.Point(3, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1149, 635);
+            this.panel6.Size = new System.Drawing.Size(1149, 588);
             this.panel6.TabIndex = 0;
             // 
             // cmbPrinter
@@ -491,7 +491,7 @@
             this.Podc_FileName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Podc_FileName.Location = new System.Drawing.Point(467, 149);
             this.Podc_FileName.Name = "Podc_FileName";
-            this.Podc_FileName.Size = new System.Drawing.Size(21, 16);
+            this.Podc_FileName.Size = new System.Drawing.Size(22, 16);
             this.Podc_FileName.TabIndex = 149;
             this.Podc_FileName.Text = "--";
             this.Podc_FileName.Visible = false;
@@ -528,7 +528,7 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.button3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(766, 587);
+            this.button3.Location = new System.Drawing.Point(766, 540);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(149, 31);
             this.button3.TabIndex = 126;
@@ -554,7 +554,7 @@
             this.MS_vRev_dated.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MS_vRev_dated.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MS_vRev_dated.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MS_vRev_dated.Location = new System.Drawing.Point(526, 590);
+            this.MS_vRev_dated.Location = new System.Drawing.Point(526, 543);
             this.MS_vRev_dated.Name = "MS_vRev_dated";
             this.MS_vRev_dated.ReadOnly = true;
             this.MS_vRev_dated.Size = new System.Drawing.Size(172, 26);
@@ -565,7 +565,7 @@
             this.MS_vDoc_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MS_vDoc_No.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MS_vDoc_No.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MS_vDoc_No.Location = new System.Drawing.Point(80, 590);
+            this.MS_vDoc_No.Location = new System.Drawing.Point(80, 543);
             this.MS_vDoc_No.Name = "MS_vDoc_No";
             this.MS_vDoc_No.ReadOnly = true;
             this.MS_vDoc_No.Size = new System.Drawing.Size(172, 26);
@@ -576,7 +576,7 @@
             this.MS_vRev_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MS_vRev_No.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MS_vRev_No.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MS_vRev_No.Location = new System.Drawing.Point(332, 590);
+            this.MS_vRev_No.Location = new System.Drawing.Point(332, 543);
             this.MS_vRev_No.Name = "MS_vRev_No";
             this.MS_vRev_No.ReadOnly = true;
             this.MS_vRev_No.Size = new System.Drawing.Size(107, 26);
@@ -587,7 +587,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label6.Location = new System.Drawing.Point(441, 593);
+            this.label6.Location = new System.Drawing.Point(441, 546);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 19);
             this.label6.TabIndex = 129;
@@ -598,7 +598,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label4.Location = new System.Drawing.Point(259, 593);
+            this.label4.Location = new System.Drawing.Point(259, 546);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 19);
             this.label4.TabIndex = 128;
@@ -609,7 +609,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label3.Location = new System.Drawing.Point(6, 593);
+            this.label3.Location = new System.Drawing.Point(6, 546);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 19);
             this.label3.TabIndex = 127;
@@ -624,7 +624,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 177);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1139, 259);
+            this.groupBox1.Size = new System.Drawing.Size(1139, 212);
             this.groupBox1.TabIndex = 126;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Income Inspection Standard";
@@ -639,7 +639,7 @@
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridView2.Location = new System.Drawing.Point(3, 22);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1145, 232);
+            this.dataGridView2.Size = new System.Drawing.Size(1145, 185);
             this.dataGridView2.TabIndex = 125;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellContentClick);
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
@@ -723,15 +723,15 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.panel6);
-            this.splitContainer1.Size = new System.Drawing.Size(1180, 710);
-            this.splitContainer1.SplitterDistance = 675;
+            this.splitContainer1.Size = new System.Drawing.Size(1180, 684);
+            this.splitContainer1.SplitterDistance = 650;
             this.splitContainer1.TabIndex = 1;
             // 
             // GRN_Approval
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 712);
+            this.ClientSize = new System.Drawing.Size(1164, 686);
             this.Controls.Add(this.splitContainer1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "GRN_Approval";
